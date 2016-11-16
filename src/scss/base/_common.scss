@@ -1,0 +1,57 @@
+@mixin translate($x, $y, $z) {
+  -webkit-transform: translate3d($x, $y, $z);
+  transform: translate3d($x, $y, $z);
+}
+
+@mixin rotate($x, $y, $z) {
+  -webkit-transform: rotateX($x) rotateY($y) rotateZ($z);
+  transform: rotateX($x) rotateY($y) rotateZ($z);
+}
+
+@mixin scale($x, $y, $z) {
+  -webkit-transform: scale3d($x, $y, $z);
+  transform: scale3d($x, $y, $z);
+}
+
+@mixin flex-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-direction-v {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+
+@mixin flex-direction-h {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+}
+
+@mixin flex-item($n:1) {
+  -webkit-box-flex: $n;
+  -webkit-flex: $n;
+  flex: $n;
+}
+
+.clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.txt-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+
+
+

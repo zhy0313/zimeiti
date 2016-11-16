@@ -1,0 +1,14 @@
+{
+  "name": "zimeiti",
+  "version": "1.0.0",
+  "description": "zimeiti",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-compress": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*"
+  },
+  "dependencies": {}
+}

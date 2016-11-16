@@ -1,0 +1,47 @@
+@charset "UTF-8";
+@import "base/reset";
+@import "base/common";
+@import "component/bgmusic";
+@import "component/modal";
+@import "component/swiper";
+
+html, body {
+  height: 100%;
+}
+
+.hd-wrap {
+  height: 100%;
+  max-width: 425px;
+  margin: 0 auto;
+}
+
+.hd-wrap-inner {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 320px) {
+  .hd-wrap-inner {
+    min-height: 504px;
+  }
+}
+
+// ----- swiper slide long content test -----
+.swiper-slide {
+  overflow: auto;
+}
+
+.swiper-slide:nth-child(odd) {
+  background: #0b97c4;
+}
+
+.swiper-slide:nth-child(even) {
+  background: #96c400;
+}
+
+li {
+  height: 8rem;
+}
+
+// ----- swiper slide long content test -----

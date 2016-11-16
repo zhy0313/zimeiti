@@ -1,0 +1,123 @@
+@-webkit-keyframes r-drop1 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -200px, 0) rotate(0deg);
+    transform: translate3d(0, -200px, 0) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 1200px, 0) rotate(360deg);
+    transform: translate3d(0, 1200px, 0) rotate(360deg);
+  }
+}
+
+@keyframes r-drop1 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -200px, 0) rotate(0deg);
+    transform: translate3d(0, -200px, 0) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 1200px, 0) rotate(360deg);
+    transform: translate3d(0, 1200px, 0) rotate(360deg);
+  }
+}
+
+@-webkit-keyframes r-drop2 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -200px, 0) rotate(0deg);
+    transform: translate3d(0, -200px, 0) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 1200px, 0) rotate(-360deg);
+    transform: translate3d(0, 1200px, 0) rotate(-360deg);
+  }
+}
+
+@keyframes r-drop2 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -200px, 0) rotate(0deg);
+    transform: translate3d(0, -200px, 0) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 1200px, 0) rotate(-360deg);
+    transform: translate3d(0, 1200px, 0) rotate(-360deg);
+  }
+}
+
+.chips {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.chip {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  background: url("../image/component/chips.png") no-repeat;
+}
+
+.chip-1 {
+  background-position: 0 -5px;
+  width: 32px;
+  height: 23px;
+}
+
+.chip-2 {
+  background-position: -55px -5px;
+  width: 32px;
+  height: 21px;
+}
+
+.chip-3 {
+  background-position: -110px 0;
+  width: 32px;
+  height: 24px;
+}
+
+.chip-4 {
+  background-position: -165px 0;
+  width: 17px;
+  height: 32px;
+}
+
+.chip-5 {
+  background-position: -205px -3px;
+  width: 23px;
+  height: 18px;
+}
+
+.chip-6 {
+  background-position: 0 -56px;
+  width: 48px;
+  height: 22px;
+}
+
+.chip-7 {
+  background-position: -72px -48px;
+  width: 40px;
+  height: 30px;
+}
+
+.chip-8 {
+  background-position: -125px -53px;
+  width: 38px;
+  height: 19px;
+}
+
+.chip-9 {
+  background-position: -181px -54px;
+  width: 65px;
+  height: 35px;
+}
+
+

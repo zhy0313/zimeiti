@@ -1,0 +1,14 @@
+.bg-music {
+  position: fixed;
+  width: 63px;
+  height: 63px;
+  top: 0;
+  right: 0;
+  background: url("../image/component/music.png") 0 -63px no-repeat;
+  -webkit-transform: scale(.6);
+  transform: scale(.6);
+  z-index: 100;
+  &.pause {
+    background: url("../image/component/music.png") 0 0 no-repeat;
+  }
+}

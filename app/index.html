@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>项目名称</title>
+  <link rel="stylesheet" href="../dist/css/style.css">
+  <script src="../dist/component/bgmusic.js"></script>
+</head>
+
+<body>
+
+<div class="hd-wrap">
+  <div class="hd-wrap-inner">
+    <div id="swiper" class="swiper-container">
+      <div class="swiper-wrapper">
+        <section id="slider1" class="swiper-slide">
+          <ul>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+          </ul>
+        </section>
+        <section id="slider2" class="swiper-slide">
+        </section>
+        <section id="slider3" class="swiper-slide">
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--modal-->
+<div id="modal" class="modal fade" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>
+
+
+<script src="../dist/component/sea.js"></script>
+<script src="../dist/component/sea.config.js"></script>
+<script>
+  seajs.use(['fastclick', 'jquery', 'swiper', 'modal'],
+    function (fastclick, $, swiper) {
+
+      // 处理移动端300ms延迟
+      fastclick(document.body);
+
+      // modal
+      $("#modal").modal();
+
+      // 全屏切换
+      (function initSwiper() {
+        new swiper('#swiper', {
+          direction: 'vertical',
+          onInit: function (swiper) {
+            handleLongContent(swiper);
+          }
+        });
+
+        function handleLongContent(swiper) {
+          var startScroll, touchStart, touchCurrent;
+          swiper.slides.on('touchstart', function (e) {
+            startScroll = this.scrollTop;
+            touchStart = e.targetTouches[0].pageY;
+          }, true);
+          swiper.slides.on('touchmove', function (e) {
+            touchCurrent = e.targetTouches[0].pageY;
+            var touchesDiff = touchCurrent - touchStart;
+            var slide = this;
+            var onlyScrolling =
+                  (slide.scrollHeight > slide.offsetHeight) &&
+                  (
+                    (touchesDiff < 0 && startScroll === 0) ||
+                    (touchesDiff > 0 && startScroll === (slide.scrollHeight - slide.offsetHeight)) ||
+                    (startScroll > 0 && startScroll < (slide.scrollHeight - slide.offsetHeight))
+                  );
+            if (onlyScrolling) {
+              e.stopPropagation();
+            }
+          }, true);
+        }
+
+      })();
+
+    });
+</script>
+
+</body>
+</html>
