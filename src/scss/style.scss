@@ -12,6 +12,21 @@ html, body {
   height: 100%;
 }
 
+.vip {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    right: -4px;
+    bottom: 0;
+    width: 12px;
+    height: 12px;
+    background: url("../image/icon/vip.png");
+    background-size: 100% 100%;
+  }
+}
+
 .hd-wrap {
   height: 100%;
   max-width: 425px;
@@ -78,7 +93,6 @@ html, body {
     top: 0;
     left: 0;
     border-radius: 50%;
-    overflow: hidden;
     height: 100%;
     width: 100%;
     padding: 1px;
@@ -335,7 +349,10 @@ html, body {
     width: 1.6rem;
     height: 1.6rem;
     border-radius: 50%;
-    overflow: hidden;
+    img {
+      border-radius: 50%;
+      display: block;
+    }
   }
   .author-name {
     vertical-align: 30%;
