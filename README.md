@@ -1,3 +1,3 @@
 :octocat: `首页:` http://www.xiaowtz.com/zimeiti/app
 
-![](https://raw.githubusercontent.com/zeronexm/zimeiti/master/index.png)
+目录说明：app页面，dist静态文件
