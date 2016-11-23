@@ -7,6 +7,11 @@
   <meta name="format-detection" content="telephone=no">
   <title>文章</title>
   <link rel="stylesheet" href="../dist/css/article.css">
+  <script>
+    function g(selector) {
+      return document.querySelector(selector)
+    }
+  </script>
 </head>
 
 <body>
@@ -14,29 +19,44 @@
 <div class="hd-wrap">
 
   <div class="article-container">
-    <!--文章类型-->
-    <section class="article-type-wrap">
+    <!--文章频道-->
+    <section class="article-channel-wrap">
       <div class="article-return">
-        <span class="icon-angle-left"></span>
+        <a class="icon-angle-left" href="./index.html"></a>
       </div>
 
-      <div class="article-type">
-        <ul id="article-types">
-          <li>推荐</li>
-          <li>图集</li>
-          <li>时政</li>
-          <li>军事</li>
-          <li>饮食</li>
-          <li>国际</li>
-          <li>科技</li>
+      <div class="article-channel">
+        <ul>
+          <li class="active"><a href="">推荐</a></li>
+          <li><a href="">图集</a></li>
+          <li><a href="">时政</a></li>
+          <li><a href="">军事</a></li>
+          <li><a href="">饮食</a></li>
         </ul>
       </div>
 
-      <div class="article-plus">
+      <div class="article-plus" id="article-plus"
+           onclick="document.querySelector('#all-article-channels').classList.add('open');">
         <span class="icon-add"></span>
       </div>
     </section>
 
+    <!--全部频道-->
+    <section class="all-article-channels" id="all-article-channels">
+      <p>全部频道</p>
+      <ul>
+        <li class="active"><a href="">推荐</a></li>
+        <li><a href="">图集</a></li>
+        <li><a href="">时政</a></li>
+        <li><a href="">军事</a></li>
+        <li><a href="">饮食</a></li>
+        <li><a href="">国际</a></li>
+        <li><a href="">科技</a></li>
+      </ul>
+      <div class="close-channels"
+           onclick="document.querySelector('#all-article-channels').classList.remove('open');">确定
+      </div>
+    </section>
 
     <!--文章主体-->
     <article>
@@ -99,11 +119,35 @@
         </div>
       </section>
 
+      <!--星级浮层-->
+      <div id="star-modal" class="modal fade star-modal" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>您为文章评分： <span><em>4.1</em>分</span></p>
+              <div class="stars-wrap">
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+                <span class="star"></span>
+              </div>
+              <div class="star-btn">确定</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!--打赏-->
       <section class="article-reward">
         <div class="reward">
           <span>赏</span>
-          <a>赞赏(5人)</a>
+          <a href="./article-reward-view.html">赞赏(5人)</a>
         </div>
         <div class="whisper">
           <span>私语</span>
@@ -141,19 +185,125 @@
       </section>
 
     </article>
+
+    <!--热门评论-->
+    <section class="article-hot-comments">
+      <h3>热门评论</h3>
+      <div class="comment-list">
+        <div class="comment-item">
+          <div class="comment-top">
+            <dl>
+              <dt>
+                <img src="http://tva4.sinaimg.cn/crop.0.0.960.960.180/bceb232djw8f7najhd9yqj20qo0qoq47.jpg">
+              </dt>
+              <dd>湖南吴彦祖</dd>
+              <dd class="icon-clock">现在</dd>
+            </dl>
+            <ul>
+              <li class="icon-commenting">3</li>
+              <li class="icon-heart active">16</li>
+            </ul>
+          </div>
+          <p class="comment-bottom">
+            这档历史纪录类节目有许多创新亮点，一批德高望重的艺术家焦晃、马少骅、鲍国安、刘劲等将在节目中担任主讲人，倾情讲述历史故事。
+          </p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-top">
+            <dl>
+              <dt>
+                <img src="http://tva4.sinaimg.cn/crop.0.0.960.960.180/bceb232djw8f7najhd9yqj20qo0qoq47.jpg">
+              </dt>
+              <dd>湖南吴彦祖</dd>
+              <dd class="icon-clock">现在</dd>
+            </dl>
+            <ul>
+              <li class="icon-commenting">3</li>
+              <li class="icon-heart">16</li>
+            </ul>
+          </div>
+          <p class="comment-bottom">
+            这档历史纪录类节目有许多创新亮点，一批德高望重的艺术家焦晃、马少骅、鲍国安、刘劲等将在节目中担任主讲人，倾情讲述历史故事。
+          </p>
+        </div>
+      </div>
+      <div class="comment-view">
+        <a href="">查看更多</a>
+      </div>
+    </section>
+
+    <!--评论输入框-->
+    <section class="article-comment-box">
+      <div class="input-box ">
+        <div class="input-box-inner">
+          <i class="icon-pen-angled"></i>
+          <textarea type="text" placeholder="写下你的想法" id="comment" name="comment"
+                    onfocus="g('.article-comment-box').classList.add('active')"
+                    onblur="g('.article-comment-box').classList.remove('active')"></textarea>
+        </div>
+        <span class="article-comment-btn">确定</span>
+      </div>
+
+      <span class="icon-commenting">45</span>
+      <span class="icon-heart-o icon-heart-thumb"></span>
+      <span class="icon-star-empty icon-star-favorites"></span>
+    </section>
   </div>
-
-
 </div>
 
 
 <script src="../dist/component/sea.js"></script>
 <script src="../dist/component/sea.config.js"></script>
 <script>
-  seajs.use(['fastclick', 'jquery', 'swiper', 'modal'], function (fastclick, $, swiper) {
+  seajs.use(['jquery', 'modal'], function ($) {
 
-    // 处理移动端300ms延迟
-    fastclick(document.body);
+    function isIOS() {
+      return !!navigator.userAgent.match(/iPhone|iPad|iPod/g);
+    }
+
+    function iosInputFixedBugHandler() {
+      if (isIOS()) {
+        var $commentInput = $("#comment"),
+            $commentBox   = $commentInput.closest(".article-comment-box");
+        $commentInput.on("focus", function () {
+          $commentBox.css("position", "absolute");
+        }).on("blur", function () {
+          $commentBox.css("position", "fixed");
+        });
+      }
+    }
+
+    iosInputFixedBugHandler();
+
+
+    // 文章评分
+    $(".article-stars").on("click", ".star", function () {
+      var $modal     = $("#star-modal"),
+          $origin    = $(this).closest(".stars-wrap"),
+          index      = $(this).index() + 1,
+          star_class = "star_" + index,
+          reg        = /star_\d+/g;
+
+      // 显示评级浮层
+      $modal.find(".stars-wrap").attr("class", function (i, cls) {
+        return cls.replace(reg, '');
+      }).addClass(star_class).end().find("em").html(index).end().modal({backdrop: false});
+
+      // 评级确定
+      $modal.on("click", ".star-btn", function () {
+        $origin.attr("class", function (i, cls) {
+          return cls.replace(reg, '');
+        }).addClass(star_class);
+        $modal.modal('hide');
+      });
+
+    });
+
+
+    // 提交评论
+    $(".article-comment-btn").on("click", function () {
+      $("#comment").blur();
+    });
 
 
   });
