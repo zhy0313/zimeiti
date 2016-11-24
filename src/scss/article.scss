@@ -3,55 +3,9 @@
 @import "base/common";
 @import "component/font";
 @import "component/modal";
-
-.icon-clock,
-.icon-commenting,
-.icon-heart {
-  @extend .icon-margin-r;
-}
-
-.icon-margin-r {
-  &:before {
-    margin-right: 5px;
-  }
-}
-
-.icon-heart-thumb {
-  @extend .icon-heart;
-  color: #ff8400 !important;
-}
-
-.icon-star-favorites {
-  @extend .icon-star-full;
-  color: #ff8400 !important;
-}
-
-html, body {
-  height: 100%;
-}
+@import "base/zimeiti";
 
 /********** article.html ************/
-
-.vip {
-  position: relative;
-  &:after {
-    content: "";
-    position: absolute;
-    display: block;
-    right: -4px;
-    bottom: 0;
-    width: 12px;
-    height: 12px;
-    background: url("../image/icon/vip.png");
-    background-size: 100% 100%;
-  }
-}
-
-.hd-wrap {
-  height: 100%;
-  max-width: 425px;
-  margin: 0 auto;
-}
 
 .article-container {
   position: relative;
@@ -754,6 +708,7 @@ article {
   overflow: hidden;
   min-height: 100%;
   background: #f7f7f7;
+
   h3 {
     position: relative;
     font-weight: normal;
@@ -817,9 +772,10 @@ article {
     color: #666;
     text-align: center;
     margin: 0;
-    padding: 1rem;
-    font-size: 1.125rem;
-    border-bottom: 1px solid #eaeaea;
+    box-shadow: inset 0px -1px 0px 0px #eaeaea;
+    height: 3rem;
+    line-height: 3rem;
+    z-index: 10;
     span {
       padding: 0 1rem;
       position: absolute;
@@ -841,6 +797,12 @@ article {
     text-align: center;
     margin: 3rem auto 2rem;
   }
+}
+
+.article-reward-wrap {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
 }
 
 .reward-default {
@@ -881,6 +843,45 @@ article {
       color: #666;
     }
   }
+}
+
+.reward-define {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: #f7f7f7;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 3rem;
+}
+
+.reward-box {
+  input {
+    @extend .clear-input;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 80%;
+    box-sizing: border-box;
+  }
+}
+
+.reward-btn {
+  @extend .zmt-btn;
+  width: 80%;
+  margin: 2rem auto;
+  box-sizing: border-box;
+  padding: .8rem;
+}
+
+.reward-close {
+  position: absolute;
+  font-size: 1.4rem;
+  color: #666;
+  right: 1rem;
+  top: 4rem;
 }
 
 @media all and (max-width: 320px) {

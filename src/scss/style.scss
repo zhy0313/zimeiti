@@ -5,40 +5,7 @@
 @import "component/swiper";
 @import "component/font";
 @import "component/animate";
-
-$mainColor: #ff6000;
-
-html, body {
-  height: 100%;
-}
-
-.vip {
-  position: relative;
-  &:after {
-    content: "";
-    position: absolute;
-    display: block;
-    right: -4px;
-    bottom: 0;
-    width: 12px;
-    height: 12px;
-    background: url("../image/icon/vip.png");
-    background-size: 100% 100%;
-  }
-}
-
-.hd-wrap {
-  height: 100%;
-  max-width: 425px;
-  margin: 0 auto;
-}
-
-.hd-wrap-inner {
-  position: relative;
-  background: #e5e5e5;
-  min-height: 100%;
-  overflow: hidden;
-}
+@import "base/zimeiti";
 
 // home
 .swiper-container {
