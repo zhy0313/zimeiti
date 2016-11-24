@@ -6,3 +6,7 @@ zip
 npm-debug.log
 node_modules
 
+Gruntfile.js
+index.png
+package.json
+src
