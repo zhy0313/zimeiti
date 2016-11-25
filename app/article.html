@@ -188,8 +188,8 @@
 
     <!--热门评论-->
     <section class="article-hot-comments">
-      <h3>热门评论</h3>
-      <div class="comment-list">
+      <h3 class="zmt-nav">热门评论</h3>
+      <div class="article-comment-list">
         <div class="comment-item">
           <div class="comment-top">
             <dl>
@@ -228,25 +228,27 @@
         </div>
       </div>
       <div class="comment-view">
-        <a href="">查看更多</a>
+        <a href="./article-comment.html">查看更多</a>
       </div>
     </section>
 
-    <!--评论输入框-->
-    <section class="article-comment-box">
-      <div class="input-box ">
-        <div class="input-box-inner">
-          <i class="icon-pen-angled"></i>
-          <textarea type="text" placeholder="写下你的想法" id="comment" name="comment"
-                    onfocus="g('.article-comment-box').classList.add('active')"
-                    onblur="g('.article-comment-box').classList.remove('active')"></textarea>
-        </div>
-        <span class="article-comment-btn">确定</span>
+    <!--文章评论框-->
+    <section class="article-comment-box zmt-comment-box">
+      <div class="zmt-comment-box-top">
+        <span class="icon-pen-angled" id="comment-write">写下你的想法</span>
+        <span class="icon-commenting">45</span>
+        <span class="icon-heart-o icon-heart-thumb"></span>
+        <span class="icon-star-empty icon-star-favorites"></span>
       </div>
-
-      <span class="icon-commenting">45</span>
-      <span class="icon-heart-o icon-heart-thumb"></span>
-      <span class="icon-star-empty icon-star-favorites"></span>
+      <!--文字输入部分-->
+      <div class="zmt-comment-modal">
+        <div class="zmt-comment-bar">
+          <span id="comment-cancel">取消</span>
+          <span id="comment-send">发送</span>
+          评论
+        </div>
+        <textarea class="clear-input" name="" id=""></textarea>
+      </div>
     </section>
   </div>
 </div>
@@ -256,25 +258,6 @@
 <script src="../dist/component/sea.config.js"></script>
 <script>
   seajs.use(['jquery', 'modal'], function ($) {
-
-    function isIOS() {
-      return !!navigator.userAgent.match(/iPhone|iPad|iPod/g);
-    }
-
-    function iosInputFixedBugHandler() {
-      if (isIOS()) {
-        var $commentInput = $("#comment"),
-            $commentBox   = $commentInput.closest(".article-comment-box");
-        $commentInput.on("focus", function () {
-          $commentBox.css("position", "absolute");
-        }).on("blur", function () {
-          $commentBox.css("position", "fixed");
-        });
-      }
-    }
-
-    iosInputFixedBugHandler();
-
 
     // 文章评分
     $(".article-stars").on("click", ".star", function () {
@@ -300,11 +283,27 @@
     });
 
 
-    // 提交评论
-    $(".article-comment-btn").on("click", function () {
-      $("#comment").blur();
-    });
+    // 写评论
+    function comment() {
+      var $box   = $(".zmt-comment-box"),
+          $modal = $box.find(".zmt-comment-modal"),
+          $text  = $box.find("textarea");
 
+      $box.on("click", "#comment-write", function () {
+        // 显示评论框
+        $modal.addClass("open");
+      }).on("click", "#comment-cancel", function () {
+        // 取消
+        $modal.removeClass("open");
+      }).on("click", "#comment-send", function () {
+        // 发送
+        alert("发送成功");
+        $modal.removeClass("open");
+        $text.val("");
+      });
+    }
+
+    comment();
 
   });
 </script>
