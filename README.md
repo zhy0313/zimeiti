@@ -12,4 +12,5 @@
 |article-reward.html|文章赏赞|  
 |article-reward-view.html|文章赏赞人员列表|
 
-### 手机预览查看qrcode.png
+### 手机预览查看
+![](http://111.206.169.164:24521/baiger/html/raw/frontend/qrcode.png)
