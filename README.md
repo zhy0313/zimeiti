@@ -13,6 +13,8 @@
 |article-reward-view.html|文章赏赞人员列表|
 |profile.html|个人页|
 |profile-more|个人页更多|
+|profile-author.html|作者个人页|
+|profile-more-author|作者个人页更多|
 
 
 ### 手机预览查看
