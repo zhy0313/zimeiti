@@ -11,11 +11,9 @@
 |article-feedback.html|文章我要报错| 
 |article-reward.html|文章赏赞|  
 |article-reward-view.html|文章赏赞人员列表|
+|profile.html|个人页|
+|profile-more|个人页更多|
 
-### 下一个要做的页面
-
-* 移动端 - 个人页
-* 移动端-作品中某一评论点开后页面
 
 ### 手机预览查看
 ![](http://111.206.169.164:24521/baiger/html/raw/frontend/qrcode.png)
