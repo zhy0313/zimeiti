@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>系统消息</title>
+  <link rel="stylesheet" href="../dist/css/profile.css">
+</head>
+
+<body>
+
+<div class="hd-wrap">
+  <div class="profile-message-page">
+
+    <!--返回导航-->
+    <h3 class="zmt-nav-back">
+      <a href="javascript:history.go(-1);">
+        <span class="icon-angle-left"></span>
+      </a>
+      系统消息
+    </h3>
+
+    <!--消息列表-->
+    <section class="message-list">
+      <!--评论 收藏 喜欢类消息-->
+      <div class="message-item">
+        <div class="avatar">
+          <span>
+            <img src="http://tva2.sinaimg.cn/crop.0.0.512.512.50/9e5389bbjw8eylgqjhrzsj20e80e8jrw.jpg">
+          </span>
+        </div>
+        <div class="content">
+          <div class="top">
+            <span>湖南吴彦祖</span>
+            <span class="icon-clock">5分钟前</span>
+          </div>
+          <div class="bottom">
+            <span>喜欢了您的文章</span>
+            <span>坚持土地集体所有权、稳定农户承包权、放活土地经营权为原则的“三权分置”改革</span>
+          </div>
+        </div>
+      </div>
+      <div class="message-item">
+        <div class="avatar">
+          <span>
+            <img src="http://tva2.sinaimg.cn/crop.0.0.512.512.50/9e5389bbjw8eylgqjhrzsj20e80e8jrw.jpg">
+          </span>
+        </div>
+        <div class="content">
+          <div class="top">
+            <span>湖南吴彦祖</span>
+            <span class="icon-clock">5分钟前</span>
+          </div>
+          <div class="bottom">
+            <span>打赏了10元您的视频</span>
+            <span>坚持土地集体所有权、稳定农户承包权、放活土地经营权为原则的“三权分置”改革</span>
+          </div>
+        </div>
+      </div>
+
+      <!--未读状态-->
+      <div class="message-item">
+        <div class="avatar">
+          <span class="icon-bell"></span>
+        </div>
+        <div class="content">
+          <div class="top">
+            <span>湖南吴彦祖</span>
+          </div>
+          <div class="bottom">
+            <time class="icon-clock">2016-10-10 12:00</time>
+          </div>
+        </div>
+      </div>
+
+      <!--已读状态-->
+      <div class="message-item read">
+        <div class="avatar">
+          <span class="icon-bell"></span>
+        </div>
+        <div class="content">
+          <div class="top">
+            <span>湖南吴彦祖</span>
+          </div>
+          <div class="bottom">
+            <time class="icon-clock">2016-10-10 12:00</time>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </div>
+</div>
+
+
+<script src="../dist/component/sea.js"></script>
+<script src="../dist/component/sea.config.js"></script>
+<script>
+  seajs.use(['jquery', 'modal'], function ($) {
+
+
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>我的钱包</title>
+  <link rel="stylesheet" href="../dist/css/profile.css">
+</head>
+
+<body>
+
+<div class="hd-wrap">
+  <div class="profile-wallet-page">
+
+    <!--返回导航-->
+    <h3 class="zmt-nav-back">
+      <a href="javascript:history.go(-1);">
+        <span class="icon-angle-left"></span>
+      </a>
+      我的钱包
+    </h3>
+
+    <!--赏赞明细-->
+    <div class="wallet-list">
+      <a href="" class="icon-notebook-list">赏赞明细</a>
+    </div>
+
+    <!--总数-->
+    <div class="wallet-count">
+      <div>
+        <span>共有</span>
+        <span>5000.00</span>
+      </div>
+    </div>
+
+    <!--提现-->
+    <div class="wallet-withdraw">
+      <span>提现</span>
+    </div>
+
+
+  </div>
+</div>
+
+
+<script src="../dist/component/sea.js"></script>
+<script src="../dist/component/sea.config.js"></script>
+<script>
+  seajs.use(['jquery', 'modal'], function ($) {
+
+
+  });
+</script>
+
+</body>
+</html>

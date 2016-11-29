@@ -546,3 +546,157 @@
     }
   }
 }
+
+//******************profile-wallet.html********************
+
+.profile-wallet-page {
+  @extend .page;
+}
+
+.wallet-list {
+  color: #ff8400;
+  font-size: .875rem;
+  overflow: hidden;
+  a {
+    float: right;
+    color: currentColor;
+    padding: 1rem 2rem;
+  }
+}
+
+.wallet-count {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  border: 5px solid #ff8400;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin: 2rem auto;
+  background: white;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ff8400;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1.2);
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  span {
+    &:first-child {
+      color: #666;
+      display: block;
+      margin-bottom: .5rem;
+    }
+    &:last-child {
+      font-size: 1.5rem;
+      color: #ff8400;
+    }
+  }
+}
+
+.wallet-withdraw {
+  text-align: center;
+  margin-top: 3rem;
+  span {
+    background: #ff8400;
+    color: #fff;
+    width: 74%;
+    padding: .6rem;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1.125rem;
+  }
+}
+
+//******************profile-message.html********************
+
+.profile-message-page {
+  @extend .page;
+}
+
+.message-list {
+
+}
+
+.message-item {
+  position: relative;
+  color: #666;
+  font-size: 0.875rem;
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem;
+  line-height: 1.4;
+  .avatar {
+    position: absolute;
+    span {
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: 50%;
+    }
+    img {
+      display: block;
+      border-radius: 50%;
+    }
+    .icon-bell {
+      background: #099999;
+      color: white;
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 1.6rem;
+    }
+  }
+  .content {
+    padding-left: 3rem;
+  }
+  .top {
+    margin-bottom: .5rem;
+    overflow: hidden;
+    span {
+      &:nth-child(2) {
+        float: right;
+        font-size: .8rem;
+      }
+    }
+  }
+  .bottom {
+    @include flex-container();
+    span {
+      &:first-child {
+        margin-right: .5rem;
+      }
+      &:last-child {
+        color: #000;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        @include flex-item(1);
+      }
+    }
+  }
+  time {
+    font-size: .8rem;
+    color: #999;
+  }
+}
+
+.message-item.read {
+  color: #999;
+  .icon-bell {
+    background: #999;
+  }
+}

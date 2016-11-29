@@ -17,6 +17,8 @@
 |profile-more-author.html|作者个人页更多|
 |profile-center.html|个人中心-读者|
 |profile-center-author.html|个人中心-作者|
+|profile-wallet.html|我的钱包|
+|profile-message.html|系统消息|
 
 
 ### 手机预览查看

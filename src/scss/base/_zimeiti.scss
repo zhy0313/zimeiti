@@ -56,6 +56,11 @@ html, body {
   }
 }
 
+.page{
+  min-height:100%;
+  background:#f7f7f7;
+}
+
 .inset-block-link {
   position: absolute;
   display: block;
@@ -104,7 +109,7 @@ html, body {
     transform: translateY(-50%);
   }
   a {
-    color: #ff8400;
+    color: #666;
   }
 }
 
