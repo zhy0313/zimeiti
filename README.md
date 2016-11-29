@@ -12,9 +12,11 @@
 |article-reward.html|文章赏赞|  
 |article-reward-view.html|文章赏赞人员列表|
 |profile.html|个人页|
-|profile-more|个人页更多|
+|profile-more.html|个人页更多|
 |profile-author.html|作者个人页|
-|profile-more-author|作者个人页更多|
+|profile-more-author.html|作者个人页更多|
+|profile-center.html|个人中心-读者|
+|profile-center-author.html|个人中心-作者|
 
 
 ### 手机预览查看

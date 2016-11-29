@@ -25,12 +25,28 @@
 
 }
 
+.icon-moneybag:before {
+  content: "\e915";
+}
+
+.icon-settings:before {
+  content: "\e914";
+}
+
 .icon-chat:before {
   content: "\e90c";
 }
 
+.icon-mail-envelope-closed:before {
+  content: "\e911";
+}
+
 .icon-pen-angled:before {
   content: "\e909";
+}
+
+.icon-more_horiz:before {
+  content: "\e912";
 }
 
 .icon-add:before {
@@ -93,6 +109,10 @@
   content: "\e902";
 }
 
+.icon-home:before {
+  content: "\e913";
+}
+
 .icon-location2:before {
   content: "\e948";
 }
@@ -144,5 +164,4 @@
 .icon-loop2:before {
   content: "\ea2e";
 }
-
 
