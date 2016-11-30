@@ -437,6 +437,41 @@
   }
 }
 
+//*************************** fans.html *****************************
+
+.fans-list {
+}
+
+.fans-item {
+  position: relative;
+  margin: 0 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px dashed #ddd;
+  line-height: 1.4;
+  span {
+    &:nth-child(1) {
+      position: absolute;
+      width: 2.4rem;
+      height: 2.4rem;
+      img {
+        display: block;
+        border-radius: 50%;
+      }
+    }
+    &:nth-child(2) {
+      color: #333;
+      padding-left: 3.4rem;
+      margin-bottom: 4px;
+    }
+    &:nth-child(3) {
+      color: #666;
+      font-size: .875rem;
+      padding-left: 3.4rem;
+    }
+
+  }
+}
+
 @media screen and (max-width: 320px) {
   html {
     font-size: 14px;

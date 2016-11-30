@@ -700,3 +700,12 @@
     background: #999;
   }
 }
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 14px;
+  }
+  .hd-wrap-inner {
+    min-height: 504px;
+  }
+}
