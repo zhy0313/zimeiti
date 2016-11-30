@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>百舸</title>
+  <link rel="stylesheet" href="../dist/css/profile.css">
+</head>
+
+<body>
+
+<div class="hd-wrap">
+  <div class="profile-feedback-page page">
+
+    <!--返回导航-->
+    <h3 class="zmt-nav-back">
+      <a href="javascript:history.go(-1);">
+        <span class="icon-angle-left"></span>
+      </a>
+      意见反馈
+    </h3>
+
+    <!--反馈区域-->
+    <section class="feedback-box">
+      <form action="">
+        <p>请简单描述您的问题或建议</p>
+        <div class="feedback-content">
+          <textarea class="clear-input" placeholder="写下您想要问的问题"></textarea>
+          <input class="clear-input" type="text" placeholder="留下您的QQ、电话或邮箱">
+        </div>
+        <input type="submit" value="提交" class="clear-input feedback-btn">
+      </form>
+
+    </section>
+
+  </div>
+</div>
+
+
+<script src="../dist/component/sea.js"></script>
+<script src="../dist/component/sea.config.js"></script>
+<script>
+  seajs.use(['jquery', 'modal'], function ($) {
+
+
+  });
+</script>
+
+</body>
+</html>

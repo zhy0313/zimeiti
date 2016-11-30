@@ -28,6 +28,10 @@ html, body {
   color: #ff8400 !important;
 }
 
+.icon-us:before {
+  content: "百";
+}
+
 .hd-wrap {
   height: 100%;
   max-width: 425px;
@@ -56,9 +60,9 @@ html, body {
   }
 }
 
-.page{
-  min-height:100%;
-  background:#f7f7f7;
+.page {
+  min-height: 100%;
+  background: #f7f7f7;
 }
 
 .inset-block-link {

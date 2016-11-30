@@ -5,6 +5,7 @@
 @import "component/font";
 @import "base/zimeiti";
 
+/********** profile.html **********/
 .profile-page {
   min-height: 100%;
   background: #f7f7f7;
@@ -352,10 +353,20 @@
         background: #d82d8e;
       }
     }
+    &.icon-wrench {
+      &:before {
+        background: #42666e;
+      }
+    }
+    &.icon-us {
+      &:before {
+        background: #f1cb34;
+      }
+    }
   }
 }
 
-//******************profile-author.html********************
+/********** profile-author.html **********/
 
 .profile-author-banner {
   position: relative;
@@ -438,7 +449,7 @@
   padding: 0 1rem;
 }
 
-//******************profile-center.html********************
+/********** profile-center.html **********/
 
 .profile-center-page {
   min-height: 100%;
@@ -531,7 +542,7 @@
 
 }
 
-//******************profile-center-author.html********************
+/********** profile-center-author.html **********/
 
 .profile-center-author-page {
   min-height: 100%;
@@ -547,7 +558,7 @@
   }
 }
 
-//******************profile-wallet.html********************
+/********** profile-wallet.html **********/
 
 .profile-wallet-page {
   @extend .page;
@@ -621,8 +632,7 @@
   }
 }
 
-//******************profile-message.html********************
-
+/********** profile-message.html **********/
 .profile-message-page {
   @extend .page;
 }
@@ -701,6 +711,53 @@
   }
 }
 
+/********** profile-center-more.html **********/
+
+.profile-center-more-page {
+  min-height: 100%;
+  background: #e5e5e5;
+  .zmt-nav-back {
+    background: #f7f7f7;
+  }
+  .profile-list {
+    margin-top: 1rem;
+    li {
+      background: #f7f7f7;
+    }
+  }
+}
+
+/********** profile-feedback.html **********/
+.feedback-box {
+  padding: 1rem 2rem;
+  p {
+    color: #999;
+  }
+  textarea {
+    height: 11.2rem;
+  }
+  textarea,
+  input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+  }
+}
+
+.feedback-btn {
+  padding: .8rem;
+  text-align: center;
+  background: #ff8400;
+  color: white;
+  border-radius: 6px;
+  margin-top: 4rem;
+}
+
+/********** media query **********/
+
 @media screen and (max-width: 320px) {
   html {
     font-size: 14px;
@@ -709,3 +766,5 @@
     min-height: 504px;
   }
 }
+
+

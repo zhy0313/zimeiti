@@ -17,8 +17,12 @@
 |profile-more-author.html|作者个人页更多|
 |profile-center.html|个人中心-读者|
 |profile-center-author.html|个人中心-作者|
+|profile-center-more.html|个人中心-更多|
 |profile-wallet.html|我的钱包|
 |profile-message.html|系统消息|
+|profile-feedback.html|意见反馈|
+|fans.html|粉丝列表|
+
 
 
 ### 手机预览查看
