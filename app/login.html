@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>百舸-登录</title>
+  <link rel="stylesheet" href="../dist/css/style.css">
+</head>
+
+<body>
+
+<div class="hd-wrap">
+
+  <section class="login-page">
+
+    <!--logo-->
+    <div class="login-logo"></div>
+
+    <!--登录框-->
+    <section class="login-form">
+      <form action="">
+        <div class="form-item">
+          <label class="icon-mobile-phone"></label>
+          <input class="clear-input" type="tel" placeholder="请输入手机号">
+        </div>
+        <div class="form-item">
+          <label class="icon-lock"></label>
+          <input class="clear-input" type="password" placeholder="请输入密码">
+        </div>
+        <div class="form-item hide">
+          <label></label>
+          <input class="clear-input" type="text" placeholder="请输入验证码">
+          <span class="login-code"><img src="../dist/image/login-code.png" alt="验证码"></span>
+        </div>
+        <div class="form-item">
+          <input class="clear-input" type="submit" value="登录">
+        </div>
+      </form>
+    </section>
+
+    <!--找回密码 ／ 注册-->
+    <section class="login-actions">
+      <a href="">找回密码</a>
+      <a href="">马上注册</a>
+    </section>
+
+    <!--其它登录方式-->
+    <section class="login-ways">
+      <p>其它登录方式</p>
+      <span class="login-via-sina"></span>
+      <span class="login-via-qq"></span>
+    </section>
+
+  </section>
+</div>
+
+
+<script src="../dist/component/sea.js"></script>
+<script src="../dist/component/sea.config.js"></script>
+<script>
+  seajs.use(['jquery', 'modal'], function ($) {
+
+
+  });
+</script>
+
+</body>
+</html>

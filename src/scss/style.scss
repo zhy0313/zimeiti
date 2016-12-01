@@ -7,7 +7,8 @@
 @import "component/animate";
 @import "base/zimeiti";
 
-// home
+/********** index.html **********/
+
 .swiper-container {
   height: 13rem;
 }
@@ -339,7 +340,8 @@
   font-size: 0.8rem;
 }
 
-// search
+/********** search.html **********/
+
 .search-container {
   min-height: 100%;
   @include flex-container();
@@ -437,7 +439,7 @@
   }
 }
 
-//*************************** fans.html *****************************
+/********** fans.html **********/
 
 .fans-list {
 }
@@ -470,6 +472,146 @@
     }
 
   }
+}
+
+/********** login.html **********/
+
+.login-page {
+  padding: 0 10%;
+  min-height: 100%;
+  background: url("../image/login-bg.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+
+.login-logo {
+  width: 16rem;
+  height: 15.625rem;
+  margin: 0 auto;
+  background: url("../image/login-logo.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.login-form {
+  font-size: 0.875rem;
+  .form-item {
+    position: relative;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  label {
+    position: absolute;
+    width: 1.5rem;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 1.5rem;
+    background: none;
+    box-sizing: border-box;
+    &[type=submit] {
+      padding-left: 0;
+      margin-top: 2rem;
+      background: #ff8400;
+      font-size: 1.125rem;
+      border-radius: 6px;
+    }
+  }
+
+  .icon-mobile-phone {
+    font-size: 22px;
+  }
+  .icon-lock {
+    font-size: 18px;
+  }
+  ::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, .6);
+  }
+}
+
+.login-code {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  img {
+    width: 4.75rem;
+    height: 1.875rem;
+  }
+
+}
+
+.login-actions {
+  text-align: center;
+  font-size: .875rem;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 11.25rem;
+  a {
+    display: block;
+    float: left;
+    color: rgba(255, 255, 255, .8);
+    margin: 1rem 0;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    &:first-child {
+      border-right: 1px solid currentColor;
+    }
+  }
+}
+
+.login-ways {
+  margin-top: 1.5rem;
+  text-align: center;
+  p {
+    position: relative;
+    font-size: .8rem;
+    color: white;
+    &:before, &:after {
+      position: absolute;
+      content: "";
+      display: block;
+      height: 1px;
+      width: 32%;
+      background: white;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    &:before {
+      left: 0;
+    }
+    &:after {
+      right: 0;
+    }
+  }
+  span {
+    margin: .5rem 3rem 3rem;
+  }
+}
+
+.login-via-sina {
+  background-image: url("../image/icon/sina.png");
+}
+
+.login-via-qq {
+  background-image: url("../image/icon/qq.png");
+}
+
+.login-via-sina,
+.login-via-qq {
+  width: 2rem;
+  height: 2rem;
+  background-size: cover;
 }
 
 @media screen and (max-width: 320px) {

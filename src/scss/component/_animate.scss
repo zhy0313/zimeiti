@@ -44,13 +44,13 @@
 }
 
 .speaker {
-    position: absolute;
-    top: 50%;
-    width: 34px;
-    height: 28px;
-    background: url(../image/icon/speaker2.png);
-    -webkit-transform: translateY(-50%) scale(0.5);
-    transform: translateY(-50%) scale(0.5);
+  position: absolute;
+  top: 50%;
+  width: 34px;
+  height: 28px;
+  background: url(../image/icon/speaker.png);
+  -webkit-transform: translateY(-50%) scale(0.5);
+  transform: translateY(-50%) scale(0.5);
   &.active {
     -webkit-animation: ani-speaker 1s steps(3) infinite;
     animation: ani-speaker 1s steps(3) infinite;
