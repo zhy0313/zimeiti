@@ -7,6 +7,7 @@
 |index.html|首页| 
 |search.html|通过首页进入的搜索页| 
 |article.html|文章详情| 
+|article-gallery.html|图集| 
 |article-comment.html|文章全部评论| 
 |article-feedback.html|文章我要报错| 
 |article-reward.html|文章赏赞|  
@@ -22,6 +23,7 @@
 |profile-message.html|系统消息|
 |profile-feedback.html|意见反馈|
 |fans.html|粉丝列表|
+|my-message.html|我的消息|
 
 
 

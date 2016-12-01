@@ -363,6 +363,17 @@
         background: #f1cb34;
       }
     }
+    &.icon-commenting {
+      &:before {
+        background: #9ac743;
+      }
+    }
+    &.icon-bell {
+      &:before {
+        background: #6a892f;
+      }
+    }
+
   }
 }
 
@@ -754,6 +765,28 @@
   color: white;
   border-radius: 6px;
   margin-top: 4rem;
+}
+
+/********** my-message.html **********/
+
+.my-message-page {
+  min-height: 100%;
+  background: #e5e5e5;
+  .zmt-nav-back {
+    background: #f7f7f7;
+  }
+  .profile-list {
+    margin-top: 1rem;
+    li {
+      background: #f7f7f7;
+      &.icon-chat {
+        &:before {
+          background: #89b03d;
+        }
+      }
+    }
+
+  }
 }
 
 /********** media query **********/

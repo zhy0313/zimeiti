@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>百舸-图集</title>
+  <link rel="stylesheet" href="../dist/css/article.css">
+</head>
+
+<body>
+
+<div class="hd-wrap">
+  <div class="article-gallery-page">
+
+    <!--返回导航-->
+
+    <a href="javascript:history.go(-1);" class="gallery-back">
+      <span class="icon-angle-left"></span>
+    </a>
+
+
+    <!--图集-->
+    <section id="swiper" class="swiper-container">
+      <div class="swiper-wrapper">
+        <section class="swiper-slide">
+          <img src="http://t1.niutuku.com/960/43/43-611158.jpg">
+        </section>
+        <section class="swiper-slide">
+          <img src="http://t1.niutuku.com/960/43/43-611182.jpg">
+        </section>
+        <section class="swiper-slide">
+          <img src="http://t1.niutuku.com/960/43/43-611184.jpg">
+        </section>
+        <!--最后一屏是 推荐图集-->
+        <section class="swiper-slide">
+          <div class="recommend-gallery">
+            <h3>推荐图集</h3>
+            <div>
+              <div class="item">
+                <a href="">
+                  <img src="http://t1.niutuku.com/960/43/43-611158.jpg">
+                  <h3>重拾到的民族精神与力量<span>小德</span></h3>
+                </a>
+              </div>
+              <div class="item">
+                <a href="">
+                  <img src="http://t1.niutuku.com/960/43/43-611182.jpg">
+                  <h3>重拾到的民族精神与力量<span>小德</span></h3>
+                </a>
+              </div>
+              <div class="item">
+                <a href="">
+                  <img src="http://t1.niutuku.com/960/43/43-611184.jpg">
+                  <h3>重拾到的民族精神与力量<span>小德</span></h3>
+                </a>
+              </div>
+              <div class="item">
+                <a href="">
+                  <img src="http://t1.niutuku.com/960/43/43-611158.jpg">
+                  <h3>重拾到的民族精神与力量<span>小德</span></h3>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!--图集介绍-->
+    <section id="gallery-desc" class="gallery-desc">
+      <div class="gallery-desc-content">
+        <h3>看《国家记忆》重拾到的民族精神与力量</h3>
+        <div class="middle">
+          <span
+            class="vip"><img
+            src="http://tva4.sinaimg.cn/crop.0.0.960.960.180/bceb232djw8f7najhd9yqj20qo0qoq47.jpg"></span>
+          <span>小德</span>
+          <span>人民大学教授</span>
+          <span class="icon-clock">2016-10-10</span>
+        </div>
+        <div class="bottom">
+          <span>1/21</span>
+          <p>
+            《国家记忆》是中国第一档国史节目以“为国家留史，为民族留记，为人物立传”为宗旨，展现党史、国史、军史中的重大历史事件、各领域重大工程建设、揭秘重大决策背后的故事、讲述各阶层各时代代表性人物，记录讲述党的奋斗史、创业史、中国特色社会主义探索史、改革开放史。</p>
+        </div>
+      </div>
+    </section>
+
+    <!--底栏-->
+    <section class="gallery-bottom">
+      <div class="inner">
+        <span class="icon-pen-angled" id="comment">评论</span>
+        <span class="icon-star-empty">评分</span>
+        <span>私语</span>
+        <span>赏</span>
+        <span class="icon-commenting">50</span>
+        <span class="icon-heart-o"></span>
+        <span class="icon-star-empty"></span>
+      </div>
+    </section>
+
+    <!--文章评论框-->
+    <section>
+      <!--文字输入部分-->
+      <div class="zmt-comment-modal">
+        <form action="">
+          <div class="zmt-comment-bar">
+            <span id="comment-cancel">取消</span>
+            <span><input type="submit" id="comment-send" value="发送"/></span>评论
+          </div>
+          <textarea class="clear-input" name="" id=""></textarea>
+        </form>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+
+<script src="../dist/component/sea.js"></script>
+<script src="../dist/component/sea.config.js"></script>
+<script>
+  seajs.use(['jquery', 'swiper', 'modal'], function ($, swiper) {
+
+    // 图片切换
+    var swiper = new swiper('#swiper', {
+      height: "100%",
+      onSlideChangeEnd: function (swiper) {
+        //activeIndex 从0开始
+        //alert("第" + (swiper.activeIndex + 1) + "个图");
+
+        // 最后一页显示推荐图集
+        if (swiper.isEnd) {
+          $(".article-gallery-page").addClass("last-page");
+        } else {
+          $(".article-gallery-page").removeClass("last-page");
+        }
+      }
+    });
+
+    // 写评论
+    function comment() {
+      var $comment = $("#comment"),
+          $modal   = $(".zmt-comment-modal"),
+          $form    = $modal.find("form");
+
+      $comment.on("click", function () {
+        // 显示评论框
+        $modal.addClass("open");
+      });
+
+      $modal.on("click", "#comment-cancel", function () {
+        // 取消
+        $modal.removeClass("open");
+      }).on("click", "#comment-send", function () {
+        // 发送
+        alert("发送成功");
+        $modal.removeClass("open");
+        $form[0].reset();
+      });
+    }
+
+    comment();
+
+  });
+</script>
+
+</body>
+</html>
