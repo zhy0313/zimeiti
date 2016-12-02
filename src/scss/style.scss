@@ -340,51 +340,12 @@
   font-size: 0.8rem;
 }
 
-/********** search.html **********/
+/********** search-page.html **********/
 
-.search-container {
+.search-page {
   min-height: 100%;
   @include flex-container();
   @include flex-direction-v();
-}
-
-.search-box {
-  width: 100%;
-  background: #f7f7f7;
-  padding: .4rem .5rem;
-  box-shadow: 0 1px 1px 0 #e8e8e8;
-  box-sizing: border-box;
-  span {
-
-    vertical-align: middle;
-    &:nth-child(2) {
-      width: 78%;
-      width: calc(100% - 5rem);
-    }
-  }
-  .search-return {
-    color: #878787;
-    font-size: 1.4rem;
-    width: 1.4rem;
-    height: 1.4rem;
-    text-align: center;
-    line-height: 1.4rem;
-  }
-  input {
-    width: 100%;
-    padding: 6px 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    outline: none;
-    box-sizing: border-box;
-    box-shadow: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-appearance: none;
-  }
-  .search-btn {
-    color: #ff6100;
-    padding: .5rem;
-  }
 }
 
 .search-content {
@@ -710,7 +671,7 @@
       text-align: center;
       border-bottom: none;
       margin-top: 2rem;
-      padding-bottom:3rem;
+      padding-bottom: 3rem;
     }
   }
 
@@ -758,6 +719,63 @@
   img {
     width: 5rem;
     height: 5rem;
+  }
+}
+
+/********** my-follow.html **********/
+.my-follow-page {
+  .search-box {
+    padding: .5rem 1rem;
+    background: #e5e5e5;
+  }
+  .search-keyword {
+    width: 85%;
+    width: calc(100% - 3.5rem);
+  }
+}
+
+.my-follow-list {
+
+}
+
+.follow-item {
+  position: relative;
+  line-height: 1.4;
+  padding: 1rem;
+  padding-bottom: 0;
+  border-bottom: 1px solid #ddd;
+  &:after{
+        font-family: "icomoon";
+    content: "\e910";
+    color: #bdbdbd;
+    margin-left: .5rem;
+    vertical-align: -2px;
+    font-size: 1.2rem;
+        position: absolute;
+    top: 50%;
+    right: 1rem;
+    margin-top: -0.6rem;
+  }
+   .follow-item-l {
+    position: absolute;
+  }
+   .follow-item-r {
+    padding: .2rem 0 .5rem 4rem;
+    h3 {
+      margin: 0;
+      color: #333;
+      font-size: .875rem;
+    }
+    span {
+      width: 90%;
+      height: 1.4rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: .8rem;
+      color: #666;
+      margin-top: .5rem;
+    }
   }
 }
 

@@ -26,7 +26,7 @@
 |my-message.html|我的消息|
 |login.html|登录|
 |register.html|注册|
-|register-addition.html|注册|
+|register-addition.html|注册完善信息|
 
 
 
