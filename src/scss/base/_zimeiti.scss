@@ -63,6 +63,7 @@ html, body {
 
 .zmt-avatar,
 .zmt-avatar-big {
+  position:relative;
   border-radius: 50%;
   img {
     display: block;

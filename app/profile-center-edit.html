@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>百舸</title>
+  <link rel="stylesheet" href="../dist/css/profile.css">
+</head>
+
+<body>
+
+<div class="hd-wrap">
+
+  <section class="profile-center-edit page">
+
+    <!--返回导航-->
+    <h3 class="zmt-nav-back">
+      <a href="javascript:history.go(-1);">
+        <span class="icon-angle-left"></span>
+      </a>
+      个人资料编辑
+    </h3>
+
+    <!--个人资料编辑-->
+    <section class="profile-center-edit-form">
+      <form action="">
+        <div class="form-item">
+          <label>头像</label>
+          <span class="zmt-avatar-big avatar-upload">
+            <input class="clear-input" type="file">
+            <img src="http://tva2.sinaimg.cn/crop.0.0.512.512.50/9e5389bbjw8eylgqjhrzsj20e80e8jrw.jpg">
+          </span>
+        </div>
+        <div class="form-item">
+          <label>昵称</label>
+          <input class="clear-input" type="text" placeholder="请输入">
+        </div>
+        <div class="form-item">
+          <label>性别</label>
+          <select class="clear-input" name="" id="">
+            <option value="1" selected>男</option>
+            <option value="0">女</option>
+          </select>
+        </div>
+        <div class="form-item">
+          <label>签名</label>
+          <textarea class="clear-input" placeholder="请输入"></textarea>
+        </div>
+        <div class="form-item">
+          <label>职业</label>
+          <input class="clear-input" type="text" placeholder="请输入">
+        </div>
+        <div class="form-item">
+          <label>所在地</label>
+          <input class="clear-input" type="text" placeholder="请输入">
+        </div>
+        <div class="form-item">
+          <input class="clear-input" type="submit" value="提交">
+        </div>
+      </form>
+    </section>
+
+  </section>
+
+</div>
+
+
+<script src="../dist/component/sea.js"></script>
+<script src="../dist/component/sea.config.js"></script>
+<script>
+  seajs.use(['jquery', 'modal'], function ($) {
+
+
+  });
+</script>
+
+</body>
+</html>

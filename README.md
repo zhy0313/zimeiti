@@ -19,14 +19,17 @@
 |profile-center.html|个人中心-读者|
 |profile-center-author.html|个人中心-作者|
 |profile-center-more.html|个人中心-更多|
+|profile-center-edit.html|个人中心-编辑|
 |profile-wallet.html|我的钱包|
 |profile-message.html|系统消息|
 |profile-feedback.html|意见反馈|
 |fans.html|粉丝列表|
 |my-message.html|我的消息|
+|my-follow.html|我的关注|
 |login.html|登录|
 |register.html|注册|
 |register-addition.html|注册完善信息|
+
 
 
 
