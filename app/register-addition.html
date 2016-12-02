@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>百舸-完善信息</title>
+  <link rel="stylesheet" href="../dist/css/style.css">
+</head>
+
+<body>
+
+<div class="hd-wrap">
+
+  <section class="register-addition-page page">
+
+    <!--返回导航-->
+    <h3 class="zmt-nav-back">
+      <a href="javascript:history.go(-1);">
+        <span class="icon-angle-left"></span>
+      </a>
+      完善信息
+    </h3>
+
+    <!--注册信息完善-->
+    <section class="register-addition-form">
+      <form action="">
+        <div class="form-item">
+          <div class="register-addition-avatar">
+            <img src="../dist/image/avatar.png" alt="默认头像">
+          </div>
+        </div>
+        <div class="form-item">
+          <label>昵称</label>
+          <input class="clear-input" type="text" placeholder="请输入">
+        </div>
+        <div class="form-item">
+          <label>性别</label>
+          <select class="clear-input" name="" id="">
+            <option value="1" selected>男</option>
+            <option value="0">女</option>
+          </select>
+        </div>
+        <div class="form-item">
+          <label>签名</label>
+          <textarea class="clear-input" placeholder="请输入"></textarea>
+        </div>
+        <div class="form-item">
+          <label>职业</label>
+          <input class="clear-input" type="text" placeholder="请输入">
+        </div>
+        <div class="form-item">
+          <label>所在地</label>
+          <input class="clear-input" type="text" placeholder="请输入">
+        </div>
+        <div class="form-item">
+          <input class="clear-input" type="submit" value="跳过">
+        </div>
+      </form>
+    </section>
+
+  </section>
+
+</div>
+
+
+<script src="../dist/component/sea.js"></script>
+<script src="../dist/component/sea.config.js"></script>
+<script>
+  seajs.use(['jquery', 'modal'], function ($) {
+
+
+  });
+</script>
+
+</body>
+</html>

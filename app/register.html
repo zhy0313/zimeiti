@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>百舸-注册</title>
+  <link rel="stylesheet" href="../dist/css/style.css">
+</head>
+
+<body>
+
+<div class="hd-wrap">
+
+  <section class="register-page page">
+
+    <!--返回导航-->
+    <h3 class="zmt-nav-back">
+      <a href="javascript:history.go(-1);">
+        <span class="icon-angle-left"></span>
+      </a>
+      注册
+    </h3>
+
+    <!--注册框-->
+    <section class="register-form">
+      <form action="">
+        <div class="form-item">
+          <input class="clear-input" type="tel" placeholder="请输入手机号">
+        </div>
+        <div class="form-item">
+          <input class="clear-input" type="text" placeholder="请输入验证码">
+          <span class="register-validate-code" id="get-validate-code">获取验证码</span>
+        </div>
+        <div class="form-item">
+          <input class="clear-input" type="password" placeholder="请输入密码">
+        </div>
+        <div class="form-item">
+          <input class="clear-input" type="password" placeholder="再次输入密码">
+        </div>
+        <div class="form-item register-msg">
+          <span class="icon-warning">您输入的密码不一致</span>
+        </div>
+        <div class="form-item register-protocal">
+          <label>
+            <input type="checkbox">
+            <span></span>
+          </label>
+          <span>我已阅读并同意《用户协议》</span>
+        </div>
+        <div class="form-item">
+          <input class="clear-input" type="submit" value="注册">
+        </div>
+      </form>
+    </section>
+
+  </section>
+
+</div>
+
+
+<script src="../dist/component/sea.js"></script>
+<script src="../dist/component/sea.config.js"></script>
+<script>
+  seajs.use(['jquery', 'modal'], function ($) {
+
+
+  });
+</script>
+
+</body>
+</html>
