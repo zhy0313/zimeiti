@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>百舸</title>
+  <link rel="stylesheet" href="../dist/css/style.css">
+</head>
+
+<body>
+
+<div class="hd-wrap">
+
+  <section class="forget-page page">
+
+    <!--返回导航-->
+    <h3 class="zmt-nav-back">
+      <a href="javascript:history.go(-1);">
+        <span class="icon-angle-left"></span>
+      </a>
+      重置密码
+    </h3>
+
+    <!--输入框-->
+    <section class="forget-form">
+      <form action="">
+        <div class="form-item">
+          <input class="clear-input" type="password" placeholder="新密码">
+        </div>
+        <div class="form-item">
+          <input class="clear-input" type="password" placeholder="确认密码">
+        </div>
+        <div class="form-item password-warn">
+          <span class="icon-warning">为了您的账号安全，密码不小于6位，不能重复或连续数字。</span>
+        </div>
+        <div class="form-item">
+          <input class="clear-input" type="submit" value="完成">
+        </div>
+        <div class="form-item">
+          <a class="forget-to-register" href="./register.html">马上注册</a>
+        </div>
+      </form>
+    </section>
+
+  </section>
+
+</div>
+
+
+<script src="../dist/component/sea.js"></script>
+<script src="../dist/component/sea.config.js"></script>
+<script>
+  seajs.use(['jquery', 'modal'], function ($) {
+
+
+  });
+</script>
+
+</body>
+</html>

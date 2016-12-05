@@ -30,6 +30,8 @@
 |my-read.html|我的阅读|
 |login.html|登录|
 |register.html|注册|
+|forget.html|找回密码|
+|reset.html|重设密码|
 |register-addition.html|注册完善信息|
 
 

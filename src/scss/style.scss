@@ -890,6 +890,80 @@
   }
 }
 
+/********** forget.html **********/
+
+.forget-form {
+  width: 80%;
+  border-radius: 6px;
+
+  margin: 3rem auto;
+
+  .form-item {
+    position: relative;
+    color: #666;
+    overflow: hidden;
+    &:nth-child(1),
+    &:nth-child(2) {
+      box-shadow: 0 0 0 1px #ddd;
+    }
+    &:nth-child(1) {
+      border-radius: 6px 6px 0 0;
+    }
+    &:nth-child(2) {
+      border-radius: 0 0 6px 6px;
+    }
+  }
+  input[type=tel],
+  input[type=text],
+  input[type=password],
+  input[type=submit] {
+    width: 100%;
+    padding: 16px 10px;
+
+    box-sizing: border-box;
+    &[type=submit] {
+      padding-left: 0;
+      background: #ff8400;
+      font-size: 1.125rem;
+      border-radius: 6px;
+      color: white;
+      margin-top: 3rem;
+    }
+  }
+  .icon-warning {
+    color: #d6af82;
+    font-size: .875rem;
+    line-height:1.4;
+    margin-top:1.5rem;
+    &:before {
+      float:left;
+      color: #eec069;
+      font-size: 1.2rem;
+      vertical-align: -3px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.forget-validate-code {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding: .5rem;
+  color: #feb74d;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+}
+
+.forget-to-register {
+  color: #666;
+  display: block;
+  margin: 2rem auto;
+  width: 4rem;
+}
+
 @media screen and (max-width: 320px) {
   html {
     font-size: 14px;

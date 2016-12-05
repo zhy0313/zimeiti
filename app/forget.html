@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>百舸</title>
+  <link rel="stylesheet" href="../dist/css/style.css">
+</head>
+
+<body>
+
+<div class="hd-wrap">
+
+  <section class="forget-page page">
+
+    <!--返回导航-->
+    <h3 class="zmt-nav-back">
+      <a href="javascript:history.go(-1);">
+        <span class="icon-angle-left"></span>
+      </a>
+      找回密码
+    </h3>
+
+    <!--输入框-->
+    <section class="forget-form">
+      <form action="">
+        <div class="form-item">
+          <input class="clear-input" type="tel" placeholder="请输入手机号">
+        </div>
+        <div class="form-item">
+          <input class="clear-input" type="text" placeholder="请输入验证码">
+          <span class="forget-validate-code" id="get-validate-code">获取验证码</span>
+        </div>
+        <div class="form-item">
+          <input class="clear-input" type="submit" value="下一步">
+        </div>
+        <div class="form-item">
+          <a class="forget-to-register" href="./register.html">马上注册</a>
+        </div>
+      </form>
+    </section>
+
+  </section>
+
+</div>
+
+
+<script src="../dist/component/sea.js"></script>
+<script src="../dist/component/sea.config.js"></script>
+<script>
+  seajs.use(['jquery', 'modal'], function ($) {
+
+
+  });
+</script>
+
+</body>
+</html>
