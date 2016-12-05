@@ -1,0 +1,69 @@
+@charset "UTF-8";
+@import "base/reset";
+@import "base/common";
+@import "component/modal";
+@import "component/font";
+@import "base/zimeiti";
+
+/********** whisper-list.html **********/
+
+.whisper-list-page {
+
+}
+
+.whisper-list {
+
+}
+
+.whisper-list-item {
+  position: relative;
+  padding: .5rem 1rem;
+  border-bottom: 1px solid #d8d8d8;
+  line-height: 1.4;
+  .whisper-item-l {
+    position: absolute;
+  }
+  .whisper-item-r {
+    padding-left: 3rem;
+    .top {
+      color: #666;
+      font-size: 0.75rem;
+      padding: 6px 0;
+      span {
+        &:last-child {
+          float: right;
+        }
+      }
+    }
+    .bottom {
+      color: #333;
+      font-size: 0.875rem;
+      margin-top: .4rem;
+      margin-bottom: 0;
+    }
+  }
+  &.read,
+  &.refuse {
+    background: #fff;
+    .bottom {
+      color: #999;
+    }
+  }
+
+}
+
+.whisper-item-refuse {
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3rem;
+  padding: .5rem;
+  color: white;
+  background: rgba(194, 181, 164, 0.9);
+  -webkit-transform: rotate(-20deg);
+  webkit-transform: rotate(-20deg);
+}

@@ -933,10 +933,10 @@
   .icon-warning {
     color: #d6af82;
     font-size: .875rem;
-    line-height:1.4;
-    margin-top:1.5rem;
+    line-height: 1.4;
+    margin-top: 1.5rem;
     &:before {
-      float:left;
+      float: left;
       color: #eec069;
       font-size: 1.2rem;
       vertical-align: -3px;
@@ -962,6 +962,64 @@
   display: block;
   margin: 2rem auto;
   width: 4rem;
+}
+
+/********** follow-list.html **********/
+
+.follow-list-item {
+  position: relative;
+  line-height: 1.4;
+  margin: 1rem;
+  padding-bottom: 0;
+  border-bottom: 1px solid #ddd;
+
+  .follow-item-l {
+    position: absolute;
+  }
+  .follow-item-r {
+    padding: .2rem 3.5rem .5rem 4rem;
+    h3 {
+      margin: 0;
+      color: #333;
+      font-size: .875rem;
+    }
+    span {
+      width: 90%;
+      height: 1.4rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: .8rem;
+      color: #666;
+      margin-top: .5rem;
+    }
+  }
+}
+
+.follow-btn {
+  position: absolute;
+  top: 50%;
+  color: #ff8400;
+  border: 1px solid currentColor;
+  width: 3.4rem;
+  padding: 6px 0;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 12px;
+  right: 0;
+  line-height: 1;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  @extend .icon-add;
+  @extend [class^="icon-"];
+
+  &.followed {
+    color: #666;
+    border: 1px solid #b8b8b8;
+    &:before {
+      content: "";
+    }
+  }
 }
 
 @media screen and (max-width: 320px) {
