@@ -744,22 +744,22 @@
   padding: 1rem;
   padding-bottom: 0;
   border-bottom: 1px solid #ddd;
-  &:after{
-        font-family: "icomoon";
+  &:after {
+    font-family: "icomoon";
     content: "\e910";
     color: #bdbdbd;
     margin-left: .5rem;
     vertical-align: -2px;
     font-size: 1.2rem;
-        position: absolute;
+    position: absolute;
     top: 50%;
     right: 1rem;
     margin-top: -0.6rem;
   }
-   .follow-item-l {
+  .follow-item-l {
     position: absolute;
   }
-   .follow-item-r {
+  .follow-item-r {
     padding: .2rem 0 .5rem 4rem;
     h3 {
       margin: 0;
@@ -775,6 +775,117 @@
       font-size: .8rem;
       color: #666;
       margin-top: .5rem;
+    }
+  }
+}
+
+/********** my-articles.html **********/
+
+.my-articles-page {
+
+}
+
+.my-articles-list {
+  padding: 1rem;
+  .articles-item {
+    position: relative;
+    height: 4.5rem;
+    font-size: .875rem;
+    border-bottom: 1px solid #e2e2e2;
+    padding: .6rem 0;
+  }
+  .item-l {
+    position: absolute;
+    width: 6rem;
+    height: 4.5rem;
+    overflow: hidden;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  h3 {
+    height: 1.4rem;
+    line-height: 1.4rem;
+    width: 100%;
+    padding-left: 6.5rem;
+    color: #454545;
+    float: left;
+    box-sizing: border-box;
+    margin: 0;
+    font-weight: normal;
+    @extend .txt-overflow;
+  }
+  .item-b {
+    position: absolute;
+    bottom: .5rem;
+    right: 0;
+    color: #b8b8b8;
+    span {
+      margin-left: 1rem;
+    }
+  }
+}
+
+/********** my-read.html **********/
+
+.my-read-page {
+
+}
+
+.my-read-calendar {
+  background: #575757;
+  color: white;
+  overflow: hidden;
+  padding: .3rem 0;
+  dl, dd {
+    margin: 0;
+  }
+  dt, dd {
+    position: relative;
+    float: left;
+    width: 12.5%;
+    text-align: center;
+    padding: .5rem 0;
+  }
+  span {
+    display: block;
+    margin-bottom: .2rem;
+    &:first-child {
+      font-size: 12px;
+      color: #bebebe;
+    }
+  }
+  dt {
+    background: #666666;
+    border-radius: 6px;
+    em {
+      font-size: 1.125rem;
+      font-style: normal;
+      color: #ff6c00;
+    }
+    span:last-child {
+      font-size: 0.875rem;
+    }
+  }
+  dd {
+    &.active {
+      background: #ff6c00;
+      border-radius: 6px;
+    }
+    &.read {
+      &:after {
+        content: "";
+        display: block;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: .2rem;
+        background: #bebebe;
+        left: 50%;
+        margin-left: -2px;
+      }
     }
   }
 }

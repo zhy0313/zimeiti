@@ -26,6 +26,8 @@
 |fans.html|粉丝列表|
 |my-message.html|我的消息|
 |my-follow.html|我的关注|
+|my-articles.html|我的作品|
+|my-read.html|我的阅读|
 |login.html|登录|
 |register.html|注册|
 |register-addition.html|注册完善信息|
