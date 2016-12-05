@@ -36,4 +36,5 @@
 |my-read.html|我的阅读|
 |whisper-list.html|私语列表|
 |whisper-ask.html|私语提问|
+|whisper-view-author.html|查看私语-作者页|
 
