@@ -67,3 +67,44 @@
   -webkit-transform: rotate(-20deg);
   webkit-transform: rotate(-20deg);
 }
+
+/********** whisper-ask.html **********/
+
+.whisper-ask {
+  width: 86%;
+  color: #999;
+  margin: 0 auto;
+  line-height: 1.4;
+  textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 100%;
+    box-sizing: border-box;
+    height: 11.2rem;
+    color: black;
+  }
+}
+
+.pay-tip {
+  font-size: .875rem;
+  color: #666;
+  text-align: center;
+  em {
+    font-style: normal;
+    color: #ff8400;
+  }
+  span {
+    font-size: .8rem;
+    color: #999;
+  }
+}
+
+.pay-btn {
+  padding: .5rem;
+  font-size: 1.125rem;
+  color: white;
+  background: #ff8400;
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 1rem;
+}

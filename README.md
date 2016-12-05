@@ -35,4 +35,5 @@
 |my-articles.html|我的作品|
 |my-read.html|我的阅读|
 |whisper-list.html|私语列表|
+|whisper-ask.html|私语提问|
 

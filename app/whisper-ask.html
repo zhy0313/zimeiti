@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>百舸</title>
+  <link rel="stylesheet" href="../dist/css/whisper.css">
+</head>
+
+<body>
+
+<div class="hd-wrap">
+  <div class="whisper-ask-page page">
+
+    <!--返回导航-->
+    <h3 class="zmt-nav-back">
+      <a href="javascript:history.go(-1);">
+        <span class="icon-angle-left"></span>
+      </a>
+      私语
+    </h3>
+
+    <!--私语提问-->
+    <section class="whisper-ask">
+
+      <form action="">
+        <div class="form-item">
+          <p>回答领域：<span>历史</span><span>政治</span></p>
+        </div>
+        <div class="form-item">
+          <textarea class="clear-input" placeholder="写下您想要的问题" name=""></textarea>
+        </div>
+        <div class="form-item">
+          <p class="pay-tip">需要向他支付<em>10元</em><span>（48小时内不回答钱将退还给您）</span></p>
+        </div>
+        <div class="form-item">
+          <input class="pay-btn clear-input" type="submit" value="支付">
+        </div>
+      </form>
+
+    </section>
+
+  </div>
+</div>
+
+
+<script src="../dist/component/sea.js"></script>
+<script src="../dist/component/sea.config.js"></script>
+<script>
+  seajs.use(['jquery', 'modal'], function ($) {
+
+
+  });
+</script>
+
+</body>
+</html>
