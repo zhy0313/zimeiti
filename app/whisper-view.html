@@ -12,7 +12,7 @@
 <body>
 
 <div class="hd-wrap">
-  <div class="whisper-view-author-page">
+  <div class="whisper-view-page">
 
     <!--返回导航-->
     <h3 class="zmt-nav-back">
@@ -22,8 +22,9 @@
       私语
     </h3>
 
-    <!--私语查看 作者-->
+    <!--私语查看 本人-->
     <section class="whisper-view">
+
       <div class="question-box">
         <div class="question-person">
           <span>
@@ -37,24 +38,13 @@
             教育是一方面，另一方面还需要全社会形成对拐卖儿童零容忍的环境。社会大环境不具备，这种问题是很难根除的。预警平台发起的初衷就是推动儿童失踪社会应急响应机制的建立。人人参与，形成过街老鼠，人人喊打的局面，让人贩子无处遁形，孩子们才能更安全。</p>
         </div>
       </div>
-      <div class="question-answer" id="answer-box">
-        <form action="">
-          <div class="form-item">
-            <p>回答：</p>
-          </div>
-          <div class="form-item">
-            <textarea class="clear-input" placeholder="写下您的回复"></textarea>
-          </div>
-          <div class="form-item">
-            <input class="clear-input" type="reset" value="取消" id="question-cancel">
-            <input class="clear-input" type="submit" value="提交" id="question-submit">
-          </div>
-        </form>
+
+      <div class="question-status">
+        <p>作者暂时无法回答，<br>对您造成的不便敬请谅解。</p>
       </div>
 
       <div class="question-btn">
-        <span id="question-refuse">拒绝</span>
-        <span id="question-reply">回复</span>
+        <span id="question-del">删除</span>
       </div>
 
     </section>
@@ -68,16 +58,6 @@
 <script>
   seajs.use(['jquery', 'modal'], function ($) {
 
-    $("#question-reply").on("click", function () {
-      $("#answer-box").slideDown();
-      $(".question-btn").fadeOut();
-    });
-
-    $("#question-cancel").on("click", function () {
-      $("#answer-box").slideUp(function () {
-        $(".question-btn").fadeIn();
-      });
-    });
 
   });
 </script>
