@@ -488,12 +488,20 @@ article {
   border-radius: 1rem;
 }
 
-.article-comment-list {
+.comment-list {
   padding: 1rem;
-  padding-bottom: 5rem;
+  //padding-bottom: 5rem;
   background: #f7f7f7;
   .comment-item {
     margin-bottom: 1rem;
+  }
+  .comment-item {
+    &:only-child {
+      margin-bottom: 0;
+      .comment-bottom {
+        border-bottom: none;
+      }
+    }
   }
 
   .comment-top {
@@ -548,6 +556,12 @@ article {
     margin: .5rem 0 0 2.5rem;
     padding-bottom: .5rem;
     border-bottom: 1px dotted #ddd;
+  }
+  .comment-reply-name {
+    strong {
+      color: #ff8400;
+      margin-left: 4px;
+    }
   }
 }
 
@@ -979,6 +993,8 @@ article {
     }
   }
 }
+
+/********** article.html ************/
 
 @media screen and (max-width: 320px) {
   html {

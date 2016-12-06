@@ -4,6 +4,10 @@ html, body {
   height: 100%;
 }
 
+.pb-5 {
+  padding-bottom: 5rem;
+}
+
 .icon-clock,
 .icon-commenting,
 .icon-heart,
@@ -63,7 +67,7 @@ html, body {
 
 .zmt-avatar,
 .zmt-avatar-big {
-  position:relative;
+  position: relative;
   border-radius: 50%;
   img {
     display: block;
@@ -158,6 +162,7 @@ html, body {
   padding: .5rem;
   span {
     vertical-align: middle;
+    box-sizing: border-box;
     &:nth-child(1) {
       border: 1px solid #ddd;
       padding: .5rem;
@@ -167,6 +172,11 @@ html, body {
     &:nth-child(n+2) {
       margin-left: 3%;
       text-align: center;
+    }
+  }
+  span {
+    &:only-child {
+      width: 100%;
     }
   }
 }

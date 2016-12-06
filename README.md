@@ -15,7 +15,6 @@
 |follow-list.html|关注列表|
 |article.html|文章详情| 
 |article-gallery.html|图集| 
-|article-comment.html|文章全部评论| 
 |article-feedback.html|文章我要报错| 
 |article-reward.html|文章赏赞|  
 |article-reward-view.html|文章赏赞人员列表|
@@ -40,4 +39,6 @@
 |whisper-view-author.html|查看私语-作者页|
 |whisper-view-list.html|付费查看私语列表-非本人|
 |whisper-view-detail.html|查看他人私语内容|
+|comment.html|作品中的评论页面| 
+|comment-detail.html|作品中某一评论点开后页面| 
 
