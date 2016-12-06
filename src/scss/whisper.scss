@@ -295,6 +295,123 @@
   }
 }
 
+/********** whisper-view-detail.html **********/
+
+.whisper-view-detail {
+  padding: 1.5rem;
+  .detail-inner {
+    box-shadow: 1px 1px 2px #c3c3c3;
+  }
+  .detail-question {
+    background: #f7f7f7;
+    padding: 1.5rem;
+    padding-bottom: 0;
+    .head {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: .5rem;
+      h3 {
+        font-weight: normal;
+        margin: .5rem 0;
+        font-size: .875rem;
+      }
+      span {
+        float: left;
+        color: #bfbfbf;
+        font-size: .8rem;
+        margin-right: .5rem;
+      }
+
+    }
+    .body {
+      padding: 1rem 0;
+      span {
+        color: #ff8400;
+        float: left;
+      }
+      p {
+        color: #666;
+        line-height: 1.4;
+        margin: 0;
+      }
+    }
+  }
+
+  .detail-answer {
+    background: #fff;
+    padding: 1.5rem;
+    padding-bottom: 0;
+    border-top: 2px solid #eaeaea;
+    .head {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: .5rem;
+      h3 {
+        font-weight: normal;
+        margin: .5rem 0;
+        font-size: .875rem;
+        text-align: right;
+      }
+      span {
+        float: right;
+        color: #bfbfbf;
+        font-size: .8rem;
+        margin-left: .5rem;
+      }
+
+    }
+    .body {
+      padding: 1rem 0;
+      span {
+        color: #00baff;
+        float: left;
+      }
+      p {
+        color: #666;
+        line-height: 1.4;
+        margin: 0;
+      }
+    }
+  }
+
+  .detail-view {
+    background: white;
+    text-align: center;
+    border-top: 1px dotted #eaeaea;
+    padding: 1rem;
+    a {
+      color: #bfbfbf;
+      font-size: .8rem;
+    }
+    .detail-attitude {
+      margin-top: 1.5rem;
+      span {
+        width: 3rem;
+        height: 3rem;
+        line-height: 3rem;
+        border-radius: 50%;
+        color: white;
+        font-size: 1.4rem;
+        margin: 0 2rem;
+        &.icon-thumbs-up {
+          background: #ff8400;
+        }
+        &.icon-thumbs-down {
+          background: #a0a0a0;
+        }
+        em {
+          display: block;
+          color: #999;
+          font-size: 12px;
+          font-style: normal;
+          margin-top: -0.5rem;
+        }
+      }
+    }
+  }
+
+}
+
 @media screen and (max-width: 320px) {
   html {
     font-size: 14px;
