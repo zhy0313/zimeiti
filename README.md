@@ -38,4 +38,5 @@
 |whisper-ask.html|私语提问|
 |whisper-view.html|查看私语|
 |whisper-view-author.html|查看私语-作者页|
+|whisper-view-list.html|查看私语列表-非本人|
 
