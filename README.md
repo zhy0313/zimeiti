@@ -41,5 +41,7 @@
 |whisper-view-detail.html|查看他人私语内容|
 |comment.html|作品中的评论页面| 
 |comment-detail.html|作品中某一评论点开后页面| 
-|comment-msg.html|我的消息 中 评论消息页面| 
+|msg-comment.html|消息中 评论消息页面| 
+|msg-get-comment.html|消息中 某一评论得到的回复页面| 
+
 

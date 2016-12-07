@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>文章评论</title>
+  <link rel="stylesheet" href="../dist/css/article.css">
+</head>
+
+<body>
+
+<div class="hd-wrap">
+  <div class="msg-get-comment-page page">
+
+    <!--返回导航-->
+    <h3 class="zmt-nav-back">
+      <a href="javascript:history.go(-1);">
+        <span class="icon-angle-left"></span>
+      </a>
+      评论详情
+    </h3>
+
+    <section class="msg-comment-head">
+      <p>文章<span>《盛世红颜》</span>的评论</p>
+    </section>
+
+    <section class="comment-list msg-reply-to-me">
+      <!--第一个是我的评论-->
+      <div class="comment-item">
+        <div class="comment-top">
+          <dl>
+            <dt>
+              <img src="http://tva4.sinaimg.cn/crop.0.0.960.960.180/bceb232djw8f7najhd9yqj20qo0qoq47.jpg">
+            </dt>
+            <dd class="comment-name">我的评论：</dd>
+            <dd class="icon-clock">现在</dd>
+          </dl>
+        </div>
+        <p class="comment-bottom">
+          这档历史纪录类节目有许多创新亮点，一批德高望重的艺术家焦晃、马少骅、鲍国安、刘劲等将在节目中担任主讲人，倾情讲述历史故事。
+        </p>
+      </div>
+      <!--其余为对我评论的回复-->
+      <div class="comment-item">
+        <div class="comment-top">
+          <dl>
+            <dt>
+              <img src="http://tva4.sinaimg.cn/crop.0.0.960.960.180/bceb232djw8f7najhd9yqj20qo0qoq47.jpg">
+            </dt>
+            <dd class="comment-name">Aaron</dd>
+            <dd class="icon-clock">现在</dd>
+          </dl>
+          <span class="msg-comment-reply">回复</span>
+        </div>
+        <p class="comment-bottom">
+          这档历史纪录类节目有许多创新亮点，一批德高望重的艺术家焦晃、马少骅、鲍国安、刘劲等将在节目中担任主讲人，倾情讲述历史故事。
+        </p>
+      </div>
+
+      <div class="comment-item">
+        <div class="comment-top">
+          <dl>
+            <dt>
+              <img src="http://tva4.sinaimg.cn/crop.0.0.960.960.180/bceb232djw8f7najhd9yqj20qo0qoq47.jpg">
+            </dt>
+            <dd class="comment-name">Aaron</dd>
+            <dd class="icon-clock">现在</dd>
+          </dl>
+          <span class="msg-comment-reply">回复</span>
+        </div>
+        <p class="comment-bottom">
+          这档历史纪录类节目有许多创新亮点，一批德高望重的艺术家焦晃、马少骅、鲍国安、刘劲等将在节目中担任主讲人，倾情讲述历史故事。
+        </p>
+      </div>
+
+      <div class="comment-item">
+        <div class="comment-top">
+          <dl>
+            <dt>
+              <img src="http://tva4.sinaimg.cn/crop.0.0.960.960.180/bceb232djw8f7najhd9yqj20qo0qoq47.jpg">
+            </dt>
+            <dd class="comment-name">Aaron</dd>
+            <dd class="icon-clock">现在</dd>
+          </dl>
+          <span class="msg-comment-reply">回复</span>
+        </div>
+        <p class="comment-bottom">
+          这档历史纪录类节目有许多创新亮点，一批德高望重的艺术家焦晃、马少骅、鲍国安、刘劲等将在节目中担任主讲人，倾情讲述历史故事。
+        </p>
+      </div>
+
+    </section>
+
+  </div>
+
+  <!--文章评论框-->
+  <section class="zmt-comment-box">
+
+    <!--文字输入部分-->
+    <div class="zmt-comment-modal">
+      <div class="zmt-comment-bar">
+        <span id="comment-cancel">取消</span>
+        <span id="comment-send">发送</span>
+        评论
+      </div>
+      <textarea class="clear-input" name="" id=""></textarea>
+    </div>
+  </section>
+</div>
+
+
+<script src="../dist/component/sea.js"></script>
+<script src="../dist/component/sea.config.js"></script>
+<script>
+  seajs.use(['jquery', 'modal'], function ($) {
+    // 写评论
+    function comment() {
+      var $box   = $(".zmt-comment-box"),
+          $modal = $box.find(".zmt-comment-modal"),
+          $text  = $box.find("textarea");
+
+      $(".msg-reply-to-me").on("click", ".msg-comment-reply", function () {
+        // 显示评论框
+        $modal.addClass("open");
+      });
+      $modal.on("click", "#comment-cancel", function () {
+        // 取消
+        $modal.removeClass("open");
+      }).on("click", "#comment-send", function () {
+        // 发送
+        alert("发送成功");
+        $modal.removeClass("open");
+        $text.val("");
+      });
+    }
+
+    comment();
+  });
+</script>
+
+</body>
+</html>

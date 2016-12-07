@@ -996,14 +996,14 @@ article {
 
 /********** comment-msg.html ************/
 
-.comment-msg-page {
+.msg-comment-page {
   background: #e5e5e5;
   .zmt-nav-back {
     background: #f7f7f7;
   }
 }
 
-.comment-msg-list {
+.msg-comment-list {
   .item {
     position: relative;
     padding: .5rem 1rem;
@@ -1051,6 +1051,54 @@ article {
       color: #666;
     }
   }
+}
+
+/********** comment-get-msg.html ************/
+
+.msg-get-comment-page {
+  background: #e5e5e5;
+  .zmt-nav-back {
+    background: #f7f7f7;
+  }
+}
+
+.msg-comment-head {
+  background: #f7f7f7;
+  overflow: hidden;
+  font-size: 0.875rem;
+  color: #666;
+  padding: 0 1rem;
+  margin-bottom: .5rem;
+  span {
+    font-size: 1rem;
+    color: #333;
+  }
+}
+
+.msg-reply-to-me {
+  padding: 0;
+  padding-bottom: 1rem;
+  .comment-item {
+    padding: 1rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    &:first-child {
+      background: white;
+      .comment-name {
+        color: #ff8400;
+      }
+    }
+  }
+}
+
+.msg-comment-reply{
+  position: absolute;
+  right: 0;
+  background: #ffae00;
+  color: white;
+  padding: 4px 1rem;
+  font-size: .8rem;
+  border-radius: 4px;
 }
 
 @media screen and (max-width: 320px) {
