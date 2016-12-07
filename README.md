@@ -10,7 +10,6 @@
 |login.html|登录|
 |register.html|注册|
 |forget.html|找回密码|
-|reset.html|重设密码|
 |register-addition.html|注册完善信息|
 |follow-list.html|关注列表|
 |article.html|文章详情| 
@@ -42,7 +41,13 @@
 |comment.html|作品中的评论页面| 
 |comment-detail.html|作品中某一评论点开后页面| 
 |msg-comment.html|消息中 评论消息页面| 
-|msg-get-cmt.html|消息中 某一评论得到的回复页面| 
-|msg-get-cmt-a.html|消息中 某一评论得到的回复页面-作者| 
+|msg-comment-a.html|消息中某一作品得到的评论页面（作者）| 
+|msg-comment-a-d.html|消息中某一评论的回复页面（作者）| 
+|msg-comment-r.html|消息中某一评论得到的回复页面| 
+|msg-comment-r-d.html|消息中两人评论回复互动页面| 
+
+
+
+
 
 

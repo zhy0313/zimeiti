@@ -902,15 +902,16 @@
     position: relative;
     color: #666;
     overflow: hidden;
-    &:nth-child(1),
-    &:nth-child(2) {
-      box-shadow: 0 0 0 1px #ddd;
-    }
     &:nth-child(1) {
-      border-radius: 6px 6px 0 0;
+      input {
+        border-radius: 6px 6px 0 0;
+      }
     }
-    &:nth-child(2) {
-      border-radius: 0 0 6px 6px;
+    &:nth-child(4) {
+      input {
+        border-bottom: 1px solid #ddd;
+        border-radius: 0 0 6px 6px;
+      }
     }
   }
   input[type=tel],
@@ -919,8 +920,9 @@
   input[type=submit] {
     width: 100%;
     padding: 16px 10px;
-
     box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-bottom: none;
     &[type=submit] {
       padding-left: 0;
       background: #ff8400;
@@ -928,6 +930,7 @@
       border-radius: 6px;
       color: white;
       margin-top: 3rem;
+      border: none;
     }
   }
   .icon-warning {
