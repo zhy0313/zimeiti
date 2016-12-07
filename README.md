@@ -42,6 +42,7 @@
 |comment.html|作品中的评论页面| 
 |comment-detail.html|作品中某一评论点开后页面| 
 |msg-comment.html|消息中 评论消息页面| 
-|msg-get-comment.html|消息中 某一评论得到的回复页面| 
+|msg-get-cmt.html|消息中 某一评论得到的回复页面| 
+|msg-get-cmt-a.html|消息中 某一评论得到的回复页面-作者| 
 
 
