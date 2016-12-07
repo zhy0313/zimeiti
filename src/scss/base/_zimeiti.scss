@@ -108,7 +108,18 @@ html, body {
   background: #ff8400;
 }
 
-%nav-common {
+.zmt-nav {
+  padding: .5rem 1rem;
+  color: #8b8b8b;
+  background: #e3e3e3;
+  font-size: .875rem;
+  font-weight: normal;
+  line-height: 1.4;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.zmt-nav-back {
   position: relative;
   height: 3rem;
   line-height: 3rem;
@@ -116,16 +127,6 @@ html, body {
   padding: 0 1rem;
   margin: 0;
   font-weight: normal;
-}
-
-.zmt-nav {
-  @extend %nav-common;
-  color: #8b8b8b;
-  background: #e3e3e3;
-}
-
-.zmt-nav-back {
-  @extend %nav-common;
   text-align: center;
   color: #666;
   z-index: 10;

@@ -495,14 +495,6 @@ article {
   .comment-item {
     margin-bottom: 1rem;
   }
-  .comment-item {
-    &:only-child {
-      margin-bottom: 0;
-      .comment-bottom {
-        border-bottom: none;
-      }
-    }
-  }
 
   .comment-top {
     position: relative;
@@ -994,7 +986,7 @@ article {
   }
 }
 
-/********** comment-msg.html ************/
+/********** msg-comment.html ************/
 
 .msg-comment-page {
   background: #e5e5e5;
@@ -1053,7 +1045,7 @@ article {
   }
 }
 
-/********** msg-get-cmt.html ************/
+/********** msg-comment-r.html ************/
 
 .msg-comment-head {
   background: #f7f7f7;
@@ -1068,7 +1060,7 @@ article {
   }
 }
 
-.msg-reply-to-me {
+.comment-list.reader {
   padding: 0;
   padding-bottom: 1rem;
   .comment-item {
@@ -1094,7 +1086,37 @@ article {
   border-radius: 4px;
 }
 
-/********** msg-get-cmt-a.html ************/
+/********** msg-comment-r-d.html ************/
+
+.comment-at {
+  color: #ff8400;
+  margin-right: 4px;
+}
+
+/********** msg-comment-a.html ************/
+
+.comment-list.author {
+  .comment-item {
+    &.me {
+      .comment-name {
+        color: #ff8400;
+      }
+    }
+  }
+}
+
+/********** msg-comment-a-d.html ************/
+
+.comment-list.author {
+  .comment-item {
+    .comment-bottom {
+      border-bottom: none;
+    }
+    &:only-child {
+      margin-bottom: 0;
+    }
+  }
+}
 
 @media screen and (max-width: 320px) {
   html {

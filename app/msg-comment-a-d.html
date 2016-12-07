@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
   <meta name="format-detection" content="telephone=no">
-  <title>文章评论</title>
+  <title>百舸</title>
   <link rel="stylesheet" href="../dist/css/article.css">
 </head>
 
 <body>
 
 <div class="hd-wrap">
-  <div class="msg-get-cmt-a-page page">
+  <div class="page">
 
     <!--返回导航-->
     <h3 class="zmt-nav-back">
@@ -26,7 +26,8 @@
       <p>我的文章<span>《盛世红颜》</span></p>
     </section>
 
-    <section class="comment-list msg-reply-to-me">
+    <!--主评论-->
+    <section class="comment-list author">
 
       <div class="comment-item">
         <div class="comment-top">
@@ -37,39 +38,54 @@
             <dd class="comment-name">Aaron</dd>
             <dd class="icon-clock">现在</dd>
           </dl>
-          <span class="msg-comment-reply">回复</span>
+          <ul>
+            <li class="icon-commenting js-comment">3</li>
+            <li class="icon-heart active">16</li>
+          </ul>
+        </div>
+        <p class="comment-bottom">
+          这档历史纪录类节目有许多创新亮点，一批德高望重的艺术家焦晃、马少骅、鲍国安、刘劲等将在节目中担任主讲人，倾情讲述历史故事。
+        </p>
+      </div>
+    </section>
+
+    <h3 class="zmt-nav">全部回复</h3>
+
+
+    <section class="comment-list author">
+
+      <div class="comment-item">
+        <div class="comment-top">
+          <dl>
+            <dt>
+              <img src="http://tva4.sinaimg.cn/crop.0.0.960.960.180/bceb232djw8f7najhd9yqj20qo0qoq47.jpg">
+            </dt>
+            <dd class="comment-name">Aaron</dd>
+            <dd class="icon-clock">现在</dd>
+          </dl>
+          <ul>
+            <li class="icon-commenting js-comment">3</li>
+            <li class="icon-heart active">16</li>
+          </ul>
         </div>
         <p class="comment-bottom">
           这档历史纪录类节目有许多创新亮点，一批德高望重的艺术家焦晃、马少骅、鲍国安、刘劲等将在节目中担任主讲人，倾情讲述历史故事。
         </p>
       </div>
 
-      <div class="comment-item">
+      <div class="comment-item me">
         <div class="comment-top">
           <dl>
             <dt>
               <img src="http://tva4.sinaimg.cn/crop.0.0.960.960.180/bceb232djw8f7najhd9yqj20qo0qoq47.jpg">
             </dt>
-            <dd class="comment-name">Aaron</dd>
+            <dd class="comment-name">我</dd>
             <dd class="icon-clock">现在</dd>
           </dl>
-          <span class="msg-comment-reply">回复</span>
-        </div>
-        <p class="comment-bottom">
-          这档历史纪录类节目有许多创新亮点，一批德高望重的艺术家焦晃、马少骅、鲍国安、刘劲等将在节目中担任主讲人，倾情讲述历史故事。
-        </p>
-      </div>
-
-      <div class="comment-item">
-        <div class="comment-top">
-          <dl>
-            <dt>
-              <img src="http://tva4.sinaimg.cn/crop.0.0.960.960.180/bceb232djw8f7najhd9yqj20qo0qoq47.jpg">
-            </dt>
-            <dd class="comment-name">Aaron</dd>
-            <dd class="icon-clock">现在</dd>
-          </dl>
-          <span class="msg-comment-reply">回复</span>
+          <ul>
+            <li class="icon-commenting js-comment">3</li>
+            <li class="icon-heart active">16</li>
+          </ul>
         </div>
         <p class="comment-bottom">
           这档历史纪录类节目有许多创新亮点，一批德高望重的艺术家焦晃、马少骅、鲍国安、刘劲等将在节目中担任主讲人，倾情讲述历史故事。
@@ -106,7 +122,7 @@
           $modal = $box.find(".zmt-comment-modal"),
           $text  = $box.find("textarea");
 
-      $(".msg-reply-to-me").on("click", ".msg-comment-reply", function () {
+      $(".comment-list").on("click", ".js-comment", function () {
         // 显示评论框
         $modal.addClass("open");
       });
