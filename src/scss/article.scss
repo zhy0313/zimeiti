@@ -994,7 +994,64 @@ article {
   }
 }
 
-/********** article.html ************/
+/********** comment-msg.html ************/
+
+.comment-msg-page {
+  background: #e5e5e5;
+  .zmt-nav-back {
+    background: #f7f7f7;
+  }
+}
+
+.comment-msg-list {
+  .item {
+    position: relative;
+    padding: .5rem 1rem;
+    background: #f7f7f7;
+    overflow: hidden;
+    margin-top: .5rem;
+    line-height: 1.4;
+    font-size: .875rem;
+    .left {
+      position: relative;
+      float: left;
+      width: 3.2rem;
+      height: 3.2rem;
+      margin-right: 1rem;
+      i {
+        position: absolute;
+        top: -4px;
+        right: -.5rem;
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        color: white;
+        background: #ff8400;
+        font-size: 12px;
+        text-align: center;
+        font-style: normal;
+        padding: 2px;
+      }
+    }
+  }
+  .top {
+    padding: 0.2rem 0;
+    color: #666;
+    span {
+      font-size: 1rem;
+      color: #333;
+    }
+  }
+  .bottom {
+    color: #999;
+    height: 1.225rem;
+    @extend .txt-overflow;
+    span {
+      color: #666;
+    }
+  }
+}
 
 @media screen and (max-width: 320px) {
   html {
