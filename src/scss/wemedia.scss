@@ -335,6 +335,16 @@
   }
 }
 
+.progress-link {
+  margin-top:2rem;
+  text-align: center;
+  a {
+    color: white;
+    background: #feb74d;
+    padding: .5rem;
+  }
+}
+
 @media screen and (max-width: 320px) {
   html {
     font-size: 14px;
