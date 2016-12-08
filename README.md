@@ -50,6 +50,8 @@
 |wemedia-apply-organization-a.html|自媒体申请-机构-a|
 |wemedia-apply-organization-b.html|自媒体申请-机构-b|
 |wemedia-apply-progress.html|自媒体申请-进度|
+|wemedia-apply-progress-result.html|自媒体申请-进度|
+
 
 
 
