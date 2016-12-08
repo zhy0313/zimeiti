@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>百舸</title>
+  <link rel="stylesheet" href="../dist/css/wemedia.css">
+</head>
+
+<body>
+
+<div class="hd-wrap">
+
+  <section class="page">
+
+    <!--返回导航-->
+    <h3 class="zmt-nav-back">
+      <a href="javascript:history.go(-1);">
+        <span class="icon-angle-left"></span>
+      </a>
+      自媒体申请
+    </h3>
+
+    <!--自媒体申请表单 机构-->
+    <div class="wemedia-form">
+      <form action="">
+        <div class="form-item">
+          <span>机构名称：</span>
+          <input class="clear-input" type="text" placeholder="请输入">
+        </div>
+
+        <div class="form-item">
+          <span>机构类型：</span>
+          <select>
+            <option value="0">政府</option>
+            <option value="1">机构</option>
+          </select>
+        </div>
+
+        <div class="form-item">
+          <span>机构地址：</span>
+          <input class="clear-input" type="text" placeholder="请输入">
+        </div>
+
+        <div class="form-item">
+          <span>组织代码证：</span>
+          <span class="file-tip">支持png/jpg/jpeg,最大5M</span>
+          <span class="icon-add file-box">
+            <input type="file">
+          </span>
+        </div>
+
+        <div class="form-item">
+          <span>认证公函：</span>
+          <span class="file-tip">支持png/jpg/jpeg,最大5M</span>
+          <span class="icon-add file-box">
+            <input type="file">
+          </span>
+        </div>
+
+
+        <div class="form-item">
+          <input class="clear-input" type="submit" value="继续">
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+</div>
+
+
+<script src="../dist/component/sea.js"></script>
+<script src="../dist/component/sea.config.js"></script>
+<script>
+  seajs.use(['jquery', 'modal'], function ($) {
+
+
+  });
+</script>
+
+</body>
+</html>

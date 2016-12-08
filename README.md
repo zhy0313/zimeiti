@@ -46,6 +46,13 @@
 |msg-comment-r.html|消息中某一评论得到的回复页面| 
 |msg-comment-r-d.html|消息中两人评论回复互动页面| 
 |wemedia-apply.html|自媒体申请|
+|wemedia-apply-individual.html|自媒体申请-个人|
+|wemedia-apply-organization-a.html|自媒体申请-机构-a|
+|wemedia-apply-organization-b.html|自媒体申请-机构-b|
+|wemedia-apply-progress.html|自媒体申请-进度|
+
+
+
 
 
 

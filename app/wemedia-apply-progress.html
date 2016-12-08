@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>百舸</title>
+  <link rel="stylesheet" href="../dist/css/wemedia.css">
+</head>
+
+<body>
+
+<div class="hd-wrap">
+
+  <section class="page">
+
+    <!--返回导航-->
+    <h3 class="zmt-nav-back">
+      <a href="javascript:history.go(-1);">
+        <span class="icon-angle-left"></span>
+      </a>
+      审核中
+    </h3>
+
+    <!--申请进度 成功使用 success 失败使用 fail -->
+    <div class="wemedia-progress fail">
+
+      <div class="progress-mark"></div>
+
+      <h3>注册信息递交成功！</h3>
+
+      <div class="progress-list">
+
+        <div class="item icon-handle-success">
+          <span>注册信息平台审核</span>
+          <small>( 24小时内可以查看审核结果 )</small>
+        </div>
+
+        <div class="item icon-handle-fail">
+          <span>注册信息平台审核</span>
+          <small>( 24小时内可以查看审核结果 )</small>
+        </div>
+
+        <div class="item">
+          <span>注册成功</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+
+<script src="../dist/component/sea.js"></script>
+<script src="../dist/component/sea.config.js"></script>
+<script>
+  seajs.use(['jquery', 'modal'], function ($) {
+
+
+  });
+</script>
+
+</body>
+</html>

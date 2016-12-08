@@ -88,6 +88,253 @@
   }
 }
 
+/********** wemedia-apply-individual.html ************/
+
+.wemedia-form {
+  border-top: 10px solid #e5e5e5;
+  padding-bottom: 2rem;
+  .form-item {
+    position: relative;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #ddd;
+    input {
+      background: none;
+    }
+    input[type=submit] {
+      padding: .8rem;
+      color: white;
+      background: #ff8400;
+      width: 100%;
+      border-radius: 6px;
+      margin-top: 1rem;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+
+  }
+  .file-tip {
+    color: #999;
+    font-size: 12px;
+    position: absolute;
+    right: 3.5rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .file-box {
+    position: absolute;
+    right: 1.5rem;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #c5c5c5;
+    border-radius: 4px;
+    padding: .2rem;
+    color: #c5c5c5;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    input[type=file] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      overflow: hidden;
+    }
+  }
+
+  .file-avatar {
+    position: absolute;
+    right: 1.4rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    padding: .4rem;
+    color: white;
+    background: #c5c5c5;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    input[type=file] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      overflow: hidden;
+    }
+
+  }
+
+  .file-pdf {
+    position: absolute;
+    right: 0;
+    width: 4rem;
+    border: 1px solid #ff8400;
+    border-radius: 4px;
+    padding: .4rem;
+    color: #ff8400;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: .875rem;
+    text-align: center;
+    input[type=file] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      overflow: hidden;
+    }
+  }
+
+  .file-pdf-tip {
+    color: #999;
+    font-size: 12px;
+    position: absolute;
+    right: 5.5rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .file-upload-t {
+    position: relative;
+  }
+  .file-upload-b {
+    position: relative;
+    margin-top: 1.5rem;
+  }
+  .file-upload-item {
+    position: relative;
+    background: #e9e9e9;
+    padding: .5rem;
+    border-radius: 4px;
+    color: #666;
+    margin-bottom: .5rem;
+    overflow: hidden;
+    .name {
+      position: relative;
+      z-index: 10;
+    }
+    .progress {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1%;
+      height: 100%;
+      background: #f8dbae;
+      border-radius: 4px;
+    }
+    .remove {
+      position: absolute;
+      right: .5rem;
+      color: #ff8400;
+      z-index: 10;
+    }
+  }
+
+}
+
+.progress-list .item.icon-handle-success {
+  @extend .icon-tick;
+  span,
+  &:before {
+    color: #ff9000;
+    background: none;
+  }
+}
+
+.progress-list .item.icon-handle-fail {
+  @extend .icon-cancel;
+  span,
+  &:before {
+    color: #333;
+    background: none;
+  }
+}
+
+.wemedia-progress {
+  &.success {
+    .progress-mark {
+      background-image: url("../image/success.png");
+    }
+    h3 {
+      color: #ff9000;
+    }
+
+  }
+  &.fail {
+    .progress-mark {
+      background-image: url("../image/fail.png");
+    }
+    h3 {
+      color: #666;
+    }
+
+  }
+  h3 {
+    text-align: center;
+    font-weight: normal;
+    margin: -1rem 0 0 0;
+  }
+}
+
+.progress-mark {
+  width: 11.6rem;
+  height: 11.3rem;
+  margin: 1rem auto 0;
+  background-size: 100% 100%;
+}
+
+.progress-list {
+  width: 56%;
+  margin: 3rem auto 0;
+  color: #999;
+  -webkit-transform: translateX(20%);
+  transform: translateX(20%);
+  .item {
+    position: relative;
+    padding-bottom: 2rem;
+    &:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      left: -1.5rem;
+      width: 1rem;
+      height: 1rem;
+      background: #d2d2d2;
+      border-radius: 50%;
+      vertical-align: bottom;
+    }
+    &:after {
+      content: "";
+      border-left: 1px dashed #d2d2d2;
+      height: 100%;
+      position: absolute;
+      left: -1rem;
+      top: 1rem;
+    }
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+  small {
+    display: block;
+    padding: .5rem 0;
+  }
+}
+
 @media screen and (max-width: 320px) {
   html {
     font-size: 14px;

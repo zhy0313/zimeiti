@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>百舸</title>
+  <link rel="stylesheet" href="../dist/css/wemedia.css">
+</head>
+
+<body>
+
+<div class="hd-wrap">
+
+  <section class="page">
+
+    <!--返回导航-->
+    <h3 class="zmt-nav-back">
+      <a href="javascript:history.go(-1);">
+        <span class="icon-angle-left"></span>
+      </a>
+      自媒体申请
+    </h3>
+
+    <!--自媒体申请表单 机构-->
+    <div class="wemedia-form">
+      <form action="">
+        <div class="form-item">
+          <span>机构联系人：</span>
+          <input class="clear-input" type="text" placeholder="请输入">
+        </div>
+
+        <div class="form-item">
+          <span>证件：</span>
+          <select>
+            <option value="0">身份证</option>
+            <option value="1">驾驶证</option>
+            <option value="2">护照</option>
+          </select>
+        </div>
+
+        <div class="form-item">
+          <span>证件号码：</span>
+          <input class="clear-input" type="text" placeholder="请输入">
+        </div>
+
+        <div class="form-item">
+          <span>提供手持证件照片：</span>
+          <span class="icon-add file-box">
+            <input type="file">
+          </span>
+        </div>
+        <div class="form-item">
+          <span>手机号码：</span>
+          <input class="clear-input" type="tel" placeholder="请输入">
+        </div>
+        <div class="form-item">
+          <span>邮箱：</span>
+          <input class="clear-input" type="text" placeholder="请输入">
+        </div>
+
+        <div class="form-item">
+          <span>自媒体名称：</span>
+          <input class="clear-input" type="text" placeholder="请输入">
+        </div>
+
+        <div class="form-item">
+          <span>简介：</span>
+          <input class="clear-input" type="text" placeholder="一句话介绍">
+        </div>
+
+        <div class="form-item">
+          <span>头像：</span>
+          <span class="icon-user file-avatar">
+            <input type="file">
+          </span>
+        </div>
+
+        <div class="form-item">
+          <div class="file-upload-t">
+            <span>上传5篇文章：</span>
+            <span class="file-pdf-tip">PDF格式</span>
+            <span class="file-pdf">
+            开始添加
+            <input type="file">
+            </span>
+          </div>
+
+          <div class="file-upload-b">
+            <div class="file-upload-item">
+              <span class="name">《关于房产限购》.pdf</span>
+              <span class="progress" style="width:70%;"></span>
+              <span class="remove icon-circle-cross"></span>
+            </div>
+            <div class="file-upload-item">
+              <span class="name">《关于房产限购》.pdf</span>
+              <span class="progress" style="width:30%;"></span>
+              <span class="remove icon-circle-cross"></span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="form-item">
+          <input class="clear-input" type="submit" value="提交">
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+</div>
+
+
+<script src="../dist/component/sea.js"></script>
+<script src="../dist/component/sea.config.js"></script>
+<script>
+  seajs.use(['jquery', 'modal'], function ($) {
+
+
+  });
+</script>
+
+</body>
+</html>
