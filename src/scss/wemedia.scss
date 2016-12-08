@@ -1,0 +1,98 @@
+@charset "UTF-8";
+@import "base/reset";
+@import "base/common";
+@import "component/font";
+@import "component/modal";
+@import "component/swiper";
+@import "base/zimeiti";
+
+/********** wemedia-apply.html ************/
+
+.wemedia-type {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 4rem;
+
+  h3 {
+    color: #606060;
+    font-weight: normal;
+    font-size: 1.5rem;
+  }
+}
+
+.wemedia-type-inner {
+  overflow: hidden;
+}
+
+.wemedia-individual,
+.wemedia-organization {
+  position: relative;
+
+  span {
+    width: 6.375rem;
+    height: 6.375rem;
+    background-size: cover;
+  }
+  input[type=radio] {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+  }
+  label {
+    margin-top: 1rem;
+    display: block;
+    color: #666;
+  }
+}
+
+.wemedia-individual {
+  float: left;
+  margin-left: 1rem;
+  span {
+    background-image: url("../image/icon/individual01.png");
+  }
+  input[type=radio]:checked + span {
+    background-image: url("../image/icon/individual02.png");
+  }
+}
+
+.wemedia-organization {
+  float: right;
+  margin-right: 1rem;
+  span {
+    background-image: url("../image/icon/organization01.png");
+  }
+  input[type=radio]:checked + span {
+    background-image: url("../image/icon/organization02.png");
+  }
+}
+
+.wemedia-link {
+  margin-top: 3rem;
+  a {
+    color: #999;
+    background: #c6c6c6;
+    padding: .5rem;
+    display: block;
+    border-radius: 6px;
+    &.active {
+      color: white;
+      background: #ff8400;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 14px;
+  }
+  .hd-wrap-inner {
+    min-height: 504px;
+  }
+}

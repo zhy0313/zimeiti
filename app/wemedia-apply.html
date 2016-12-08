@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>百舸</title>
+  <link rel="stylesheet" href="../dist/css/wemedia.css">
+</head>
+
+<body>
+
+<div class="hd-wrap">
+
+  <section class="wemedia-apply-page page">
+
+    <!--返回导航-->
+    <h3 class="zmt-nav-back">
+      <a href="javascript:history.go(-1);">
+        <span class="icon-angle-left"></span>
+      </a>
+      自媒体申请
+    </h3>
+
+    <!--申请类型-->
+    <section class="wemedia-type">
+
+      <h3>您是</h3>
+
+      <div class="wemedia-type-inner js-wemedia-type">
+        <div class="wemedia wemedia-individual">
+          <input id="individual" type="radio" name="wemedia-type" data-link="./wemedia-individual.html">
+          <span></span>
+          <label for="individual">个人</label>
+        </div>
+
+        <div class="wemedia wemedia-organization">
+          <input id="organization" type="radio" name="wemedia-type" data-link="./wemedia-organization.html">
+          <span></span>
+          <label for="organization">机构</label>
+        </div>
+      </div>
+
+      <div class="wemedia-link" id="wemedia-link">
+        <a>继续</a>
+      </div>
+
+    </section>
+
+  </section>
+
+</div>
+
+
+<script src="../dist/component/sea.js"></script>
+<script src="../dist/component/sea.config.js"></script>
+<script>
+  seajs.use(['jquery', 'modal'], function ($) {
+
+    function initLink() {
+      var $link = $("#wemedia-link a");
+
+      $(".js-wemedia-type").on("click", ".wemedia", function (event) {
+        var $input = $(this).find("input[type=radio]");
+        if ($input.is(":checked")) {
+          $link.attr("href", $input.attr("data-link")).addClass("active");
+        }
+      });
+
+    }
+
+    initLink();
+
+
+  });
+</script>
+
+</body>
+</html>
