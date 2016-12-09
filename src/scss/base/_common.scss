@@ -45,8 +45,8 @@
   }
 }
 
-.txt-center{
-  text-align:center;
+.txt-center {
+  text-align: center;
 }
 
 .txt-overflow {
@@ -55,13 +55,14 @@
   white-space: nowrap;
 }
 
-.clear-input{
+.clear-input {
   -webkit-appearance: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  border:none;
-  outline:none;
-  box-shadow:none;
-  resize:none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
+  resize: none;
 }
 
 

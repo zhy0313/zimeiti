@@ -4,7 +4,7 @@
 @import "component/font";
 @import "component/modal";
 @import "component/swiper";
-@import "base/zimeiti";
+@import "baiger";
 
 /********** article.html ************/
 
@@ -15,10 +15,12 @@
 }
 
 .article-channel-wrap {
-  position: relative;
+  position: fixed;
   background: #f7f7f7;
   overflow: hidden;
   text-align: center;
+  width: 100%;
+  z-index: 10;
 }
 
 .article-return,
@@ -88,6 +90,7 @@
 
 article {
   overflow: hidden;
+  padding-top: 2.75rem;
 }
 
 .article-cover {
@@ -210,6 +213,9 @@ article {
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    &:before {
+      content: "\e9d7";
+    }
   }
 
   &.star_1 {
@@ -336,6 +342,7 @@ article {
     a:first-child {
       color: white;
       background: #ff8400;
+      border: 1px solid currentColor;
     }
   }
 
@@ -528,6 +535,9 @@ article {
       color: #b8b8b8;
       right: 1rem;
       bottom: 40%;
+      a {
+        color: currentColor;
+      }
       li {
         float: left;
         margin: 0 0 0 1rem;
@@ -589,6 +599,10 @@ article {
     text-align: center;
     padding-top: 0;
     margin-top: -15px;
+    h3 {
+      font-weight: normal;
+      color: #ff8400;
+    }
     p {
       color: #666;
       font-size: .875rem;
@@ -610,9 +624,6 @@ article {
   .stars-wrap {
     color: #999;
     font-size: 2rem;
-  }
-  .modal-dialog {
-    z-index: 10;
   }
 }
 

@@ -20,7 +20,7 @@
 
   <div class="article-container">
     <!--文章频道-->
-    <section class="article-channel-wrap">
+    <section class="article-channel-wrap headroom" id="headroom">
       <div class="article-return">
         <a class="icon-angle-left" href="./index.html"></a>
       </div>
@@ -36,7 +36,7 @@
       </div>
 
       <div class="article-plus" id="article-plus"
-           onclick="document.querySelector('#all-article-channels').classList.add('open');">
+           onclick="g('#all-article-channels').classList.add('open');">
         <span class="icon-add"></span>
       </div>
     </section>
@@ -54,7 +54,7 @@
         <li><a href="">科技</a></li>
       </ul>
       <div class="close-channels"
-           onclick="document.querySelector('#all-article-channels').classList.remove('open');">确定
+           onclick="g('#all-article-channels').classList.remove('open');">确定
       </div>
     </section>
 
@@ -119,29 +119,6 @@
         </div>
       </section>
 
-      <!--星级浮层-->
-      <div id="star-modal" class="modal fade star-modal" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>您为文章评分： <span><em>4.1</em>分</span></p>
-              <div class="stars-wrap">
-                <span class="star"></span>
-                <span class="star"></span>
-                <span class="star"></span>
-                <span class="star"></span>
-                <span class="star"></span>
-              </div>
-              <div class="star-btn">确定</div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <!--打赏-->
       <section class="article-reward">
@@ -150,8 +127,8 @@
           <a href="./article-reward-view.html">赞赏(5人)</a>
         </div>
         <div class="whisper">
-          <a href="">私语</a>
-          <a>私语(5人)</a>
+          <a href="./whisper-ask.html">私语</a>
+          <a href="./whisper-view-list.html">私语(5人)</a>
         </div>
       </section>
 
@@ -187,7 +164,6 @@
     </article>
 
 
-
     <!--热门评论-->
     <section class="article-hot-comments">
       <h3 class="zmt-nav">热门评论</h3>
@@ -195,14 +171,18 @@
         <div class="comment-item">
           <div class="comment-top">
             <dl>
-              <dt>
-                <img src="http://tva4.sinaimg.cn/crop.0.0.960.960.180/bceb232djw8f7najhd9yqj20qo0qoq47.jpg">
-              </dt>
-              <dd>湖南吴彦祖</dd>
-              <dd class="icon-clock">现在</dd>
+              <a href="./profile.html">
+                <dt>
+                  <img src="http://tva4.sinaimg.cn/crop.0.0.960.960.180/bceb232djw8f7najhd9yqj20qo0qoq47.jpg">
+                </dt>
+                <dd>湖南吴彦祖</dd>
+                <dd class="icon-clock">现在</dd>
+              </a>
             </dl>
             <ul>
-              <li class="icon-commenting">3</li>
+              <a href="./comment-detail.html">
+                <li class="icon-commenting">3</li>
+              </a>
               <li class="icon-heart active">16</li>
             </ul>
           </div>
@@ -212,13 +192,15 @@
         </div>
         <div class="comment-item">
           <div class="comment-top">
-            <dl>
-              <dt>
-                <img src="http://tva4.sinaimg.cn/crop.0.0.960.960.180/bceb232djw8f7najhd9yqj20qo0qoq47.jpg">
-              </dt>
-              <dd>湖南吴彦祖</dd>
-              <dd class="icon-clock">现在</dd>
-            </dl>
+            <a href="./profile.html">
+              <dl>
+                <dt>
+                  <img src="http://tva4.sinaimg.cn/crop.0.0.960.960.180/bceb232djw8f7najhd9yqj20qo0qoq47.jpg">
+                </dt>
+                <dd>湖南吴彦祖</dd>
+                <dd class="icon-clock">现在</dd>
+              </dl>
+            </a>
             <ul>
               <li class="icon-commenting">3</li>
               <li class="icon-heart">16</li>
@@ -230,7 +212,7 @@
         </div>
       </div>
       <div class="comment-view">
-        <a href="./article-comment.html">查看更多</a>
+        <a href="./comment.html">查看更多</a>
       </div>
     </section>
 
@@ -253,16 +235,45 @@
           <textarea class="clear-input" name="" id=""></textarea>
         </form>
       </div>
-
     </section>
+
+  </div>
+</div>
+
+<!--星级浮层-->
+<div id="star-modal" class="modal fade star-modal" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>您为文章评分： <span><em>4.1</em>分</span></p>
+        <div class="stars-wrap">
+          <span class="star"></span>
+          <span class="star"></span>
+          <span class="star"></span>
+          <span class="star"></span>
+          <span class="star"></span>
+        </div>
+        <div class="star-btn">确定</div>
+      </div>
+    </div>
   </div>
 </div>
 
 
 <script src="../dist/component/sea.js"></script>
 <script src="../dist/component/sea.config.js"></script>
+<script src="../dist/component/headroom.min.js"></script>
+
 <script>
   seajs.use(['jquery', 'modal'], function ($) {
+
+    var headroom = new Headroom(g("#headroom"));
+    headroom.init();
 
     // 文章评分
     $(".article-stars").on("click", ".star", function () {

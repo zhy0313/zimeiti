@@ -92,7 +92,7 @@
     <section class="gallery-bottom">
       <div class="inner">
         <span class="icon-pen-angled" id="comment">评论</span>
-        <span class="icon-star-empty">评分</span>
+        <span class="icon-star-empty" id="star">评分</span>
         <span>私语</span>
         <span>赏</span>
         <span class="icon-commenting">50</span>
@@ -115,6 +115,32 @@
       </div>
     </section>
 
+  </div>
+</div>
+
+<!--评分浮层-->
+<div id="star-modal" class="modal fade star-modal" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3>评分</h3>
+        <div class="stars-wrap">
+          <span class="star"></span>
+          <span class="star"></span>
+          <span class="star"></span>
+          <span class="star"></span>
+          <span class="star"></span>
+        </div>
+        <p>您为文章评分： <span><em>?</em>分</span></p>
+
+        <div class="star-btn">确定</div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -163,6 +189,33 @@
     }
 
     comment();
+
+    // 文章评分
+
+    $("#star").on("click", function () {
+      $("#star-modal").modal();
+    });
+
+
+    // 文章评分
+    $("#star-modal").on("click", ".star", function () {
+      var $modal     = $("#star-modal"),
+          index      = $(this).index() + 1,
+          star_class = "star_" + index,
+          reg        = /star_\d+/g;
+
+      // 显示评级浮层
+      $modal.find(".stars-wrap").attr("class", function (i, cls) {
+        return cls.replace(reg, '');
+      }).addClass(star_class).end().find("em").html(index);
+
+      // 评级确定
+      $modal.on("click", ".star-btn", function () {
+        $modal.modal('hide');
+      });
+
+    });
+
 
   });
 </script>

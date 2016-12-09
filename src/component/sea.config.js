@@ -10,6 +10,6 @@ seajs.config({
     'tweenmax': 'sea.tweenmax',
     'chips': 'sea.chips',
     'shake': 'sea.shake',
-    'modal':'sea.bs.modal'
+    'modal': 'sea.bs.modal'
   }
 });
