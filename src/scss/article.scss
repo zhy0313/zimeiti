@@ -501,6 +501,12 @@ article {
   background: #f7f7f7;
   .comment-item {
     margin-bottom: 1rem;
+    &.author {
+      .comment-name {
+        color: #ff8400;
+
+      }
+    }
   }
 
   .comment-top {
@@ -561,7 +567,7 @@ article {
   }
   .comment-reply-name {
     strong {
-      color: #ff8400;
+      color: #61b3f5;
       margin-left: 4px;
     }
   }
