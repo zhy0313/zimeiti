@@ -16,7 +16,7 @@
 |article-gallery.html|图集| 
 |article-feedback.html|文章我要报错| 
 |article-reward.html|文章赏赞|  
-|article-reward-view.html|文章赏赞人员列表|
+|article-reward-view.html|文章赏赞人员列表 ／ 赏赞明细|
 |profile.html|个人页|
 |profile-more.html|个人页更多|
 |profile-author.html|作者个人页|
@@ -30,7 +30,7 @@
 |profile-feedback.html|意见反馈|
 |my-message.html|我的消息|
 |my-follow.html|我的关注|
-|my-articles.html|我的作品|
+|my-articles.html|我的作品 ／ 我的收藏|
 |my-read.html|我的阅读|
 |whisper-list.html|私语列表|
 |whisper-ask.html|私语提问|
