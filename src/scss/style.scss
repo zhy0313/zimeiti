@@ -826,6 +826,57 @@
   }
 }
 
+/********** my-favorite.html **********/
+
+.my-favorite-list {
+  padding: 1rem;
+  .favorite-item {
+    position: relative;
+    height: 4.5rem;
+    font-size: .875rem;
+    border-bottom: 1px solid #e2e2e2;
+    padding: .6rem 0;
+  }
+  .item-l {
+    position: absolute;
+    width: 6rem;
+    height: 4.5rem;
+    overflow: hidden;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  h3 {
+    height: 1.4rem;
+    line-height: 1.4rem;
+    width: 100%;
+    padding-left: 6.5rem;
+    color: #454545;
+    float: left;
+    box-sizing: border-box;
+    margin: 0;
+    font-weight: normal;
+    @extend .txt-overflow;
+  }
+  .item-b {
+    position: absolute;
+    bottom: .5rem;
+    padding-left: 6.5rem;
+    color: #b8b8b8;
+    width: 100%;
+    box-sizing: border-box;
+    span {
+      vertical-align: bottom;
+    }
+    .icon-group {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
 /********** my-read.html **********/
 
 .my-read-page {

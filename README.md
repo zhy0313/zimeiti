@@ -30,7 +30,8 @@
 |profile-feedback.html|意见反馈|
 |my-message.html|我的消息|
 |my-follow.html|我的关注|
-|my-articles.html|我的作品 ／ 我的收藏|
+|my-articles.html|我的作品|
+|my-favorite.html|我的收藏|
 |my-read.html|我的阅读|
 |whisper-list.html|私语列表|
 |whisper-ask.html|私语提问|
