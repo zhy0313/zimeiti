@@ -35,7 +35,9 @@
 |my-read.html|我的阅读|
 |whisper-list.html|私语列表|
 |whisper-ask.html|私语提问|
-|whisper-view.html|查看私语|
+|whisper-view-unanswer.html|查看私语-未回答|
+|whisper-view-unpay.html|查看私语-未支付|
+|whisper-view-unresponse.html|查看私语-未回应|
 |whisper-view-author.html|查看私语-作者页|
 |whisper-view-list.html|付费查看私语列表-非本人|
 |whisper-view-detail.html|查看他人私语内容|
