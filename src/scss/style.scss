@@ -583,7 +583,8 @@
     padding: 6px 1.5rem;
     border-bottom: 1px solid rgb(232, 232, 232);
     color: #666;
-    &:nth-child(n+5) {
+    &:nth-last-child(3),
+    &:nth-last-child(3) ~ .form-item {
       text-align: center;
       border-bottom: none;
       margin-top: 2rem;
@@ -628,6 +629,15 @@
   color: #feb74d;
   border: 1px solid currentColor;
   border-radius: 4px;
+}
+
+.img-validate-code {
+  position: absolute;
+  width: 5rem;
+  top: 50%;
+  right: 1rem;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .register-protocal {
@@ -957,7 +967,7 @@
         border-radius: 6px 6px 0 0;
       }
     }
-    &:nth-child(4) {
+    &:nth-child(5) {
       input {
         border-bottom: 1px solid #ddd;
         border-radius: 0 0 6px 6px;
