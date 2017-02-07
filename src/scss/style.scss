@@ -680,7 +680,6 @@
       text-align: center;
       border-bottom: none;
       margin-top: 2rem;
-      padding-bottom: 3rem;
     }
   }
 
@@ -729,6 +728,15 @@
     width: 5rem;
     height: 5rem;
   }
+}
+
+.addition-ignore {
+  color: #d6af82;
+  float: right;
+  padding-bottom: 2px;
+  border-bottom: 1px solid currentColor;
+  margin-right: 15%;
+  margin-top: .5rem;
 }
 
 /********** my-follow.html **********/
