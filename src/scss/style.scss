@@ -905,17 +905,57 @@
   background: #575757;
   color: white;
   overflow: hidden;
-  padding: .3rem 0;
-  dl, dd {
-    margin: 0;
-  }
-  dt, dd {
-    position: relative;
+  padding: .3rem;
+  .calendar-y-m {
     float: left;
-    width: 12.5%;
-    text-align: center;
-    padding: .5rem 0;
+    background: #666666;
+    border-radius: 6px;
+    padding: .3rem .5rem;
   }
+  .calendar-m {
+    em {
+      font-size: 1.125rem;
+      font-style: normal;
+      color: #ff6c00;
+    }
+  }
+  .calendar-y {
+    font-size: 0.875rem;
+  }
+  .calendar-d {
+    @include flex-container();
+    @include flex-direction-h();
+    overflow: auto;
+    li {
+      position: relative;
+      min-width: 3rem;
+      text-align: center;
+      padding: .5rem 0;
+      @include flex-item(1);
+      &.disabled {
+        color: #797979;
+      }
+      &.active {
+        background: #ff6c00;
+        border-radius: 6px;
+      }
+      &.read {
+        &:after {
+          content: "";
+          display: block;
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          position: absolute;
+          bottom: .2rem;
+          background: #bebebe;
+          left: 50%;
+          margin-left: -2px;
+        }
+      }
+    }
+  }
+
   span {
     display: block;
     margin-bottom: .2rem;
@@ -924,38 +964,7 @@
       color: #bebebe;
     }
   }
-  dt {
-    background: #666666;
-    border-radius: 6px;
-    em {
-      font-size: 1.125rem;
-      font-style: normal;
-      color: #ff6c00;
-    }
-    span:last-child {
-      font-size: 0.875rem;
-    }
-  }
-  dd {
-    &.active {
-      background: #ff6c00;
-      border-radius: 6px;
-    }
-    &.read {
-      &:after {
-        content: "";
-        display: block;
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-        position: absolute;
-        bottom: .2rem;
-        background: #bebebe;
-        left: 50%;
-        margin-left: -2px;
-      }
-    }
-  }
+
 }
 
 /********** forget.html **********/

@@ -24,17 +24,16 @@
     </h3>
 
     <!--阅读日历-->
-    <section class="my-read-calendar">
-      <dl>
-        <dt><span><em>11</em>月</span><span>2016</span></dt>
-        <dd class="read"><span>六</span><span>26</span></dd>
-        <dd><span>日</span><span>27</span></dd>
-        <dd class="active read"><span>一</span><span>28</span></dd>
-        <dd><span>二</span><span>29</span></dd>
-        <dd><span>三</span><span>30</span></dd>
-        <dd><span>四</span><span>01</span></dd>
-        <dd><span>五</span><span>02</span></dd>
-      </dl>
+    <section id="calendar" class="my-read-calendar">
+
+      <div class="calendar-y-m">
+        <span class="calendar-m"><em>--</em>月</span>
+        <span class="calendar-y">--</span>
+      </div>
+
+      <ul class="calendar-d">
+      </ul>
+
     </section>
 
     <!--阅读列表-->
@@ -91,6 +90,59 @@
 <script>
   seajs.use(['jquery', 'modal'], function ($) {
 
+    function getDaysOfMounth(month, year) {
+      var day  = new Date(year, month, 1),
+          days = [];
+      while (day.getMonth() === month) {
+        days.push(new Date(day));
+        day.setDate(day.getDate() + 1);
+      }
+      return days;
+    }
+
+
+    // 阅读日历初始化
+    function initCalendar() {
+      var $calendar          = $("#calendar"),
+          $calendarYearMonth = $calendar.find(".calendar-y-m"),
+          $calendarYear      = $calendarYearMonth.find(".calendar-y"),
+          $calendarMonth     = $calendarYearMonth.find(".calendar-m"),
+          $calendarDays      = $calendar.find(".calendar-d");
+
+      // 获取当前月份所有日期
+      var now = new Date();
+      var days = getDaysOfMounth(now.getMonth(), now.getFullYear());
+      var weekends = ["日", "一", "二", "三", "四", "五", "六"];
+
+      // 年月
+      $calendarYear.html(now.getFullYear());
+      $calendarMonth.find("em").html(now.getMonth() + 1);
+
+      // 日
+      days.forEach(function (day) {
+        var unclick = day.getDate() > now.getDate() ? "disabled" : "";
+        var content = "<li class=" + unclick + "><span>" + weekends[day.getDay()] + "</span><span>" + day.getDate() + "</span></li>";
+        $calendarDays.append(content);
+      });
+
+      // test
+      $calendarDays.find("li").eq(0).addClass("read");
+      $calendarDays.find("li").eq(1).addClass("read active");
+
+      return $calendar;
+
+    }
+
+    var $Calendar = initCalendar();
+
+    // Listener
+    $Calendar.on("click", "li", function () {
+      var $this = $(this);
+      if ($this.hasClass("disabled")) {
+        return;
+      }
+      $(this).addClass("active").siblings("li").removeClass("active");
+    });
 
   });
 </script>

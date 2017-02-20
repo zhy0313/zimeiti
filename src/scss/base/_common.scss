@@ -21,13 +21,19 @@
 
 @mixin flex-direction-v {
   -webkit-box-orient: vertical;
+  box-orient: vertical;
   -webkit-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
   flex-direction: column;
 }
 
 @mixin flex-direction-h {
   -webkit-box-orient: horizontal;
+  box-orient: horizontal;
   -webkit-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: row;
   flex-direction: row;
 }
 
