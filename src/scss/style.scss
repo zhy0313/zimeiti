@@ -964,7 +964,89 @@
       color: #bebebe;
     }
   }
+}
 
+.mini-calendar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  &.open {
+    .panel {
+      display: block;
+    }
+  }
+
+  .view {
+    font-size: .875rem;
+    color: #666;
+    min-width: 2rem;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 10px;
+  }
+  .panel {
+    position: absolute;
+    display: none;
+    right: 0;
+    background: #575757;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    text-align: center;
+    color: white;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      border: 10px solid transparent;
+      border-bottom: 10px solid #575757;
+      top: -20px;
+      right: 10%;
+    }
+  }
+  .panel-item {
+    padding: 6px 0;
+    overflow: hidden;
+    width: 9rem;
+    vertical-align: middle;
+    span {
+      margin: 0 4px;
+    }
+  }
+  .minus, .plus {
+    padding: 4px;
+    color: white;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    text-align: center;
+    line-height: 1rem;
+  }
+  .minus {
+    background: #ff6000 url("../image/icon/minus.png") center center no-repeat;
+    background-size: 60% auto;
+  }
+  .plus {
+    background: #ff6000 url("../image/icon/plus.png") center center no-repeat;
+    background-size: 60% auto;
+  }
+  .num {
+    width: 3rem;
+    vertical-align: top;
+  }
+  .ctr-btn {
+    border-top: 1px solid #ff6000;
+    padding-top: 1rem;
+    span {
+      background: #ff6000;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin: 0 6px;
+    }
+  }
 }
 
 /********** forget.html **********/

@@ -23,18 +23,38 @@
       我的阅读
     </h3>
 
-    <!--阅读日历-->
-    <section id="calendar" class="my-read-calendar">
-
-      <div class="calendar-y-m">
-        <span class="calendar-m"><em>--</em>月</span>
-        <span class="calendar-y">--</span>
+    <div id="mini-cal" class="mini-calendar">
+      <div class="view"></div>
+      <div class="panel">
+        <div class="panel-item y">
+          <span class="minus"></span>
+          <span class="num"></span>
+          <span class="plus"></span>
+        </div>
+        <div class="panel-item m">
+          <span class="minus"></span>
+          <span class="num"></span>
+          <span class="plus"></span>
+        </div>
+        <div class="ctr-btn">
+          <span id="reset">本月</span>
+          <span id="sure">确定</span>
+        </div>
       </div>
+    </div>
 
-      <ul class="calendar-d">
-      </ul>
+    <!--阅读日历-->
+    <!--<section id="calendar" class="my-read-calendar">-->
 
-    </section>
+    <!--<div class="calendar-y-m">-->
+    <!--<span class="calendar-m"><em>&#45;&#45;</em>月</span>-->
+    <!--<span class="calendar-y">&#45;&#45;</span>-->
+    <!--</div>-->
+
+    <!--<ul class="calendar-d">-->
+    <!--</ul>-->
+
+    <!--</section>-->
 
     <!--阅读列表-->
     <section class="my-articles-list">
@@ -90,59 +110,94 @@
 <script>
   seajs.use(['jquery', 'modal'], function ($) {
 
-    function getDaysOfMounth(month, year) {
-      var day  = new Date(year, month, 1),
-          days = [];
-      while (day.getMonth() === month) {
-        days.push(new Date(day));
-        day.setDate(day.getDate() + 1);
-      }
-      return days;
-    }
+    function initMiniCalendar() {
 
+      var $miniCal  = $(".mini-calendar"),
+          $M        = $miniCal.find(".m .num"),
+          $Y        = $miniCal.find(".y .num"),
+          $V        = $miniCal.find(".view"),
+          now       = new Date(),
+          thisYear  = now.getFullYear(),
+          thisMonth = now.getMonth() + 1,
+          $date     = $({});
 
-    // 阅读日历初始化
-    function initCalendar() {
-      var $calendar          = $("#calendar"),
-          $calendarYearMonth = $calendar.find(".calendar-y-m"),
-          $calendarYear      = $calendarYearMonth.find(".calendar-y"),
-          $calendarMonth     = $calendarYearMonth.find(".calendar-m"),
-          $calendarDays      = $calendar.find(".calendar-d");
-
-      // 获取当前月份所有日期
-      var now = new Date();
-      var days = getDaysOfMounth(now.getMonth(), now.getFullYear());
-      var weekends = ["日", "一", "二", "三", "四", "五", "六"];
-
-      // 年月
-      $calendarYear.html(now.getFullYear());
-      $calendarMonth.find("em").html(now.getMonth() + 1);
-
-      // 日
-      days.forEach(function (day) {
-        var unclick = day.getDate() > now.getDate() ? "disabled" : "";
-        var content = "<li class=" + unclick + "><span>" + weekends[day.getDay()] + "</span><span>" + day.getDate() + "</span></li>";
-        $calendarDays.append(content);
+      $date.data({
+        year: thisYear,
+        month: thisMonth
       });
 
-      // test
-      $calendarDays.find("li").eq(0).addClass("read");
-      $calendarDays.find("li").eq(1).addClass("read active");
 
-      return $calendar;
+      $date.on("update", function () {
+        $V.html($date.data("year") + "／" + $date.data("month"));
+        $Y.html($date.data("year"));
+        $M.html($date.data("month"));
+      });
+      $date.trigger("update");
+
+
+      // 减
+      $miniCal.on("click", ".minus", function (event) {
+        event.stopPropagation();
+        if ($(this).closest(".panel-item").hasClass("y")) {
+          var currentYear = $date.data("year");
+          if (currentYear <= 1970) {
+            return;
+          }
+          $date.data("year", currentYear - 1);
+        }
+        if ($(this).closest(".panel-item").hasClass("m")) {
+          var currentMonth = $date.data("month");
+          if (currentMonth == 1) {
+            currentMonth = 13;
+          }
+          $date.data("month", currentMonth - 1);
+        }
+        $date.trigger("update");
+      });
+
+
+      // 加
+      $miniCal.on("click", ".plus", function (event) {
+        event.stopPropagation();
+        if ($(this).closest(".panel-item").hasClass("y")) {
+          var currentYear = $date.data("year");
+          $date.data("year", currentYear + 1);
+        }
+        if ($(this).closest(".panel-item").hasClass("m")) {
+          var currentMonth = $date.data("month");
+          if (currentMonth == 12) {
+            currentMonth = 0;
+          }
+          $date.data("month", currentMonth + 1);
+        }
+        $date.trigger("update");
+      });
+
+      // open
+      $miniCal.on("click", "", function () {
+        $(this).addClass("open");
+      });
+
+
+      // reset
+      $miniCal.on("click", "#reset", function () {
+        $date.data({
+          year: thisYear,
+          month: thisMonth
+        }).trigger("update");
+      });
+
+      // sure
+      $miniCal.on("click", "#sure", function (event) {
+        event.stopPropagation();
+        $miniCal.removeClass("open");
+      });
+
+      return $miniCal;
 
     }
 
-    var $Calendar = initCalendar();
-
-    // Listener
-    $Calendar.on("click", "li", function () {
-      var $this = $(this);
-      if ($this.hasClass("disabled")) {
-        return;
-      }
-      $(this).addClass("active").siblings("li").removeClass("active");
-    });
+    initMiniCalendar();
 
   });
 </script>

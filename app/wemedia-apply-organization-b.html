@@ -47,6 +47,9 @@
 
         <div class="form-item">
           <span>提供手持证件照片：</span>
+          <span class="file-thumb">
+            <img src="http://tva4.sinaimg.cn/crop.0.0.511.511.180/68cfd0d1jw8fd17cdycztj20e70e83ym.jpg" alt="文件图片缩略图">
+          </span>
           <span class="icon-add file-box">
             <input type="file">
           </span>
@@ -73,6 +76,7 @@
         <div class="form-item">
           <span>头像：</span>
           <span class="icon-user file-avatar">
+            <img class="uploaded-avatar" src="http://tva4.sinaimg.cn/crop.0.0.511.511.180/68cfd0d1jw8fd17cdycztj20e70e83ym.jpg" alt="已上传头像">
             <input type="file">
           </span>
         </div>
@@ -113,11 +117,25 @@
 </div>
 
 
+<!--图片预览-->
+<div id="thumb-modal" class="modal fade thumb-modal" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <img src="http://tva4.sinaimg.cn/crop.0.0.511.511.180/68cfd0d1jw8fd17cdycztj20e70e83ym.jpg" alt="文件图片缩略图">
+  </div>
+</div>
+
+
 <script src="../dist/component/sea.js"></script>
 <script src="../dist/component/sea.config.js"></script>
 <script>
   seajs.use(['jquery', 'modal'], function ($) {
 
+    $(".file-thumb").on("click", function () {
+      var $modal = $("#thumb-modal"),
+          url    = $(this).find("img").attr("src");
+      $modal.find("img").attr("src", url);
+      $modal.modal();
+    });
 
   });
 </script>
