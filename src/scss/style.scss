@@ -360,6 +360,14 @@
   border-bottom: 1px dashed #e4e4e4;
 }
 
+.search-refresh{
+  float: right;
+  width: 1.4rem;
+  height: 1.4rem;
+  background: url(../image/icon/icon-refresh.png) no-repeat;
+  background-size: cover;
+}
+
 .search-list {
   padding-top: .5rem;
   padding-bottom: 4rem;
