@@ -271,14 +271,14 @@
 .home-article-header.with-cover,
 .home-article-header.with-video {
   .title {
-    position: absolute;
-    bottom: 0;
+    //position: absolute;
+    //bottom: 0;
     width: 100%;
-    padding-bottom: .7rem;
+    //padding-bottom: .7rem;
     box-sizing: border-box;
-    color: white;
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .5) 100%);
-    background: linear-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .5) 100%);
+    color: rgb(56, 56, 56);
+    //background: -webkit-linear-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .5) 100%);
+    //background: linear-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .5) 100%);
   }
 }
 
