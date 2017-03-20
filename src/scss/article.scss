@@ -984,6 +984,11 @@ article {
       display: block;
       min-height: 100%;
       min-width: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
     }
     h3 {
       position: absolute;

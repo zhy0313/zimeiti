@@ -194,6 +194,7 @@
   }
 }
 
+
 .home-article-header {
   position: relative;
   .title {
@@ -204,15 +205,15 @@
       font-size: 0.8rem;
       margin-left: 1rem;
     }
-    .time {
-      color: #9f9f9f;
-      font-size: 0.8rem;
-      float: right;
-      margin-top: 4px;
-      &:before {
-        margin-right: 4px;
-      }
-
+  }
+  .time{
+    color: #9f9f9f;
+    font-size: 0.8rem;
+    padding: .7rem;
+    padding-bottom: 0;
+    padding-top:.3rem;
+    &:before {
+      margin-right: 4px;
     }
   }
   .cover {
