@@ -408,6 +408,23 @@
   }
 }
 
+.search-no-result{
+  >h3{
+    text-align: center;
+    color: #999;
+    padding: 1rem 0;
+    &:before{
+      vertical-align: -2px;
+      margin-right:4px;
+    }
+  }
+}
+
+.relative-keywords{
+  font-style:normal;
+  color:#ff6100;
+}
+
 /********** fans.html **********/
 
 .fans-list {
