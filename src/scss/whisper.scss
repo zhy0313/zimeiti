@@ -17,6 +17,48 @@
 
 /********** whisper-list.html **********/
 
+.whisper-list-type {
+  text-align: center;
+  color: #ff8400;
+  width: 80%;
+  margin: 10px auto;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #ff8400;
+  span {
+    position: relative;
+    padding: 5px 10px;
+    float: left;
+    width: 33.33333333%;
+    box-sizing: border-box;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 1px;
+      height: 16px;
+      background: #ff8400;
+      right: -1px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+
+    &.active {
+      background: #ff8400;
+      color: white;
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
 .whisper-list-item {
   position: relative;
   padding: .5rem 1rem;
@@ -67,6 +109,14 @@
   background: rgba(194, 181, 164, 0.9);
   -webkit-transform: rotate(-20deg);
   webkit-transform: rotate(-20deg);
+}
+
+.whisper-no-content {
+  width: 7rem;
+  height: 9.25rem;
+  background: url(../image/no-content.png) center center;
+  background-size: 100% 100%;
+  margin: 5rem auto;
 }
 
 /********** whisper-ask.html **********/

@@ -68,12 +68,11 @@
   }
   .tag {
     float: left;
-    font-size: 0.875rem;
     color: white;
-    padding: 0.3rem 0.5rem;
+    padding: 0.3rem 1rem;
     margin-left: 1rem;
-    background: $mainColor;
-    border-radius: 10px;
+    background: #ff6000;
+    border-radius: 14px;
     i {
       margin-left: 6px;
     }
@@ -106,7 +105,7 @@
     }
     li {
       display: inline-block;
-      padding: .3rem 1rem;
+      padding: .3rem 0.875rem;
       border-radius: 1rem;
       margin: .5rem;
       &.active {
@@ -129,11 +128,140 @@
     box-sizing: border-box;
     background: #24211e;
     color: white;
-    padding: .4rem;
     border-radius: 50%;
-    margin-top: -0.2rem;
+    text-align: center;
+    line-height: 1.75rem;
     a {
       color: currentColor;
+    }
+  }
+}
+
+.home-nav-no-fixed {
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  padding: 1rem 0.5rem 0.5rem;
+  box-sizing: border-box;
+  @include flex-container();
+  @include flex-direction-h();
+  .user {
+    position: relative;
+    width: 1.75rem;
+    height: 1.75rem;
+    background: #666;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.75rem;
+    color: white;
+    padding: 2px;
+  }
+  .user.new-message {
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 6px;
+      height: 6px;
+      background: $mainColor;
+      border-radius: 50%;
+    }
+  }
+  .user-avatar {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    padding: 1px;
+    box-sizing: border-box;
+    img {
+      border-radius: 50%;
+    }
+  }
+  .tag {
+    color: white;
+    padding: 0.3rem 1rem;
+    margin-left: 1rem;
+    background: #ff6000;
+    border-radius: 14px;
+    i {
+      margin-left: 6px;
+    }
+  }
+  .tag-panel {
+    position: absolute;
+    height: 9.625rem;
+    background: rgba(0, 0, 0, .9);
+    width: 100%;
+    top: -11.625rem;
+    left: 0;
+    padding: 1rem 0;
+    text-align: center;
+    -webkit-transition: all 0.8s;
+    -webkit-transform: translateY(0);
+    transition: all 0.8s;
+    transform: translateY(0);
+    overflow: hidden;
+    z-index: 10;
+    &.open {
+      overflow: initial;
+      -webkit-transition: all 0.8s;
+      -webkit-transform: translateY(100%);
+      transition: all 0.8s;
+      transform: translateY(100%);
+    }
+    ul {
+      width: 20rem;
+      margin: auto;
+      text-align: left;
+    }
+    li {
+      display: inline-block;
+      padding: .3rem 0.875rem;
+      border-radius: 1rem;
+      margin: .5rem;
+      &.active {
+        background: $mainColor;
+      }
+    }
+  }
+
+  .tag-btn {
+    color: $mainColor;
+    border: 1px solid currentColor;
+    padding: .3rem 1rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+  }
+  .search {
+    position: relative;
+    @include flex-item(1);
+    margin-left: 2rem;
+    border-radius: 10px;
+    border: 1px solid #cecece;
+    overflow: hidden;
+    input[type=text] {
+      height: 1.875rem;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 30px 0 10px;
+    }
+    .icon-search {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 1.875rem;
+      height: 1.875rem;
+      line-height: 1.875rem;
+      text-align: center;
+      z-index: 10;
     }
   }
 }
@@ -194,7 +322,6 @@
   }
 }
 
-
 .home-article-header {
   position: relative;
   .title {
@@ -206,12 +333,12 @@
       margin-left: 1rem;
     }
   }
-  .time{
+  .time {
     color: #9f9f9f;
     font-size: 0.8rem;
     padding: .7rem;
     padding-bottom: 0;
-    padding-top:.3rem;
+    padding-top: .3rem;
     &:before {
       margin-right: 4px;
     }
@@ -361,7 +488,7 @@
   border-bottom: 1px dashed #e4e4e4;
 }
 
-.search-refresh{
+.search-refresh {
   float: right;
   width: 1.4rem;
   height: 1.4rem;
@@ -408,21 +535,21 @@
   }
 }
 
-.search-no-result{
-  >h3{
+.search-no-result {
+  > h3 {
     text-align: center;
     color: #999;
     padding: 1rem 0;
-    &:before{
+    &:before {
       vertical-align: -2px;
-      margin-right:4px;
+      margin-right: 4px;
     }
   }
 }
 
-.relative-keywords{
-  font-style:normal;
-  color:#ff6100;
+.relative-keywords {
+  font-style: normal;
+  color: #ff6100;
 }
 
 /********** fans.html **********/

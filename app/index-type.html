@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>首页</title>
+  <link rel="stylesheet" href="../dist/css/style.css">
+  <script src="../dist/component/howler.min.js"></script>
+</head>
+
+<body>
+
+<div class="hd-wrap">
+  <div class="hd-wrap-inner">
+    <!--导航-->
+    <section class="home-nav-no-fixed clearfix">
+      <!--用户头像-->
+      <div id="user" class="icon-user user new-message">
+        <span class="user-avatar vip">
+          <img src="http://tva1.sinaimg.cn/crop.0.0.512.512.180/68cfd0d1jw8f7s67qyij9j20e80e8t97.jpg">
+        </span>
+      </div>
+      <!--标签-->
+      <div id="tag" class="tag" onclick="this.querySelector('.tag-panel').classList.add('open');">
+        <span id="current-tag">推荐<i class="icon-caret-down"></i></span>
+        <div class="tag-panel">
+          <ul>
+            <li class="active">推荐</li>
+            <li>图集</li>
+            <li>时政</li>
+            <li>军事</li>
+            <li>国际</li>
+            <li>科技</li>
+            <li>饮食</li>
+          </ul>
+          <span id="tag-btn" class="tag-btn"
+                onclick="window.event.stopPropagation();document.querySelector('.tag-panel').classList.remove('open');">确定
+          </span>
+        </div>
+
+      </div>
+      <!--搜索-->
+      <div id="search" class="search">
+        <input type="text" class="clear-input" placeholder="请输入要搜索的内容">
+        <span class="icon-search"></span>
+      </div>
+    </section>
+
+    <!--文章部分-->
+    <section class="home-article-container">
+
+      <!--根据文章头部区分默认／视频／封面／音频-->
+
+      <div class="home-article">
+
+        <!--文章头部 默认-->
+        <div class="home-article-header">
+          <div class="title">
+            <span>奥地利小镇的冬天奥地利小镇的冬天</span>
+          </div>
+          <div class="time icon-clock">2016-10-31</div>
+        </div>
+
+
+        <!--导读-->
+        <a href="./article.html">
+          <div class="home-article-guide">
+            <span>导读：</span>
+            <p>近几年出现的一种标题形式，它类似于20世纪80年代中期出现的标题新闻，现在许多报纸都在运用这一特殊的新闻品种，它主要是方便人们阅读，激起人们阅读的兴趣， 用导读造句：我想看看中国新闻网的新闻导读部分。</p>
+          </div>
+        </a>
+
+        <!--作者-->
+        <div class="home-article-author">
+            <span class="author-avatar vip">
+              <img src="http://tva4.sinaimg.cn/crop.0.0.960.960.180/bceb232djw8f7najhd9yqj20qo0qoq47.jpg">
+            </span>
+          <span class="author-name">小德</span>
+          <span class="author-identity">特邀作者</span>
+
+          <div>
+            <span class="home-article-view icon-eye">3000</span>
+            <span class="home-article-comment icon-commenting">88</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="home-article">
+        <!--文章头部 带封面-->
+        <div class="home-article-header with-cover">
+          <!--封面-->
+          <div class="cover">
+            <img
+              src="http://m.tuniucdn.com/fb2/t1/G1/M00/F6/D6/Cii9EVbBgdiINy1xABxWxTQCSo4AAB3oQPZ7TkAHFbd379_w450_h300_c1_t0_w500_h280_c1_t0.png">
+          </div>
+          <!--标题-->
+          <div class="title">
+            <span>奥地利小镇的冬天</span>
+            <span class="img-set">9图</span>
+          </div>
+
+          <div class="time icon-clock">2016-10-31</div>
+
+          <!--音频-->
+        </div>
+        <!--导读-->
+
+        <div class="home-article-guide">
+          <span>导读：</span>
+          <p>近几年出现的一种标题形式，它类似于20世纪80年代中期出现的标题新闻，现在许多报纸都在运用这一特殊的新闻品种，它主要是方便人们阅读，激起人们阅读的兴趣， 用导读造句：我想看看中国新闻网的新闻导读部分。</p>
+        </div>
+
+        <!--作者-->
+        <div class="home-article-author">
+
+            <span class="author-avatar">
+              <img src="http://tva4.sinaimg.cn/crop.0.0.960.960.180/bceb232djw8f7najhd9yqj20qo0qoq47.jpg">
+            </span>
+          <span class="author-name">小德</span>
+          <span class="author-identity">特邀作者</span>
+
+          <div>
+            <span class="home-article-view icon-eye">3000</span>
+            <span class="home-article-comment icon-commenting">88</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="home-article">
+        <!--文章头部 带视频-->
+        <div class="home-article-header with-video">
+          <!--视频-->
+          <div class="video">
+            <video src="http://7jpsxk.com1.z0.glb.clouddn.com/ocean_small.mp4"
+                   poster="http://m.tuniucdn.com/fb2/t1/G1/M00/F6/D6/Cii9EVbBgdiINy1xABxWxTQCSo4AAB3oQPZ7TkAHFbd379_w450_h300_c1_t0_w500_h280_c1_t0.png"
+                   controls webkit-playsinline></video>
+          </div>
+          <!--标题-->
+          <div class="title">
+            <span>奥地利小镇的冬天</span>
+          </div>
+
+          <div class="home-article-time icon-clock">2016-10-31</div>
+
+        </div>
+        <!--导读-->
+        <div class="home-article-guide">
+          <span>导读：</span>
+          <p>近几年出现的一种标题形式，它类似于20世纪80年代中期出现的标题新闻，现在许多报纸都在运用这一特殊的新闻品种，它主要是方便人们阅读，激起人们阅读的兴趣， 用导读造句：我想看看中国新闻网的新闻导读部分。</p>
+        </div>
+        <!--作者-->
+        <div class="home-article-author">
+
+            <span class="author-avatar">
+              <img src="http://tva4.sinaimg.cn/crop.0.0.960.960.180/bceb232djw8f7najhd9yqj20qo0qoq47.jpg">
+            </span>
+          <span class="author-name">小德</span>
+          <span class="author-identity">特邀作者</span>
+
+          <div>
+            <span class="home-article-view icon-eye">3000</span>
+            <span class="home-article-comment icon-commenting">88</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="home-article">
+
+        <!--文章头部 音频-->
+        <div class="home-article-header with-audio">
+          <div class="title">
+            <span>《关键词》</span>
+          </div>
+
+          <div class="time icon-clock">2016-10-31</div>
+
+          <div class="audio">
+            <audio src="http://7jpsxs.com1.z0.glb.clouddn.com/keyword.mp3"></audio>
+            <div data-control="audio" class="audio-btn">
+              <span class="icon-play2"></span>
+            </div>
+            <div class="audio-speaker">
+              <span class="speaker"></span>
+            </div>
+            <div class="audio-time">--:--</div>
+          </div>
+        </div>
+
+        <!--导读-->
+        <div class="home-article-guide">
+          <span>导读：</span>
+          <p>近几年出现的一种标题形式，它类似于20世纪80年代中期出现的标题新闻，现在许多报纸都在运用这一特殊的新闻品种，它主要是方便人们阅读，激起人们阅读的兴趣， 用导读造句：我想看看中国新闻网的新闻导读部分。</p>
+        </div>
+
+        <!--作者-->
+        <div class="home-article-author">
+            <span class="author-avatar">
+              <img src="http://tva4.sinaimg.cn/crop.0.0.960.960.180/bceb232djw8f7najhd9yqj20qo0qoq47.jpg">
+            </span>
+          <span class="author-name">小德</span>
+          <span class="author-identity">特邀作者</span>
+
+          <div>
+            <span class="home-article-view icon-eye">3000</span>
+            <span class="home-article-comment icon-commenting">88</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="home-article">
+
+        <!--文章头部 音频-->
+        <div class="home-article-header with-audio">
+          <div class="title">
+            <span>狗叫</span>
+          </div>
+          <div class="time icon-clock">2016-10-31</div>
+
+          <div class="audio">
+            <audio src="http://7jpsxs.com1.z0.glb.clouddn.com/puppy-barking_ds.mp3"></audio>
+            <div data-control="audio" class="audio-btn">
+              <span class="icon-play2"></span>
+            </div>
+            <div class="audio-speaker">
+              <span class="speaker"></span>
+            </div>
+            <div class="audio-time">--:--</div>
+          </div>
+        </div>
+
+        <!--导读-->
+        <div class="home-article-guide">
+          <span>导读：</span>
+          <p>近几年出现的一种标题形式，它类似于20世纪80年代中期出现的标题新闻，现在许多报纸都在运用这一特殊的新闻品种，它主要是方便人们阅读，激起人们阅读的兴趣。</p>
+        </div>
+
+        <!--作者-->
+        <div class="home-article-author">
+            <span class="author-avatar">
+              <img src="http://tva4.sinaimg.cn/crop.0.0.960.960.180/bceb232djw8f7najhd9yqj20qo0qoq47.jpg">
+            </span>
+          <span class="author-name">小德</span>
+          <span class="author-identity">特邀作者</span>
+
+          <div>
+            <span class="home-article-view icon-eye">3000</span>
+            <span class="home-article-comment icon-commenting">88</span>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!--查看更多-->
+    <section id="view-more" class="home-view-more">
+      <span>查看更多</span>
+    </section>
+  </div>
+</div>
+
+
+<script src="../dist/component/sea.js"></script>
+<script src="../dist/component/sea.config.js"></script>
+<script>
+  seajs.use(['fastclick', 'jquery', 'swiper', 'modal'], function (fastclick, $, swiper) {
+
+    // 处理移动端300ms延迟
+    fastclick(document.body);
+
+
+    // 选择文章类型
+    $("#tag").on("click", ".tag-panel li", function () {
+      $(this).toggleClass("active");
+      // load articles
+    });
+
+
+    // 播放音频
+    // 音频时间格式化
+    function formatTime(secs) {
+      var minutes = Math.floor(secs / 60) || 0;
+      var seconds = (secs - minutes * 60) || 0;
+      return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+    }
+
+
+    $(".home-article-container").on("click", "[data-control=audio]", function () {
+      playAudio($(this));
+    });
+
+
+    function playAudio($currentBtn) {
+
+      var $playBtn       = $currentBtn,
+          $playContainer = $currentBtn.closest(".audio"),
+          $playTime      = $playContainer.find(".audio-time"),
+          $playSpeaker   = $playContainer.find(".speaker"),
+          cache          = $playBtn.data("cache"),
+          requestAnimationFrameID,
+          sound_duration;
+
+
+      if (cache) {
+        if (cache.sound.playing(cache.id)) {
+          cache.sound.pause(cache.id);
+        } else {
+          cache.sound.play(cache.id);
+        }
+      } else {
+        var audio = $playContainer.find("audio")[0],
+            soundID;
+
+        function _updateTime() {
+          var seek = Math.round(sound.seek());
+          var duration = Math.round(sound.duration());
+          var time = formatTime(duration - seek);
+          $playTime.html(time);
+          requestAnimationFrameID = window.requestAnimationFrame(_updateTime);
+        }
+
+        function _reset() {
+          window.cancelAnimationFrame(requestAnimationFrameID);
+          $playSpeaker.removeClass("active");
+          $playBtn.find("span").removeClass().addClass("icon-play2");
+        }
+
+        var sound = new Howl({
+          src: [audio.src],
+          loop: false,
+          onend: function () {
+            _reset();
+            $playTime.html(sound_duration);
+          },
+          onplay: function () {
+            $playBtn.find("span").removeClass().addClass("icon-pause");
+            $playSpeaker.addClass("active");
+            // 更新音频剩余时间
+            requestAnimationFrameID = window.requestAnimationFrame(_updateTime);
+          },
+          onpause: function () {
+            _reset();
+          },
+          onload: function () {
+            sound_duration = formatTime(Math.round(sound.duration()));
+          }
+        });
+
+        soundID = sound.play();
+
+        if (sound.state(soundID) === "loading") {
+          $playBtn.find("span").removeClass().addClass("icon-spinner2 sound-rotate");
+        }
+
+        $playBtn.data("cache", {sound: sound, id: soundID});
+      }
+    }
+
+  });
+
+</script>
+
+</body>
+</html>
