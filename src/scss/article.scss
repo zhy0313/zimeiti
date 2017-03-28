@@ -323,7 +323,7 @@ article {
   overflow: hidden;
   > div {
     float: left;
-    width: 6rem;
+    min-width: 6rem;
     margin: 1rem;
     text-align: center;
   }
@@ -334,7 +334,7 @@ article {
     font-size: .8rem;
     width: 100%;
     text-align: center;
-    padding: 8px 0;
+    padding: 8px 1rem;
     border-radius: 1rem;
     box-sizing: border-box;
   }
@@ -622,7 +622,6 @@ article {
     }
   }
   .star-btn {
-    width: 3rem;
     padding: .5rem 1rem;
     background: #ff8400;
     color: white;
