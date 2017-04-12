@@ -167,8 +167,8 @@
       font-size: .875rem;
       font-weight: normal;
     }
-    a{
-      color:#ff8400;
+    a {
+      color: #ff8400;
     }
   }
   .bottom {
@@ -319,6 +319,7 @@
     &.icon-mail-envelope-closed {
       &:before {
         background: #9ac743;
+        font-size: 1rem;
       }
     }
     &.icon-star-full {
@@ -354,6 +355,7 @@
     &.icon-moneybag {
       &:before {
         background: #d82d8e;
+        font-size: 1rem;
       }
     }
     &.icon-wrench {
