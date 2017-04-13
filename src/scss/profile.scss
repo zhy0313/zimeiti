@@ -279,104 +279,78 @@
     position: relative;
     padding: 1rem;
     border-bottom: 1px solid #eaeaea;
-    padding-left: 4.6rem;
+    @include flex-container();
+    @include flex-direction-h();
     a {
-      display: block;
       color: #333;
       overflow: hidden;
-    }
-    span {
-      float: right;
-      color: #ff8400;
-      &:after {
-        font-family: "icomoon";
-        content: "\e910";
-        color: #bdbdbd;
-        margin-left: .5rem;
-        vertical-align: -2px;
-        font-size: 1.2rem;
+      line-height: 1.6rem;
+      @include flex-item(1);
+      span {
+        float: right;
+        color: #ff8400;
+        &:after {
+          font-family: "icomoon";
+          content: "\e910";
+          color: #bdbdbd;
+          margin-left: .5rem;
+          vertical-align: -2px;
+          font-size: 1.2rem;
+        }
       }
     }
-    &:before {
-      position: absolute;
-      display: block;
+
+    > span {
       width: 1.6rem;
       height: 1.6rem;
-      left: 2rem;
-      top: 50%;
-      margin-top: -0.8rem;
       border-radius: 50%;
       text-align: center;
       line-height: 1.6rem;
       color: white;
       font-size: .8rem;
+      margin: 0 1rem;
     }
-    &.icon-home {
-      &:before {
-        background: #ff8400;
-      }
+
+    .icon-home {
+      background: #ff8400;
     }
-    &.icon-mail-envelope-closed {
-      &:before {
-        background: #9ac743;
-        font-size: 1rem;
-      }
+    .icon-mail-envelope-closed {
+      background: #9ac743;
+      font-size: 1rem;
     }
-    &.icon-star-full {
-      &:before {
-        background: #cb5475;
-      }
+    .icon-star-full {
+      background: #cb5475;
     }
-    &.icon-more_horiz {
-      &:before {
-        background: #5b829b;
-      }
+    .icon-more_horiz {
+      background: #5b829b;
     }
-    &.icon-add {
-      &:before {
-        background: #f8715e;
-      }
+    .icon-add {
+      background: #f8715e;
     }
-    &.icon-eye {
-      &:before {
-        background: #698afe;
-      }
+    .icon-eye {
+      background: #698afe;
     }
-    &.icon-chat {
-      &:before {
-        background: #eeae4a;
-      }
+    .icon-chat {
+      background: #eeae4a;
     }
-    &.icon-file-text {
-      &:before {
-        background: #ba69c8;
-      }
+    .icon-file-text {
+      background: #ba69c8;
     }
-    &.icon-moneybag {
-      &:before {
-        background: #d82d8e;
-        font-size: 1rem;
-      }
+    .icon-moneybag {
+      background: #d82d8e;
+      font-size: 1rem;
     }
-    &.icon-wrench {
-      &:before {
-        background: #42666e;
-      }
+    .icon-wrench {
+      background: #42666e;
     }
-    &.icon-us {
-      &:before {
-        background: #f1cb34;
-      }
+    .icon-us {
+      background: #f1cb34;
     }
-    &.icon-commenting {
-      &:before {
-        background: #9ac743;
-      }
+    .icon-comment {
+      background: #9ac743;
     }
-    &.icon-bell {
-      &:before {
-        background: #6a892f;
-      }
+    .icon-bell {
+      background: #6a892f;
     }
 
   }
@@ -700,17 +674,10 @@
     }
   }
   .bottom {
-    @include flex-container();
     span {
+      color: #000;
       &:first-child {
         margin-right: .5rem;
-      }
-      &:last-child {
-        color: #000;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        @include flex-item(1);
       }
     }
   }
@@ -721,7 +688,6 @@
 }
 
 .message-item.read {
-  color: #999;
   .icon-bell {
     background: #999;
   }

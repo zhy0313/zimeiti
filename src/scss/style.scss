@@ -39,19 +39,19 @@
     color: white;
     padding: 2px;
   }
-  .user.new-message {
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 6px;
-      height: 6px;
-      background: $mainColor;
-      border-radius: 50%;
-    }
-  }
+  //.user.new-message {
+  //  &:after {
+  //    content: "";
+  //    display: block;
+  //    position: absolute;
+  //    top: 0;
+  //    right: 0;
+  //    width: 6px;
+  //    height: 6px;
+  //    background: $mainColor;
+  //    border-radius: 50%;
+  //  }
+  //}
   .user-avatar {
     display: block;
     position: absolute;

@@ -394,3 +394,18 @@ a {
   }
 }
 
+.new-message{
+  position:relative;
+  &:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6px;
+    height: 6px;
+    background: #ff6000;
+    border-radius: 50%;
+  }
+}
+
