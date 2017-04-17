@@ -415,9 +415,10 @@
   color: #666;
   line-height: 1.4;
   padding: 0 0.7rem;
-  > span {
-    float: left;
-    color: black;
+  > p {
+    span{
+      color: black;
+    }
   }
 }
 
