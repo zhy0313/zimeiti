@@ -32,6 +32,13 @@
             <input class="clear-input" type="file">
             <img src="http://tva2.sinaimg.cn/crop.0.0.512.512.50/9e5389bbjw8eylgqjhrzsj20e80e8jrw.jpg">
           </span>
+          <div class="loading-tip" style="float:right;">
+            <span class="uil-ring-css">
+              <div></div>
+            </span>
+            <span>正在上传</span>
+          </div>
+
         </div>
         <div class="form-item">
           <label>昵称</label>
@@ -67,12 +74,27 @@
 </div>
 
 
+<div id="loading-modal" class="modal fade" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="loading-modal">
+      <div class="uil-ring-css">
+        <div></div>
+      </div>
+      <span>正在上传</span>
+    </div>
+  </div>
+</div>
+
+
 <script src="../dist/component/sea.js"></script>
 <script src="../dist/component/sea.config.js"></script>
 <script>
   seajs.use(['jquery', 'modal'], function ($) {
+    // $("#loading-modal").modal({backdrop: 'static'});
 
-
+//    setTimeout(function(){
+//      $("#loading-modal").modal('hide');
+//    },3000)
   });
 </script>
 

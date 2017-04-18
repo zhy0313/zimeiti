@@ -344,12 +344,19 @@
     }
   }
   .cover {
+    position: relative;
     margin: -0.7rem;
     margin-bottom: auto;
     height: 11rem;
     overflow: hidden;
     img {
+      position: absolute;
       display: block;
+      min-width: 100%;
+      left: 50%;
+      top: 0;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
     }
   }
   .video {
@@ -416,7 +423,7 @@
   line-height: 1.4;
   padding: 0 0.7rem;
   > p {
-    span{
+    span {
       color: black;
     }
   }
