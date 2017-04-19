@@ -32,6 +32,62 @@
     </div>
   </div>
 
+
+
+  <!--您需要支付1元钱查看此问题，同时关注此作者-->
+  <div class="modal fade custom-modal pay-modal" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"></button>
+        </div>
+        <div class="modal-banner">
+          <img src="../dist/image/pay-modal-banner.jpg">
+        </div>
+        <div class="modal-body">
+          <h3>您需要支付<span>1元钱</span>查看此问题，<br>同时关注此作者。</h3>
+          <span class="modal-btn">确认打开</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--支付问答成功-->
+  <div class="modal fade custom-modal success-modal" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"></button>
+        </div>
+        <div class="modal-banner">
+          <img src="../dist/image/success-modal-banner.png">
+          <p>支付问答成功</p>
+        </div>
+        <div class="modal-body">
+          <h3>感谢您的支持！<br>请随时关注消息提醒！</h3>
+          <span class="modal-btn">查看私信</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--赞赏成功-->
+  <div class="modal fade custom-modal basic-modal" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"></button>
+        </div>
+        <div class="modal-banner">
+          <img src="../dist/image/basic-modal-banner.png">
+          <p>赏赞成功 !<br>感谢您的支持 !</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 
@@ -43,12 +99,9 @@
     // bootstrap modal 文档 http://v3.bootcss.com/javascript/#modals
 
     // 打开浮层
-    $(".modal").modal({backdrop: true});
-
-    // 隐藏浮层
-    $("#cancel").on("click", function () {
-      $(".modal").modal('hide');
-    });
+    $(".pay-modal").modal({backdrop: true});
+    $(".success-modal").modal({backdrop: true});
+    $(".basic-modal").modal({backdrop: true});
 
   });
 </script>

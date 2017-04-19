@@ -237,20 +237,22 @@
 </div>
 
 <!--星级浮层-->
-<div id="star-modal" class="modal fade star-modal" role="dialog" aria-hidden="true">
+<div id="star-modal" class="modal fade custom-modal star-modal" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <button type="button" class="close" data-dismiss="modal"></button>
+
+      </div>
+      <div class="modal-banner">
+        <img src="../dist/image/star-banner.png" alt="评分">
       </div>
       <div class="modal-body">
-        <p>您为文章评分： <span><em>4.1</em>分</span></p>
+        <h4>您为文章评分： <span><em>4.1</em>分</span></h4>
         <div class="stars-wrap">
           <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
         </div>
-        <span class="star-btn">确定</span>
+        <span class="modal-btn star-btn">确定</span>
       </div>
     </div>
   </div>
@@ -278,7 +280,7 @@
       // 显示评级浮层
       $modal.find(".stars-wrap").attr("class", function (i, cls) {
         return cls.replace(reg, '');
-      }).addClass(star_class).end().find("em").html(index).end().modal({backdrop: false});
+      }).addClass(star_class).end().find("em").html(index).end().modal({backdrop: true});
 
       // 评级确定
       $modal.on("click", ".star-btn", function () {

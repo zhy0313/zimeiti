@@ -216,7 +216,7 @@ article {
     &:before {
       content: "\e9d7";
     }
-    margin:0 3px;
+    margin: 0 3px;
   }
 
   &.star_1 {
@@ -591,45 +591,6 @@ article {
   margin: 0 auto;
   a {
     color: white;
-  }
-}
-
-.star-modal {
-  .modal-content {
-    border-radius: 0;
-  }
-  .modal-header {
-    border: none;
-    border-top: 2px solid #ff8400;
-  }
-  .modal-body {
-    text-align: center;
-    padding-top: 0;
-    margin-top: -15px;
-    h3 {
-      font-weight: normal;
-      color: #ff8400;
-    }
-    p {
-      color: #666;
-      font-size: .875rem;
-      span {
-        color: #ff8400;
-      }
-      em {
-        font: 1.4rem normal;
-      }
-    }
-  }
-  .star-btn {
-    padding: .5rem 1rem;
-    background: #ff8400;
-    color: white;
-    margin: 2rem auto 0;
-  }
-  .stars-wrap {
-    color: #999;
-    font-size: 2rem;
   }
 }
 

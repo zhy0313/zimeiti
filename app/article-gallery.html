@@ -119,26 +119,21 @@
 </div>
 
 <!--评分浮层-->
-<div id="star-modal" class="modal fade star-modal" role="dialog" aria-hidden="true">
+<div id="star-modal" class="modal fade custom-modal star-modal" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <button type="button" class="close" data-dismiss="modal"></button>
+      </div>
+      <div class="modal-banner">
+        <img src="../dist/image/star-banner.png" alt="评分">
       </div>
       <div class="modal-body">
-        <h3>评分</h3>
+        <h4>您为文章评分： <span><em>?</em>分</span></h4>
         <div class="stars-wrap">
-          <span class="star"></span>
-          <span class="star"></span>
-          <span class="star"></span>
-          <span class="star"></span>
-          <span class="star"></span>
+          <span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
         </div>
-        <p>您为文章评分： <span><em>?</em>分</span></p>
-
-        <div class="star-btn">确定</div>
+        <span class="modal-btn star-btn">确定</span>
       </div>
     </div>
   </div>
@@ -193,7 +188,7 @@
     // 文章评分
 
     $("#star").on("click", function () {
-      $("#star-modal").modal();
+      $("#star-modal").modal({backdrop: true});
     });
 
 

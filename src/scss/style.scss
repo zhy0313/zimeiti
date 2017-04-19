@@ -270,7 +270,6 @@
   position: absolute;
   bottom: 1rem;
   width: 100%;
-  padding-left: 0.5rem;
   color: white;
 }
 
@@ -281,7 +280,7 @@
   border-radius: 50%;
   overflow: hidden;
   padding: 1px;
-  margin-top: 2px;
+  margin: .4rem .3rem 0 1rem;
   background: white;
   > img {
     display: block;
@@ -290,7 +289,6 @@
 }
 
 .banner-title {
-  padding-left: 3rem;
   span {
     font-size: 0.75rem;
     font-style: italic;
@@ -300,6 +298,9 @@
     margin: 0;
     padding: 2px 0 .8rem;
     line-height: 1;
+  }
+  &.ad {
+    text-align: center;
   }
 }
 
