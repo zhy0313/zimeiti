@@ -337,7 +337,10 @@
 <script src="../dist/component/sea.js"></script>
 <script src="../dist/component/sea.config.js"></script>
 <script>
-  seajs.use(['fastclick', 'jquery', 'swiper', 'modal'], function (fastclick, $, swiper) {
+  seajs.use(['fastclick', 'jquery', 'swiper', 'top', 'modal'], function (fastclick, $, swiper, top) {
+
+    top();
+    console.log(top);
 
     // 处理移动端300ms延迟
     fastclick(document.body);

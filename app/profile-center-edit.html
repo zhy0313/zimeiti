@@ -74,14 +74,13 @@
 </div>
 
 
-<div id="loading-modal" class="modal fade" role="dialog" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="loading-modal">
-      <div class="uil-ring-css">
-        <div></div>
-      </div>
-      <span>正在上传</span>
-    </div>
+<div class="avatar-cropper-container">
+  <div class="avatar-cropper">
+    <img id="cropper" src="../dist/image/1.jpg" alt="">
+  </div>
+  <div class="avatar-cropper-btns">
+    <span id="cropper-cancel">取消</span>
+    <span id="cropper-ok">确定</span>
   </div>
 </div>
 
@@ -89,12 +88,34 @@
 <script src="../dist/component/sea.js"></script>
 <script src="../dist/component/sea.config.js"></script>
 <script>
-  seajs.use(['jquery', 'modal'], function ($) {
-    // $("#loading-modal").modal({backdrop: 'static'});
+  seajs.use(['jquery', 'modal', 'cropper'], function ($) {
 
-//    setTimeout(function(){
-//      $("#loading-modal").modal('hide');
-//    },3000)
+    // 裁剪
+    $("#cropper").cropper({
+      aspectRatio: 1,
+      ready: function () {
+        $(this).cropper('crop');
+      }
+    });
+
+
+    // 确定裁剪
+    $("#cropper-ok").on("click", function () {
+      var cropperData = $("#cropper").cropper('getData');
+      console.log(cropperData);
+      console.log(cropperData.x); //裁剪起点，相对于原始图片左上角x
+      console.log(cropperData.y); //裁剪起点，相对于原始图片左上角y
+      console.log(cropperData.width);//裁剪区域宽度
+      console.log(cropperData.height);//裁剪区域高度
+      console.log(cropperData.rotate);// 原始图片旋转角度
+      console.log(cropperData.scaleX);
+      console.log(cropperData.scaleY);
+    });
+
+    //取消裁剪
+    $("#cropper-cancel").on("click", function () {
+      $(".avatar-cropper-container").hide();
+    });
   });
 </script>
 

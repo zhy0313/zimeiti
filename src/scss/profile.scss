@@ -371,6 +371,9 @@
 
 .profile-author-avatar {
   text-align: center;
+  .icon-add.followed {
+    color: #cecece;
+  }
   span {
     vertical-align: middle;
     &:nth-child(2) {
@@ -393,7 +396,7 @@
       line-height: 2rem;
       border-radius: 50%;
       padding: .2rem;
-      border: 2px solid #a5a5a5;
+      border: 2px solid #e0e0e0;
       font-weight: bold;
     }
 

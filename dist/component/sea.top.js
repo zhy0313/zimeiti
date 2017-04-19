@@ -1,0 +1,1 @@
+define(function(a,b,c){function d(){e(document).ready(function(){e(window).scroll(function(){e(this).scrollTop()>200?f.fadeIn(200):f.fadeOut(200)}),f.click(function(a){a.preventDefault(),e("html,body").animate({scrollTop:0},300)})})}var e=a("jquery"),f=e("<div class='go-top'></div>");f.appendTo(e("body")),c.exports=d});
