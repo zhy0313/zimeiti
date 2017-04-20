@@ -332,7 +332,9 @@
 
 .success-modal,
 .basic-modal,
-.star-modal {
+.star-modal,
+.shang-modal,
+.whisper-modal {
   .modal-header {
     margin-bottom: -2rem;
   }
@@ -352,6 +354,38 @@
     color: #999;
     font-size: 2rem;
     margin: -10px 0 20px;
+  }
+}
+
+.modal-avatar {
+  color: #666;
+  font-size: 12px;
+  ul {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  li {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #fff;
+    box-shadow: 1px 1px 1px 1px #efefef;
+    border-radius: 50%;
+  }
+  span {
+    margin: 0 4px;
+  }
+}
+
+.modal-link {
+  display: block;
+  span {
+    color: #ff8106;
+  }
+  em {
+    font-style: normal;
+    color: #666;
+    font-size: 12px;
   }
 }
 

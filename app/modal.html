@@ -33,7 +33,6 @@
   </div>
 
 
-
   <!--您需要支付1元钱查看此问题，同时关注此作者-->
   <div class="modal fade custom-modal pay-modal" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
@@ -88,6 +87,55 @@
     </div>
   </div>
 
+  <!--图集页 赏-->
+  <div class="modal fade custom-modal shang-modal" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"></button>
+        </div>
+        <div class="modal-banner">
+          <img src="../dist/image/shang-modal-banner.png">
+        </div>
+        <div class="modal-body">
+          <span class="modal-btn">赏</span>
+          <div class="modal-avatar">
+            <a href="">
+              <ul>
+                <li><img src="../dist/image/avatar.png"></li>
+                <li><img src="../dist/image/avatar.png"></li>
+                <li><img src="../dist/image/avatar.png"></li>
+                <li><img src="../dist/image/avatar.png"></li>
+              </ul>
+              <span>共15人</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--图集页 私语-->
+  <div class="modal fade custom-modal whisper-modal" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"></button>
+        </div>
+        <div class="modal-banner">
+          <img src="../dist/image/whisper-modal-banner.png">
+        </div>
+        <div class="modal-body">
+          <span class="modal-btn">私语</span>
+          <a class="modal-link" href="">
+            <span>查看其它私语 <em>(5人)</em></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 
@@ -102,6 +150,8 @@
     $(".pay-modal").modal({backdrop: true});
     $(".success-modal").modal({backdrop: true});
     $(".basic-modal").modal({backdrop: true});
+    $(".shang-modal").modal({backdrop: true});
+    $(".whisper-modal").modal({backdrop: true});
 
   });
 </script>
