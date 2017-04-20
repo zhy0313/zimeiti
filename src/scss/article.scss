@@ -347,20 +347,14 @@ article {
       border: 1px solid currentColor;
     }
     a:last-child {
-      ul {
-        display: inline-block;
-        vertical-align: middle;
-      }
-      li {
-        display: inline-block;
-        width: 1rem;
-        height: 1rem;
-        border: 1px solid #fff;
-        box-shadow: 1px 1px 1px 1px #efefef;
-        border-radius: 50%;
-      }
       span {
+        color: #ff8400;
+      }
+      em {
+        font-style: normal;
+        color: #666;
         font-size: 12px;
+        margin: 0 4px;
       }
     }
   }
@@ -373,7 +367,7 @@ article {
     }
     a:last-child {
       span {
-        color: #ff8106;
+        color: #ff8400;
       }
       em {
         font-style: normal;
