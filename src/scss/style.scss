@@ -79,35 +79,40 @@
   }
   .tag-panel {
     position: absolute;
-    height: 9.625rem;
-    background: rgba(0, 0, 0, .9);
+    background: rgba(0, 0, 0, 0.75);
     width: 100%;
-    top: -11.625rem;
+    top: 0;
     left: 0;
-    padding: 1rem 0;
     text-align: center;
     -webkit-transition: all 0.8s;
-    -webkit-transform: translateY(0);
+    -webkit-transform: translateY(-100%);
     transition: all 0.8s;
-    transform: translateY(0);
+    transform: translateY(-100%);
     overflow: hidden;
     &.open {
       overflow: initial;
       -webkit-transition: all 0.8s;
-      -webkit-transform: translateY(100%);
+      -webkit-transform: translateY(0);
       transition: all 0.8s;
-      transform: translateY(100%);
+      transform: translateY(0);
     }
     ul {
-      width: 20rem;
-      margin: auto;
-      text-align: left;
+      @include flex-container();
+      @include flex-direction-h();
+      width: 96%;
+      margin: 0 auto;
+      -wekit-flex-wrap: wrap;
+      flex-wrap: wrap;
     }
     li {
+      //@include flex-item(1);
       display: inline-block;
-      padding: .3rem 0.875rem;
+      padding: .3rem 0;
       border-radius: 1rem;
-      margin: .5rem;
+      margin: 1rem 1%;
+      width: 18%;
+      box-sizing: border-box;
+      text-align: center;
       &.active {
         background: $mainColor;
       }
