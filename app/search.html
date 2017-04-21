@@ -18,7 +18,10 @@
     <!--搜索框-->
     <section class="search-box">
       <a href="javascript:history.go(-1);"><span class="search-return icon-angle-left"></span></a>
-      <span class="search-keyword"><input type="text" placeholder="请输入关键词" name="keyword"></span>
+      <span class="search-keyword">
+        <input type="text" placeholder="请输入关键词" name="keyword">
+        <div class="clear"></div>
+      </span>
       <span class="search-btn" id="search">搜索</span>
       <span class="search-cancel" id="cancel">取消</span>
     </section>
@@ -164,6 +167,20 @@
 <script>
   seajs.use(['jquery', 'modal'], function ($) {
 
+    $(".search-keyword").on("input", function () {
+      var $content = $(this).find("input"),
+          $clear   = $(this).find(".clear");
+      if ($content.val().length > 0) {
+        $clear.show();
+      } else {
+        $clear.hide();
+      }
+    });
+
+    $(".search-keyword").on("click", ".clear", function () {
+      $(this).siblings("input").val("");
+      $(this).hide();
+    });
 
   });
 </script>
