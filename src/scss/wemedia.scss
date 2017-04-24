@@ -299,6 +299,17 @@
     }
 
   }
+  &.audit {
+    .progress-mark {
+      background-image: url(../image/audit.png);
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    h3 {
+      color: #666;
+    }
+  }
   h3 {
     text-align: center;
     font-weight: normal;
