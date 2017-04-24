@@ -156,11 +156,11 @@ article {
 
 .article-content {
   color: #333333;
-  padding-bottom: 0;
+  //padding-bottom: 0;
   line-height: 1.6;
+  padding: 0 1rem 0;
   p {
-    margin: 1rem;
-    margin-top: 0;
+
   }
   img {
     display: block;
