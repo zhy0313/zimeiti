@@ -113,10 +113,16 @@
 
 .whisper-no-content {
   width: 7rem;
-  height: 9.25rem;
+  height: 7rem;
   background: url(../image/no-content.png) center center;
   background-size: 100% 100%;
-  margin: 5rem auto;
+  margin: 5rem auto 1rem;
+}
+
+.whisper-word{
+  text-align: center;
+  color: #b0b0b4;
+  margin: 0;
 }
 
 /********** whisper-ask.html **********/
