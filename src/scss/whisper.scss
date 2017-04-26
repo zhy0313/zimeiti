@@ -20,16 +20,17 @@
 .whisper-list-type {
   text-align: center;
   color: #ff8400;
-  width: 80%;
-  margin: 10px auto;
-  border-radius: 6px;
-  overflow: hidden;
-  border: 1px solid #ff8400;
+  margin: 10px;
+  >div{
+    overflow: hidden;
+    display: inline-block;
+    border: 1px solid #ff8400;
+    border-radius: 6px;
+  }
   span {
     position: relative;
-    padding: 5px 10px;
+    padding: 5px 15px;
     float: left;
-    width: 33.33333333%;
     box-sizing: border-box;
     &:after {
       content: "";
