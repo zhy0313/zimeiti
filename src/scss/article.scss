@@ -1032,23 +1032,28 @@ article {
         padding: 2px;
       }
     }
-  }
-  .top {
-    padding: 0.2rem 0;
-    color: #666;
-    span {
-      font-size: 1rem;
-      color: #333;
+    .right{
+      margin-left:4.2rem;
+      .top {
+        padding: 0.2rem 0;
+        color: #666;
+        span {
+          font-size: 1rem;
+          color: #333;
+          display:inline;
+        }
+      }
+      .bottom {
+        color: #999;
+        height: 1.225rem;
+        @extend .txt-overflow;
+        span {
+          color: #666;
+        }
+      }
     }
   }
-  .bottom {
-    color: #999;
-    height: 1.225rem;
-    @extend .txt-overflow;
-    span {
-      color: #666;
-    }
-  }
+
 }
 
 /********** msg-comment-r.html ************/
