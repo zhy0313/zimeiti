@@ -746,16 +746,26 @@
 }
 
 .login-via-wechat {
+  position: relative;
   border: 1px solid white;
   color: white;
   text-align: center;
   padding: 8px;
   border-radius: 6px;
   margin-top: 10px;
-  &:before{
-    vertical-align: middle;
-    margin-right:5px;
+  span {
+    position: relative;
+    margin-left: 22px;
+    &:before {
+      position: absolute;
+      left: -22px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      margin-top: 1px;
+    }
   }
+
 }
 
 /********** register.html **********/
