@@ -776,6 +776,7 @@
   }
   input[type=tel],
   input[type=text],
+  input[type=number],
   input[type=password],
   input[type=submit] {
     width: 100%;
@@ -1259,6 +1260,7 @@
   input[type=tel],
   input[type=text],
   input[type=password],
+  input[type=number],
   input[type=submit] {
     width: 100%;
     padding: 16px 10px;
