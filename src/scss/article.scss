@@ -79,7 +79,7 @@
         width: 80%;
         height: 2px;
         background: #ff7e00;
-        bottom:8px;
+        bottom: 8px;
         left: 10%;
       }
     }
@@ -767,15 +767,15 @@ article {
   overflow: hidden;
 
   .swiper-slide {
+    background: #333;
     overflow: hidden;
     img {
       position: absolute;
       display: block;
-      min-height: 100%;
-      max-width: none;
-      left: 50%;
-      -webkit-transform: translateX(-50%);
-      transform: translateX(-50%);
+      top: 50%;
+      width: 100%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
     }
   }
 }
@@ -1032,15 +1032,15 @@ article {
         padding: 2px;
       }
     }
-    .right{
-      margin-left:4.2rem;
+    .right {
+      margin-left: 4.2rem;
       .top {
         padding: 0.2rem 0;
         color: #666;
         span {
           font-size: 1rem;
           color: #333;
-          display:inline;
+          display: inline;
         }
       }
       .bottom {
