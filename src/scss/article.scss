@@ -442,6 +442,9 @@ article {
     bottom: .5rem;
     font-size: .8rem;
     color: #666;
+    padding-left: 7.5rem;
+    box-sizing: border-box;
+    text-align: left;
     span {
       margin-right: 5px;
       &:nth-child(1) {
