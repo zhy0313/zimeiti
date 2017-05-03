@@ -398,6 +398,20 @@
   }
 }
 
+.protocal-modal {
+  .modal-dialog {
+    margin-top: 0;
+    width: 90%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 2rem 0;
+  }
+  .modal-content {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
 /*!
  * Cropper v3.0.0-rc
  * https://github.com/fengyuanchen/cropper

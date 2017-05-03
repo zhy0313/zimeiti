@@ -781,7 +781,7 @@
     &:nth-last-child(3) ~ .form-item {
       text-align: center;
       border-bottom: none;
-      margin-top: 2rem;
+      margin-top: 1rem;
     }
   }
   input[type=tel],
@@ -859,6 +859,9 @@
       background: url("../image/icon/icon-checked.png") no-repeat;
       background-size: cover;
     }
+  }
+  a {
+    color: #ff8400;
   }
 }
 

@@ -53,7 +53,7 @@
             <input type="checkbox">
             <span></span>
           </label>
-          <span>我已阅读并同意《用户协议》</span>
+          <span>我已阅读并同意<a id="protocal">《用户协议》</a></span>
         </div>
         <div class="form-item">
           <input class="clear-input" type="submit" value="注册">
@@ -66,11 +66,31 @@
 </div>
 
 
+<!--协议模版-->
+<div id="protocalModal" class="modal fade baiger-modal protocal-modal" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-title">用户协议</div>
+        <ul></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <script src="../dist/component/sea.js"></script>
 <script src="../dist/component/sea.config.js"></script>
 <script>
   seajs.use(['jquery', 'modal'], function ($) {
-
+    $("#protocal").on("click", function () {
+      $("#protocalModal").modal();
+    });
 
   });
 </script>
