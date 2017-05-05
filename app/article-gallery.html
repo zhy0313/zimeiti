@@ -7,6 +7,11 @@
   <meta name="format-detection" content="telephone=no">
   <title>百舸-图集</title>
   <link rel="stylesheet" href="../dist/css/article.css">
+  <script>
+    function g(selector) {
+      return document.querySelector(selector)
+    }
+  </script>
 </head>
 
 <body>
@@ -14,11 +19,50 @@
 <div class="hd-wrap">
   <div class="article-gallery-page">
 
+    <!--文章频道-->
+    <section class="article-channel-wrap">
+      <div class="article-return">
+        <a class="icon-angle-left" href="./index.html"></a>
+      </div>
+
+      <div class="article-channel">
+        <ul>
+          <li class="active"><a href="">推荐</a></li>
+          <li><a href="">图集</a></li>
+          <li><a href="">时政</a></li>
+          <li><a href="">军事</a></li>
+          <li><a href="">饮食</a></li>
+        </ul>
+      </div>
+
+      <div class="article-plus" id="article-plus"
+           onclick="g('#all-article-channels').classList.add('open');">
+        <span class="icon-add"></span>
+      </div>
+    </section>
+
+    <!--全部频道-->
+    <section class="all-article-channels" id="all-article-channels">
+      <p>全部频道</p>
+      <ul>
+        <li class="active"><a href="">推荐</a></li>
+        <li><a href="">图集</a></li>
+        <li><a href="">时政</a></li>
+        <li><a href="">军事</a></li>
+        <li><a href="">饮食</a></li>
+        <li><a href="">国际</a></li>
+        <li><a href="">科技</a></li>
+      </ul>
+      <div class="close-channels"
+           onclick="g('#all-article-channels').classList.remove('open');">确定
+      </div>
+    </section>
+
     <!--返回导航-->
 
-    <a href="javascript:history.go(-1);" class="gallery-back">
-      <span class="icon-angle-left"></span>
-    </a>
+    <!--<a href="javascript:history.go(-1);" class="gallery-back">-->
+      <!--<span class="icon-angle-left"></span>-->
+    <!--</a>-->
 
 
     <!--图集-->
@@ -211,6 +255,12 @@
 
     });
 
+
+    // 图像点击关闭介绍
+    var $galleryDesc = $("#gallery-desc");
+    $(".swiper-slide").on("click", "img", function () {
+      $galleryDesc.toggleClass("collapsing");
+    });
 
   });
 </script>

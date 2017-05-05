@@ -857,6 +857,12 @@ article {
   color: #fff;
   -webkit-transition: all .5s;
   transition: all .5s;
+  &.collapsing {
+    -webkit-transform: translateY(200%);
+    transform: translateY(200%);
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
 }
 
 .gallery-desc-content {
