@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>百舸</title>
+  <link rel="stylesheet" href="../dist/css/style.css">
+</head>
+
+<body>
+
+<div class="hd-wrap">
+
+  <div class="page">
+
+    <!--返回导航-->
+    <h3 class="zmt-nav-back">
+      <a href="javascript:history.go(-1);">
+        <span class="icon-angle-left"></span>
+      </a>
+      出错了
+    </h3>
+
+
+    <div class="error-msg">
+      <img src="../dist/image/error.jpg" alt="出错啦">
+      <div class="error-detail">该作者已注销</div>
+    </div>
+  </div>
+
+
+  <script src="../dist/component/sea.js"></script>
+  <script src="../dist/component/sea.config.js"></script>
+  <script>
+    seajs.use(['jquery', 'modal'], function ($) {
+
+
+    });
+  </script>
+
+</body>
+</html>

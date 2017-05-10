@@ -1481,6 +1481,25 @@
   }
 }
 
+.error-msg {
+  text-align: center;
+  background: #e5e5e5;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 3rem;
+  bottom: 0;
+  box-sizing: border-box;
+  padding-top: 5rem;
+  img {
+    width: 6.375rem;
+  }
+  .error-detail {
+    font-size: 1.125rem;
+    color: #666666;
+  }
+}
+
 @media screen and (max-width: 320px) {
   html {
     font-size: 14px;
