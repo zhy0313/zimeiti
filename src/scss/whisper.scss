@@ -470,6 +470,48 @@
 
 }
 
+//withdraw
+.withdraw-box {
+  p {
+    color: #666;
+    padding: 1rem;
+    margin: 0;
+  }
+  .form-item {
+    background: white;
+    padding: 1rem;
+    input[type="text"],
+    input[type="number"] {
+      padding: 0 1rem;
+    }
+  }
+  .form-btns {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  input[type="submit"] {
+    width: 100%;
+    color: #fff;
+    border-radius: 6px;
+    padding: .6rem 0;
+    background: #ff8400;
+    &.disabled {
+      background: #d0d0d0;
+    }
+  }
+}
+
+.withdraw-tip {
+  text-align: right;
+  padding: 0 1rem;
+  margin-top: 1rem;
+  a {
+    font-size: .875rem;
+    color: #ff8400;
+  }
+}
+
 @media screen and (max-width: 320px) {
   html {
     font-size: 14px;

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>百舸</title>
+  <link rel="stylesheet" href="../dist/css/whisper.css">
+</head>
+
+<body>
+
+<div class="hd-wrap">
+  <div class="whisper-view-page whisper-page">
+
+    <!--返回导航-->
+    <h3 class="zmt-nav-back">
+      <a href="javascript:history.go(-1);">
+        <span class="icon-angle-left"></span>
+      </a>
+      提现
+    </h3>
+
+
+    <section class="withdraw-view">
+      <div class="withdraw-box">
+        <p>零钱可用金额<span>10.00</span>元</p>
+        <form action="">
+          <div class="form-item">
+            <span>金额(元)</span>
+            <input type="text" class="clear-input" placeholder="请填写提现金额">
+          </div>
+          <div class="form-btns">
+            <!--填写金额后按钮颜色改变，去掉disabled-->
+            <input type="submit" value="确认提现" class="clear-input disabled">
+          </div>
+        </form>
+        <div class="withdraw-tip">
+          <a href="">提现说明</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+
+<script src="../dist/component/sea.js"></script>
+<script src="../dist/component/sea.config.js"></script>
+<script>
+  seajs.use(['jquery', 'modal'], function ($) {
+
+
+  });
+</script>
+
+</body>
+</html>
