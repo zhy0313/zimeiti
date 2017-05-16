@@ -471,24 +471,39 @@
 }
 
 //withdraw
+.withdraw-head {
+  background: #ffa406 url("../image/icon/money.png") center 2.5rem no-repeat;
+  background-size: 3.75rem 3.75rem;
+  color: white;
+  text-align: center;
+  padding: .5rem 0 5.25rem;
+}
+
 .withdraw-box {
-  p {
-    color: #666;
-    padding: 1rem;
-    margin: 0;
+  padding-top: 2rem;
+  form {
+    width: 90%;
+    margin: 0 auto;
   }
   .form-item {
     background: white;
     padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    color: #666;
+    em {
+      font-style: normal;
+      color: #ffa406;
+      padding: 0 10px;
+    }
     input[type="text"],
     input[type="number"] {
-      padding: 0 1rem;
+      padding: 0;
     }
   }
   .form-btns {
     margin-top: 2rem;
     text-align: center;
-    padding: 0 1rem;
   }
   input[type="submit"] {
     width: 100%;
@@ -502,13 +517,67 @@
   }
 }
 
+.withdraw-all {
+  display: inline-block;
+  padding: 0;
+  margin-top: 0.125rem;
+  font-size: 0.875rem;
+  position: absolute;
+  right: 2rem;
+  z-index: 10;
+}
+
 .withdraw-tip {
-  text-align: right;
+  text-align: center;
   padding: 0 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  font-size: 12px;
+  p {
+    color: #999999;
+  }
   a {
-    font-size: .875rem;
     color: #ff8400;
+    &:before {
+      content: "?";
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      line-height: 12px;
+      margin-right: 5px;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+    }
+  }
+}
+
+.withdraw-explain {
+  color: #333;
+  ul {
+    width: 80%;
+    margin: 2rem auto;
+  }
+  li {
+    position: relative;
+    span {
+      position: absolute;
+    }
+    p {
+      padding-left: 1.5rem;
+      line-height: 1.6;
+    }
+    em {
+      font-style: normal;
+      color: #ff8400;
+    }
+  }
+  > div {
+    width: 80%;
+    color: #fff;
+    border-radius: 6px;
+    padding: .6rem 0;
+    background: #ff8400;
+    text-align: center;
+    margin: 0 auto;
   }
 }
 
