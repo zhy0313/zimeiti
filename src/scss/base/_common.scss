@@ -807,9 +807,10 @@
     overflow: hidden;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid #ddd;
+    @include flex-container();
+    @include flex-direction-h();
     li {
-      float: left;
-      width: 25%;
+      @include flex-item(1);
       box-sizing: border-box;
     }
   }
