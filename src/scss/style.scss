@@ -409,6 +409,29 @@
   }
 }
 
+.video-cover {
+  position: relative;
+  padding-top: 56.25%;
+  z-index: 10;
+  img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .video-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    font-size: 3rem;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+
 .home-article-header.with-cover,
 .home-article-header.with-video {
   .title {
