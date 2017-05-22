@@ -342,14 +342,11 @@ article {
 
   .reward {
     a:first-child {
-      color: white;
-      background: #ff8400;
-      border: 1px solid currentColor;
+      color: #ff8400;
+      background: white;
+      border: 1px solid #ff8400;
     }
     a:last-child {
-      span {
-        color: #ff8400;
-      }
       em {
         font-style: normal;
         color: #666;
@@ -361,14 +358,11 @@ article {
 
   .whisper {
     a:first-child {
-      color: #999999;
-      background: white;
+      color: white;
+      background: #ff8400;
       border: 1px solid currentColor;
     }
     a:last-child {
-      span {
-        color: #ff8400;
-      }
       em {
         font-style: normal;
         color: #666;
