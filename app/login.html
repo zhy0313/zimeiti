@@ -22,36 +22,34 @@
     <section class="login-form">
       <form action="">
         <div class="form-item">
-          <label class="icon-mobile-phone"></label>
+          <!--<span class="icon icon-mobile-phone"></span>-->
           <input class="clear-input" type="tel" placeholder="请输入手机号">
         </div>
         <div class="form-item">
-          <label class="icon-lock"></label>
+          <!--<span class="icon icon-lock"></span>-->
           <input class="clear-input" type="password" placeholder="请输入密码">
+          <span class="register-validate-code">获取验证码</span>
         </div>
-        <div class="form-item hide">
-          <label></label>
+        <div class="form-item">
+          <!--<span class="icon"></span>-->
           <input class="clear-input" type="text" placeholder="请输入验证码">
           <span class="login-code"><img src="../dist/image/login-code.png" alt="验证码"></span>
         </div>
+
+        <div class="form-item login-protocal">
+          <label>
+            <input type="checkbox" id="_pro">
+            <span></span>
+          </label>
+          <span><label for="_pro">我已阅读并同意</label><a id="protocal">《用户协议》</a></span>
+        </div>
+
         <div class="form-item">
           <input class="clear-input" type="submit" value="登录">
         </div>
       </form>
     </section>
 
-    <!--第三方登录-->
-    <section class="login-other">
-      <div class="login-via-wechat">
-        <span class="icon-wechat">微信授权登录</span>
-      </div>
-    </section>
-
-    <!--找回密码 ／ 注册-->
-    <section class="login-actions">
-      <a href="">找回密码</a>
-      <a href="">马上注册</a>
-    </section>
 
   </section>
 </div>
