@@ -41,19 +41,7 @@
     color: white;
     padding: 2px;
   }
-  //.user.new-message {
-  //  &:after {
-  //    content: "";
-  //    display: block;
-  //    position: absolute;
-  //    top: 0;
-  //    right: 0;
-  //    width: 6px;
-  //    height: 6px;
-  //    background: $mainColor;
-  //    border-radius: 50%;
-  //  }
-  //}
+
   .user-avatar {
     display: block;
     position: absolute;
@@ -440,14 +428,9 @@
 .home-article-header.with-cover,
 .home-article-header.with-video {
   .title {
-    //position: absolute;
-    //bottom: 0;
     width: 100%;
-    //padding-bottom: .7rem;
     box-sizing: border-box;
     color: rgb(56, 56, 56);
-    //background: -webkit-linear-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .5) 100%);
-    //background: linear-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .5) 100%);
   }
 }
 
@@ -473,7 +456,6 @@
     color: #666;
     font-size: 0.8rem;
     bottom: .7rem;
-
     right: .7rem;
     span {
       margin-left: .5rem;
@@ -705,27 +687,7 @@
     width: 4.75rem;
     height: 1.875rem;
   }
-
 }
-
-//.login-actions {
-//  text-align: center;
-//  font-size: .875rem;
-//  overflow: hidden;
-//  margin: 1.5rem auto;
-//  width: 11.25rem;
-//  a {
-//    display: block;
-//    float: left;
-//    color: rgba(255, 255, 255, .8);
-//    margin: 1rem 0;
-//    padding: 0 1rem;
-//    box-sizing: border-box;
-//    &:first-child {
-//      border-right: 1px solid currentColor;
-//    }
-//  }
-//}
 
 .login-ways {
   margin-top: 1.5rem;
@@ -756,48 +718,6 @@
     margin: .5rem 3rem 3rem;
   }
 }
-
-//.login-via-sina {
-//  background-image: url("../image/icon/sina.png");
-//}
-//
-//.login-via-qq {
-//  background-image: url("../image/icon/qq.png");
-//}
-//
-//.login-via-sina,
-//.login-via-qq {
-//  width: 2rem;
-//  height: 2rem;
-//  background-size: cover;
-//}
-//
-//.login-other {
-//
-//}
-//
-//.login-via-wechat {
-//  position: relative;
-//  border: 1px solid white;
-//  color: white;
-//  text-align: center;
-//  padding: 8px;
-//  border-radius: 6px;
-//  margin-top: 10px;
-//  span {
-//    position: relative;
-//    margin-left: 22px;
-//    &:before {
-//      position: absolute;
-//      left: -22px;
-//      top: 50%;
-//      -webkit-transform: translateY(-50%);
-//      transform: translateY(-50%);
-//      margin-top: 1px;
-//    }
-//  }
-//
-//}
 
 .login-protocal {
   text-align: center;
@@ -1061,10 +981,6 @@
 
 /********** my-articles.html **********/
 
-.my-articles-page {
-
-}
-
 .my-articles-list {
   padding: 1rem;
   .articles-item {
@@ -1159,10 +1075,6 @@
 }
 
 /********** my-read.html **********/
-
-.my-read-page {
-
-}
 
 .my-read-calendar {
   background: #575757;
