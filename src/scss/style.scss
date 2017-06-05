@@ -21,6 +21,15 @@
   background: $mainColor;
 }
 
+.swiper-home-banner {
+  .swiper-slide {
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
 .home-nav {
   position: absolute;
   width: 100%;
@@ -41,7 +50,7 @@
     color: white;
     padding: 2px;
   }
-
+  
   .user-avatar {
     display: block;
     position: absolute;
@@ -108,7 +117,7 @@
       }
     }
   }
-
+  
   .tag-btn {
     color: $mainColor;
     border: 1px solid currentColor;
@@ -225,7 +234,7 @@
       }
     }
   }
-
+  
   .tag-btn {
     color: $mainColor;
     border: 1px solid currentColor;
@@ -460,7 +469,7 @@
     span {
       margin-left: .5rem;
     }
-
+    
   }
   .author-avatar {
     width: 1.6rem;
@@ -547,9 +556,9 @@
       border-radius: 50%;
       overflow: hidden;
       box-shadow: 1px 1px 2px 0 #ddd;
-
+      
     }
-
+    
     &:nth-child(3) {
       &:before {
         color: #b8b8b8;
@@ -607,7 +616,7 @@
       font-size: .875rem;
       padding-left: 3.4rem;
     }
-
+    
   }
 }
 
@@ -665,7 +674,7 @@
       color: #eaeaea;
     }
   }
-
+  
   .icon-mobile-phone {
     font-size: 22px;
   }
@@ -793,7 +802,7 @@
       vertical-align: -3px;
       margin-right: 5px;
     }
-
+    
   }
 }
 
@@ -853,7 +862,7 @@
 /********** register-addition.html **********/
 
 .register-addition-form {
-
+  
   .form-item {
     position: relative;
     padding: 6px 1.5rem;
@@ -865,7 +874,7 @@
       margin-top: 2rem;
     }
   }
-
+  
   label {
     width: 20%;
     display: inline-block;
@@ -873,7 +882,7 @@
     float: left;
     width: 20%;
   }
-
+  
   input,
   textarea,
   select {
@@ -898,7 +907,7 @@
       vertical-align: -3px;
       margin-right: 5px;
     }
-
+    
   }
 }
 
@@ -935,7 +944,7 @@
 }
 
 .my-follow-list {
-
+  
 }
 
 .follow-item {
@@ -1130,7 +1139,7 @@
       }
     }
   }
-
+  
   span {
     display: block;
     margin-bottom: .2rem;
@@ -1151,7 +1160,7 @@
       display: block;
     }
   }
-
+  
   .view {
     font-size: .875rem;
     color: #666;
@@ -1230,7 +1239,7 @@
   width: 80%;
   border-radius: 6px;
   margin: 3rem auto 0;
-
+  
   .form-item {
     position: relative;
     color: #666;
@@ -1309,7 +1318,7 @@
   margin: 1rem;
   padding-bottom: 0;
   border-bottom: 1px solid #ddd;
-
+  
   .follow-item-l {
     position: absolute;
   }
@@ -1349,7 +1358,7 @@
   transform: translateY(-50%);
   @extend .icon-add;
   @extend [class^="icon-"];
-
+  
   &.followed {
     color: #666;
     border: 1px solid #b8b8b8;
