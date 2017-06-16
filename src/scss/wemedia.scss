@@ -296,11 +296,11 @@
           display: block;
           width: 100%;
           height: 100%;
-          background: url("../image/icon/icon-unchecked.png") no-repeat;
+          background: url("../image/icon/icon-unchecked.png?20170616") no-repeat;
           background-size: 100% 100%;
         }
         input:checked + i {
-          background: url("../image/icon/icon-checked.png") no-repeat;
+          background: url("../image/icon/icon-checked.png?20170616") no-repeat;
           background-size: 100% 100%;
         }
       }

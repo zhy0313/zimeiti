@@ -286,7 +286,8 @@ a {
     text-align: center;
   }
   input {
-    @include flex-item(1);
+    //@include flex-item(1);
+    width:100%;
     padding: 0 6px;
     border: none;
     border-radius: 4px;
